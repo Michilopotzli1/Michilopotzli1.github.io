@@ -54,3 +54,26 @@ footer p {
     font-size: 0.9em;
 }
 
+h1 {
+    color: #cceff0;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f6d4ed; ;
+    border: 1px solid #2e797c;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+strong {
+    color: #d97b9d;
+}
+
