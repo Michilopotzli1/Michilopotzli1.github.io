@@ -1,15 +1,14 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
     padding: 20px;
-    background-color: #f6d4ed; /* Rosa claro */
-    color: #2e797c; /* Turquesa oscuro */
+    background-color: #f6d4ed;
+    color: #2e797c;
 }
 
 header h1 {
     text-align: center;
-    color: #d97b9d; /* Rosa oscuro */
+    color: #d97b9d;
 }
 
 main {
@@ -19,61 +18,50 @@ main {
 .reference {
     margin-bottom: 20px;
     padding: 15px;
-    background-color: #cceff0; /* Azul claro */
-    border: 1px solid #92c576; /* Verde */
+    background-color: #cceff0;
+    border: 1px solid #92c576;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .reference h2 {
     margin: 0 0 10px;
-    color: #92c576; /* Verde */
+    color: #92c576;
 }
 
 .reference p {
     margin: 0 0 10px;
-    color: #2e797c; /* Turquesa oscuro */
+    color: #2e797c;
 }
 
 .reference a {
     text-decoration: none;
     color: #ffffff;
-    background-color: #d97b9d; /* Rosa oscuro */
+    background-color: #d97b9d;
     padding: 10px 15px;
     border-radius: 5px;
     display: inline-block;
 }
 
 .reference a:hover {
-    background-color: #92c576; /* Verde */
+    background-color: #92c576;
 }
 
 footer p {
     text-align: center;
-    color: #2e797c; /* Turquesa oscuro */
+    color: #2e797c;
     font-size: 0.9em;
 }
 
-h1 {
+.navbar {
+    background-color: #d97b9d;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover {
     color: #cceff0;
-    text-align: center;
 }
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #f6d4ed; 
-    border: 1px solid #2e797c;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-strong {
-    color: #d97b9d;
-}
-
