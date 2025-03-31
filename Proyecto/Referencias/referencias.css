@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
     background-color: #f6d4ed;
     color: #2e797c;
 }
@@ -9,10 +9,11 @@ body {
 header h1 {
     text-align: center;
     color: #d97b9d;
+    margin-top: 20px;
 }
 
 main {
-    margin-top: 20px;
+    margin-top: 100px;
 }
 
 .reference {
@@ -54,14 +55,14 @@ footer p {
 }
 
 .navbar {
-    background-color: #d97b9d;
+    background-color: #cceff0;
 }
 
 .navbar-brand,
 .navbar-nav .nav-link {
-    color: #ffffff;
+    color: #92c576;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #cceff0;
+    color: #d97b9d;
 }
