@@ -1,75 +1,64 @@
-.nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.nav ul li {
-  position: relative;
-}
-
-.nav ul li a {
-  text-decoration: none;
-  display: block;
-  padding: 10px;
-  color: #333;
-}
-
-.nav ul ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  list-style: none;
-  background-color: #f8f8f8;
-  padding: 0;
-  z-index: 10;
-}
-
-.nav ul li:hover > ul {
-  display: block;
-}
-
-.nav ul ul li a {
-  padding: 8px 20px;
-  color: #333;
-}
-nav ul ul li:hover a {
-  background-color: #ddd;
-
-.btn-light,
-.btn-light:hover,
-.btn-light:focus {
-  color: #333;
-  text-shadow: none;
-}
-
-
 body {
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+    background-image: url("Portada.jpg");
+    background-size: cover;
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .cover-container {
-  max-width: 42em;
+    max-width: 42em;
 }
 
 .nav-masthead .nav-link {
-  color: rgba(255, 255, 255, .5);
-  border-bottom: .25rem solid transparent;
+    color: rgba(255, 255, 255, .5);
+    border-bottom: .25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+    border-bottom-color: rgba(255, 255, 255, .25);
 }
 
 .nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
+    margin-left: 1rem;
 }
 
 .nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.nav-masthead .dropdown-menu {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.nav-masthead .dropdown-menu a {
+    color: #333;
+    padding: 8px 20px;
+    text-decoration: none;
+}
+
+.nav-masthead .dropdown-menu a:hover {
+    background-color: #ddd;
+}
+
+.nav-masthead .dropdown-submenu {
+    position: relative;
+}
+
+.nav-masthead .dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -5px;
+    position: absolute;
+    background-color: #f8f8f8;
+    border-radius: 5px;
 }
