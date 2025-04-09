@@ -60,17 +60,6 @@ body {
     position: absolute;
     background-color: #f8f8f8;
     border-radius: 5px;
-        padding: 10px;
-    z-index: 10; /* Garantiza que el menú esté encima de otros elementos */
-}
-
-.nav-masthead .dropdown-menu a {
-    color: #333;
-    padding: 8px 20px;
-    text-decoration: none;
-}
-
-.nav-masthead .dropdown-menu a:hover {
-    background-color: #ddd; 
-}
+    padding: 10px;
+    z-index: 10;
 }
