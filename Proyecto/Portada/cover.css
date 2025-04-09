@@ -1,14 +1,13 @@
-body {
-    background-image: url("Portada.jpg");
-    background-size: cover;
-    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+.btn-light,
+.btn-light:hover,
+.btn-light:focus {
+    color: #333;
+    text-shadow: none;
 }
 
-.montserrat {
-    font-family: "Montserrat", sans-serif;
-    font-weight: normal;
-    font-style: normal;
+body {
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
 .cover-container {
