@@ -24,6 +24,7 @@
   list-style: none;
   background-color: #f8f8f8;
   padding: 0;
+  z-index: 10;
 }
 
 .nav ul li:hover > ul {
@@ -32,7 +33,10 @@
 
 .nav ul ul li a {
   padding: 8px 20px;
+  color: #333;
 }
+nav ul ul li:hover a {
+  background-color: #ddd;
 
 .btn-light,
 .btn-light:hover,
@@ -40,6 +44,7 @@
   color: #333;
   text-shadow: none;
 }
+
 
 body {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
