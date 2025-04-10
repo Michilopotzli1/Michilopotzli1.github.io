@@ -4,122 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Referencias ❤</title>
-    <!-- Estilos de Bootstrap -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-QmmbKuguwHdzC1CCi4C5KyMsKtT5JjPAf4y4N3Q9jdd5skDkzlsrrzP36j2Vb9yL" crossorigin="anonymous">
-    <!-- Estilos personalizados -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="referencias.css">
     <style>
-        /* Navbar Personalizada */
+        body {
+            background-color: #f6d4ed; /* Background for referencias page */
+            color: #2e797c; /* Text color */
+        }
+
         .navbar {
-            background-color: #f6d4ed; /* Fondo rosado */
-            padding: 10px 20px;
-            border-bottom: 2px solid #92c576; /* Línea decorativa */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+            background-color: #d97b9d; /* Navbar background */
         }
 
-        .navbar-brand {
-            font-weight: bold;
-            color: #92c576;
-            font-size: 1.5em;
+        .navbar-brand,
+        .nav-link {
+            color: #ffffff; /* Navbar text color */
         }
 
-        .navbar-nav .nav-link {
-            color: #2e797c;
-            margin-right: 15px;
-            font-size: 1.1em;
-            transition: color 0.3s ease, background-color 0.3s ease;
+        .nav-link:hover {
+            color: #92c576; /* Green hover color */
         }
 
-        .navbar-nav .nav-link:hover {
+        .btn-secondary {
+            background-color: #92c576; /* Green button color */
+            border-color: #92c576;
             color: #ffffff;
-            background-color: #92c576;
-            border-radius: 5px;
-            padding: 5px;
         }
 
-        .navbar-toggler {
-            border: none; 
-            background-color: #92c576; 
-            padding: 5px 10px;
-            border-radius: 4px;
+        .btn-secondary:hover {
+            background-color: #cceff0; /* Light blue hover button color */
+            border-color: #cceff0;
+            color: #2e797c;
         }
 
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'%3E%3C/path%3E%3C/svg%3E");
-            width: 30px;
-            height: 30px;
-        }
-
-        .dropdown-menu {
-            background-color: #ffffff; 
+        .reference {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #cceff0; /* Light blue section background */
             border: 1px solid #92c576;
             border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .dropdown-item {
-            color: #2e797c;
-            font-size: 1em;
-            padding: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
+        .reference h2 {
+            margin: 0 0 10px;
+            color: #92c576; /* Section title green color */
         }
 
-        .dropdown-item:hover {
-            background-color: #d97b9d;
+        .reference a {
+            text-decoration: none;
             color: #ffffff;
+            background-color: #d97b9d;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: color 0.3s ease, background-color 0.3s ease; 
         }
 
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                text-align: center;
-            }
-            .navbar-nav {
-                margin-top: 10px;
-            }
-            .nav-link {
-                display: block;
-                margin: 10px 0;
-            }
+        .reference a:hover {
+            background-color: #92c576;
+        }
+
+        footer {
+            background-color: #d97b9d;
+            padding: 10px;
+            border-top: 2px solid #92c576;
+            text-align: center;
+            color: #ffffff;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-<header>
-   
-    <nav class="navbar navbar-expand-md fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Referencias</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../Portada/index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Contactos/contactos.html">Contactos</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="temasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Temas</a>
-                        <ul class="dropdown-menu" aria-labelledby="temasDropdown">
-                            <li><a class="dropdown-item" href="#">¿Qué es la Jpop?</a></li>
-                            <li><a class="dropdown-item" href="#">Moda</a></li>
-                            <li><a class="dropdown-item" href="#">Entretenimiento</a></li>
-                            <li><a class="dropdown-item" href="#">Videojuegos</a></li>
-                            <li><a class="dropdown-item" href="#">Música</a></li>
-                        </ul>
-                    </li>
-                </ul>
+    <!-- Header with Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Referencias</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../Portada/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Contactos/contactos.html">Contactos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="temasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Temas</a>
+                            <ul class="dropdown-menu" aria-labelledby="temasDropdown">
+                                <li><a class="dropdown-item" href="#">¿Qué es la Jpop?</a></li>
+                                <li><a class="dropdown-item" href="#">Moda</a></li>
+                                <li><a class="dropdown-item" href="#">Entretenimiento</a></li>
+                                <li><a class="dropdown-item" href="#">Videojuegos</a></li>
+                                <li><a class="dropdown-item" href="#">Música</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-     <h1>Referencias ❤</h1>
-</header>
+        </nav>
+        <h1>REFERENCIAS❤</h1>h1>
+    </header>
 
-
-    <!-- Contenido Principal -->
+    <!-- Page Content -->
     <main>
         <section class="reference">
             <h2>Academia lab</h2>
@@ -143,7 +135,7 @@
         <p>Diseño inspirado en la cultura J-Pop ❤</p>
     </footer>
 
-    <!-- Scripts de Bootstrap -->
+    <!-- Scripts for Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+x5MSz7KfH39QCB5u8j82lv4EelTz5aGz9gbi0" crossorigin="anonymous"></script>
 </body>
 </html>
