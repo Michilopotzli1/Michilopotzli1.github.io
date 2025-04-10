@@ -14,10 +14,10 @@ header h1 {
 
 main {
     margin-top: 100px;
-    padding: 20px; /* Espaciado interno */
-    background-color: #ffffff; /* Fondo blanco para contraste */
-    border-radius: 10px; /* Esquinas suaves */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+    padding: 20px; 
+    background-color: #ffffff;
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .reference {
@@ -46,20 +46,25 @@ main {
     padding: 10px 15px;
     border-radius: 5px;
     display: inline-block;
-    transition: color 0.3s ease, background-color 0.3s ease; /* Transición suave */
+    transition: color 0.3s ease, background-color 0.3s ease; 
 }
 
 .reference a:hover {
     background-color: #92c576;
 }
 
+footer {
+    background-color: #d97b9d; 
+    padding: 10px;
+    border-top: 2px solid #92c576; 
+}
+
 footer p {
     text-align: center;
-    color: #2e797c;
+    color: #ffffff; 
     font-size: 0.9em;
 }
 
-/* Estilización de la barra de navegación */
 .navbar {
     background-color: #cceff0;
 }
@@ -67,52 +72,54 @@ footer p {
 .navbar-brand,
 .navbar-nav .nav-link {
     color: #92c576;
-    transition: color 0.3s ease; /* Transición suave */
+    transition: color 0.3s ease; 
 }
 
 .navbar-nav .nav-link:hover {
     color: #d97b9d;
 }
 
-/* Estilos para el menú desplegable */
 .dropdown-menu {
-    background-color: #f6d4ed; /* Fondo pastel */
+    background-color: #f6d4ed; 
     border: 1px solid #92c576;
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 5px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .dropdown-item {
     color: #2e797c;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .dropdown-item:hover {
     background-color: #d97b9d;
-    color: #ffffff; /* Contraste */
+    color: #ffffff; 
 }
 
-/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5em; /* Reducir tamaño del título */
+        font-size: 1.5em;
     }
 
     .reference {
-        padding: 10px; /* Reducir el espaciado */
+        padding: 10px; 
     }
 
     .navbar {
-        flex-direction: column; /* Navegación en columna */
+        flex-direction: column; 
     }
 }
 
-footer {
-    background-color: #d97b9d; /* Fondo rosado */
-    padding: 10px;
-    border-top: 2px solid #92c576; /* Línea decorativa */
+.btn-secondary {
+    background-color: #92c576;
+    border-color: #92c576;
+    color: #ffffff;
+    transition: color 0.3s ease, background-color 0.3s ease; 
 }
 
-footer p {
-    color: #ffffff; /* Texto blanco */
+.btn-secondary:hover {
+    background-color: #cceff0;
+    border-color: #cceff0;
+    color: #2e797c;
 }
+
