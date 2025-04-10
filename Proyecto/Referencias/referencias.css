@@ -5,11 +5,13 @@ body {
     background-color: #f6d4ed;
     color: #2e797c;
 }
+
 header h1 {
     text-align: center;
     color: #d97b9d;
     margin-top: 20px;
 }
+
 main {
     margin-top: 20px;
     padding: 20px;
@@ -17,6 +19,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .reference {
     margin-bottom: 20px;
     padding: 15px;
@@ -25,14 +28,17 @@ main {
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .reference h2 {
     margin: 0 0 10px;
     color: #92c576;
 }
+
 .reference p {
     margin: 0 0 10px;
     color: #2e797c;
 }
+
 .reference a {
     text-decoration: none;
     color: #ffffff;
@@ -40,11 +46,14 @@ main {
     padding: 10px 15px;
     border-radius: 5px;
     display: inline-block;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .reference a:hover {
     background-color: #92c576;
+    color: #ffffff;
 }
+
 footer {
     background-color: #d97b9d;
     padding: 10px;
@@ -52,13 +61,18 @@ footer {
     text-align: center;
     color: #ffffff;
 }
+
 .navbar {
     background-color: #d97b9d;
+    border-bottom: 2px solid #92c576;
 }
+
 .navbar-brand,
 .nav-link {
     color: #ffffff;
+    transition: color 0.3s ease;
 }
+
 .nav-link:hover {
     color: #92c576;
 }
