@@ -14,6 +14,10 @@ header h1 {
 
 main {
     margin-top: 100px;
+    padding: 20px; /* Espaciado interno */
+    background-color: #ffffff; /* Fondo blanco para contraste */
+    border-radius: 10px; /* Esquinas suaves */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra elegante */
 }
 
 .reference {
@@ -42,6 +46,7 @@ main {
     padding: 10px 15px;
     border-radius: 5px;
     display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transición suave */
 }
 
 .reference a:hover {
@@ -54,6 +59,7 @@ footer p {
     font-size: 0.9em;
 }
 
+/* Estilización de la barra de navegación */
 .navbar {
     background-color: #cceff0;
 }
@@ -61,8 +67,52 @@ footer p {
 .navbar-brand,
 .navbar-nav .nav-link {
     color: #92c576;
+    transition: color 0.3s ease; /* Transición suave */
 }
 
 .navbar-nav .nav-link:hover {
     color: #d97b9d;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+    background-color: #f6d4ed; /* Fondo pastel */
+    border: 1px solid #92c576;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.dropdown-item {
+    color: #2e797c;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.dropdown-item:hover {
+    background-color: #d97b9d;
+    color: #ffffff; /* Contraste */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em; /* Reducir tamaño del título */
+    }
+
+    .reference {
+        padding: 10px; /* Reducir el espaciado */
+    }
+
+    .navbar {
+        flex-direction: column; /* Navegación en columna */
+    }
+}
+
+footer {
+    background-color: #d97b9d; /* Fondo rosado */
+    padding: 10px;
+    border-top: 2px solid #92c576; /* Línea decorativa */
+}
+
+footer p {
+    color: #ffffff; /* Texto blanco */
 }
