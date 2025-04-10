@@ -66,8 +66,8 @@ footer p {
 }
 
 .navbar {
-    background-color: #cceff0; /* Fondo suave */
-    padding: 10px 20px; /* Espaciado interno */
+    background-color: #f6d4ed; /* Manteniendo el fondo rosado de referencias */
+    padding: 10px 20px;
     border-bottom: 2px solid #92c576; /* Línea decorativa */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
@@ -80,7 +80,7 @@ footer p {
 
 .navbar-nav .nav-link {
     color: #2e797c;
-    margin-right: 15px; /* Espaciado entre los enlaces */
+    margin-right: 15px;
     font-size: 1.1em;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
