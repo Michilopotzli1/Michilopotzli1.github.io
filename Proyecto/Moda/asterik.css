@@ -1,0 +1,136 @@
+:root {
+    --soft-pink: #ffc1cc;
+    --pale-pink: #ffe4e6;
+    --white: #ffffff;
+    --text-dark: #333333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--pale-pink);
+    margin: 0;
+    color: var(--text-dark);
+}
+
+header {
+    background: linear-gradient(90deg, #ffc1cc, #ff99aa); /* Gradiente atractivo */
+    padding: 20px 0;
+    border-bottom: 4px solid #ff6699;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: var(--white);
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra para mejor contraste */
+}
+
+h2 {
+    color: #ff6699;
+    font-size: 2em;
+}
+
+h3 {
+    color: #ff99aa;
+    font-size: 1.5em;
+    margin-top: 20px;
+    border-left: 4px solid #ff6699;
+    padding-left: 10px;
+}
+
+main {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--pale-pink);
+    border-left: 4px solid #ff99aa;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ligera sombra para resaltar */
+}
+
+section:hover {
+    background-color: var(--white); /* Efecto de enfoque */
+    border-left: 4px solid #ff6699;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+ul, ol {
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+footer {
+    background-color: var(--soft-pink);
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+    border-top: 4px solid #ff99aa;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ff6699;
+    text-decoration: underline;
+}
+
+button {
+    background-color: #ff6699;
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff99aa;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
