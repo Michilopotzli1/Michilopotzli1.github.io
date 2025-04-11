@@ -69,37 +69,69 @@
         .nav-link:hover {
             color: #92c576;
         }
+
+      li:hover {color: #c98895; }
+          .dropdown-item {color: #EFC3CA;}
+          .dropdown-item:hover { color: #F8D9DE; background-color: #d49ba7;}
+          .dropdown-menu {background-color: #c98895;}
+          .bg-pink{background-color: #c98895;
+      }
+    </style>
     </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-pink">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Referencias</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../Portada/index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Contactos/contactos.html">Contactos</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="temasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Temas</a>
-                            <ul class="dropdown-menu" aria-labelledby="temasDropdown">
-                                <li><a class="dropdown-item" href="../Jpop/Jpop.html">¿Qué es J-Pop?</a></li>
-                                <li><a class="dropdown-item" href="../Moda/moda-japonesa.html">Moda</a></li>
-                                <li><a class="dropdown-item" href="../Entretenimiento/entretenimiento.html">Entretenimiento</a></li>
-                                <li><a class="dropdown-item" href="../Musica/musica.html">Música</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+              <a class="navbar-brand" href="../Portada/index.html">J-POP</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarNav_bg-dark">
+            <ul class="navbar-nav dropdown">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Música
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
+                      <a class="dropdown-item" href="#">Historia</a>
+                      <a class="dropdown-item" href="#">Actualidad</a>
+                  </div>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Videojuegos
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
+                      <a class="dropdown-item" href="#">Actualidad</a>
+                      <a class="dropdown-item" href="#">Consolas del Nipon</a>
+                  </div>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Entretenimiento
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
+                      <a class="dropdown-item" href="#">Anime y Mangas</a>
+                      <a class="dropdown-item" href="#">Peliculas y novelas</a>
+                  </div>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Moda y maquillaje
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
+                      <a class="dropdown-item" href="#">Historia</a>
+                      <a class="dropdown-item" href="#">Estilos actuales</a>
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main id="referencias">
         <section class="reference">
