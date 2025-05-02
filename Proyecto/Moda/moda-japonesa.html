@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moda Japonesa a través de las Eras</title>
-    <link rel="stylesheet" href="asterik.css">
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -33,12 +31,142 @@
       .dropdown-item:hover { color: #F8D9DE; background-color: #d49ba7;}
       .dropdown-menu {background-color: #c98895;}
       .bg-pink{background-color: #c98895;}
-        
+
+        :root {
+    --soft-pink: #ffc1cc;
+    --pale-pink: #ffe4e6;
+    --white: #ffffff;
+    --text-dark: #333333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--pale-pink);
+    margin: 0;
+    color: var(--text-dark);
+}
+
+header {
+    background: linear-gradient(90deg, #ffc1cc, #ff99aa); /* Gradiente atractivo */
+    padding: 20px 0;
+    border-bottom: 4px solid #ff6699;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: var(--white);
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra para mejor contraste */
+}
+
+h2 {
+    color: #ff6699;
+    font-size: 2em;
+}
+
+h3 {
+    color: #ff99aa;
+    font-size: 1.5em;
+    margin-top: 20px;
+    border-left: 4px solid #ff6699;
+    padding-left: 10px;
+}
+
+main {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--pale-pink);
+    border-left: 4px solid #ff99aa;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ligera sombra para resaltar */
+}
+
+section:hover {
+    background-color: var(--white); /* Efecto de enfoque */
+    border-left: 4px solid #ff6699;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+ul, ol {
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+footer {
+    background-color: var(--soft-pink);
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+    border-top: 4px solid #ff99aa;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ff6699;
+    text-decoration: underline;
+}
+
+button {
+    background-color: #ff6699;
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff99aa;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+    main {
+        padding: 15px;
+    }
+    section {
+        padding: 10px;
+    }
+    footer {
+        font-size: 0.9em;
+    }
+}
+
     </style>
 </head>
-</head>
 <body>
-    <header>
 <header data-bs-theme="dark">
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-pink">
     <div class="container-fluid">
@@ -91,13 +219,14 @@
       </div>
     </div>
   </nav>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</header>
         <div class="container">
             <h1 class="text-white text-center">Moda Japonesa a través de las Eras</h1>
         </div>
-    </header>
+
     <main class="container">
         <section class="mt-4">
             <h2>Un Viaje por la Historia de la Moda Japonesa</h2>
