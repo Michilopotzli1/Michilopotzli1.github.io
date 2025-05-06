@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="image/x-icon" href="../favicon.ico">
+    <title>Plantilla J-POP</title>
+    <meta name="autor" content="Leonardo Alvarez Ramirez & Company">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        li:hover {color:rgb(136, 190, 201); }
+        button:hover {background-color:rgb(153, 197, 255);}
+        li {margin-bottom: 10px;}
+        a {transition: color 0.3s ease, background-color 0.3s ease;}
+        .dropdown-item {color:rgb(149, 183, 224);}
+        .dropdown-item:hover { color:rgb(141, 210, 240); background-color: #d49ba7;}
+        .dropdown-menu {background-color:rgb(197, 245, 192);}
+        .bg-pink {background-color:rgb(151, 204, 237);}
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.55rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+
+        .bold-span{
+            color: var(--text-white);
+        }
+
+        :root {
+            --soft-pink:rgb(193, 231, 255);
+            --pale-pink: #e4fff7;
+            --text-white: #ffffff;
+            --text-gray: #ced4da;
+            --dark: #343a40
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--dark);
+            margin: 0;
+            color: var(--text-gray);
+        }
+
+        h1 {
+            margin: 0;
+            color:rgb(84, 181, 245);;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+        }
+
+        h2 {
+            color:rgb(102, 227, 255);
+            font-size: 2em;
+        }
+
+        h3 {
+            color:rgb(153, 233, 255);
+            font-size: 1.5em;
+            margin-top: 20px;
+            border-left: 4px solidrgb(127, 192, 232);
+            padding-left: 10px;
+        }
+
+        
+        main {
+            margin-top: 70px;
+            background-color: var(-dark);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        section {
+            animation: fadeIn 1s ease-in-out;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            animation: scaleUp 0.8s ease-in-out;
+        }
+
+        .table tbody tr {
+        transition: background-color 0.3s ease-in-out;
+        }
+
+        .table tbody tr:hover {
+        background-color: #b3e0ff; 
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+
+        footer {
+            background-color: var(--soft-pink);
+            color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+            border-top: 4px solidrgb(153, 189, 223);
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color:rgb(153, 210, 166);
+            text-decoration: underline;
+        }
+
+        button {
+            background-color:rgb(102, 201, 255);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.9);
+                opacity: 0.8;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {font-size: 1.8em;}
+            h2 {font-size: 1.4em;}
+            h3 {font-size: 1.2em;}
+            main {padding: 15px;}
+            section {padding: 10px;}
+            footer {font-size: 0.9em;}
+        }
+
+
+        .wallpaper {
+            background-image: url('wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--dark);
+            padding-top: 70px; 
+        }
+
+        .wallpaper-title {
+            color: var(--text-white);
+            font-size: 3em;
+            text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+
+        .text-left{text-align: left;}
+        .text-centre{text-align: center;}
+        .text-right{text-align: right;}
+
+    </style>
+</head>
+<body>
+
+    <!--Esta parte es el navbar, de preferencia no lo toquen a menos que sepan que hacen por que ni yo se como arreglar los pedos de esta madre xD-->
+    <div id="root">
+        <header data-bs-theme="dark">
+            <nav class="navbar navbar-expand-md fixed-top bg-pink">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../Portada/index.html">J-POP</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav_bg-dark">
+                        <ul class="navbar-nav dropdown">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Música
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
+                                <a class="dropdown-item" href="#">Historia</a>
+                                <a class="dropdown-item" href="#">Actualidad</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Videojuegos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
+                                <a class="dropdown-item" href="#">Actualidad</a>
+                                <a class="dropdown-item" href="#">Consolas del Nipon</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Entretenimiento
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
+                                <a class="dropdown-item" href="#">Anime y Mangas</a>
+                                <a class="dropdown-item" href="#">Peliculas y novelas</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Moda y maquillaje
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
+                                <a class="dropdown-item" href="../Moda/moda-japonesa.html">Historia</a>
+                                <a class="dropdown-item" href="#">Estilos actuales</a>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            </header>
+    
+            <!--Wallpaper portada con el titulo, usa una seccion aparte asi que no interfiere ni con el navbar ni el texto posterior, usenlo como quieran-->
+            <section class="wallpaper">
+                <h1 class="wallpaper-title">Actualidad de los videojuegos</h1>
+            </section>
+    
+
+            <main class="container">
+                <section>
+                    <h2>Historia y Evolución de los Videojuegos Japoneses</h2>
+                    <p>Japón ha sido un epicentro de innovación en la industria del videojuego, desde sus inicios en los años 70 con títulos arcade hasta los mundos abiertos y las narrativas cinematográficas de hoy. Algunas etapas clave en su evolución incluyen:</p>
+                </section>
+        
+                <section>
+                    <h3>Orígenes (1970-1980): La Era de los Arcades</h3>
+                    <p>Durante los años 70, Japón dominó la industria del videojuego con desarrollos en máquinas arcade. Algunas de las compañías pioneras fueron:</p>
+                    <ul>
+                        <li><b>Taito:</b> lanzó Space Invaders (1978), considerado el primer gran éxito de los videojuegos.</li>
+                        <li><b>Namco:</b> Presentó *Pac-Man* (1980), que estableció estándares de diseño y accesibilidad en los videojuegos.</li>
+                    </ul>
+                </section>
+        
+                <section>
+                    <h3>Expansión (1980-1990): Consolas Domésticas</h3>
+                    <p>La introducción de consolas como la Nintendo Entertainment System (NES) en 1983 y la Super Nintendo (SNES) en 1990 permitió que los videojuegos japoneses llegaran a hogares de todo el mundo. Durante esta época:</p>
+                    <ul>
+                        <li><b>Nintendo Entertainment System (NES) (1983):</b> Introdujo *Super Mario Bros.*, *The Legend of Zelda* y *Final Fantasy*.</li>
+                        <li><b>SEGA Mega Drive (Genesis):</b> Competencia directa con su personaje icónico *Sonic the Hedgehog*.</li>
+                    </ul>
+                </section>
+        
+                <section>
+                    <h3>Avances Tecnológicos (1990-2000): Juegos en 3D y RPGs Cinematográficos</h3>
+                    <p>Japón lideró el cambio hacia los videojuegos en 3D y las experiencias narrativas más complejas:</p>
+
+                    <ul>
+                        <li><b>PlayStation (1994):</b> Introdujo *Metal Gear Solid*, *Final Fantasy VII* y *Resident Evil*.</li>
+                        <li><b>Nintendo 64 (1996):</b> Revolucionó el gameplay con *Super Mario 64* y *Ocarina of Time*.</li>
+                        <li><b>Dreamcast (1998):</b> Primera consola con acceso a internet.</li>
+                    </ul>
+                </section>
+        
+                <section>
+                    <h3>Actualidad (2000-presente): Mundo Abierto, Inteligencia Artificial y Realidad Virtual</h3>
+                    <ul>
+                        <li><b>Mundo Abierto:</b> *Zelda: Breath of the Wild* redefinió la exploración.</li>
+                        <li><b>Inteligencia Artificial:</b> *Final Fantasy XVI* y *The Last Guardian* mejoraron la interacción de personajes.</li>
+                        <li><b>Realidad Virtual:</b> *Resident Evil 7 VR* y *Astro Bot* transformaron la inmersión en juegos.</li>
+                    </ul>
+                </section>
+        
+                <section>
+                    <h2>Influencias Culturales de los Videojuegos Japoneses</h2>
+                    <ul>
+                        <li><b>Narrativas profundas:</b> *Persona 5*, *Xenoblade Chronicles*, *Final Fantasy* con dilemas filosóficos.</li>
+                        <li><b>Folclore japonés:</b> *Okami*, *Nioh* inspirados en mitología japonesa.</li>
+                        <li><b>Arte influenciado por el manga y anime:</b> *Genshin Impact*, *Dragon Quest*.</li>
+                    </ul>
+                </section>
+        
+                <section>
+                    <h2>Impacto Global</h2>
+                    <ul>
+                        <li><b>Adaptaciones cinematográficas y televisivas:</b> *Pokémon*, *Sonic*, *Resident Evil*.</li>
+                        <li><b>Eventos de esports:</b> *Street Fighter*, *Tekken*.</li>
+                        <li><b>Estilo visual japonés:</b> Se ha convertido en un estándar en la industria.</li>
+                    </ul>
+                </section>
+        
+                <section>
+                    <h2>Tendencias Futuras</h2>
+                    <ul>
+                        <li><b>Accesibilidad:</b> Juegos más inclusivos como *The Last of Us Part II*.</li>
+                        <li><b>Cloud Gaming:</b> Expansión de *PlayStation Now* y *Nintendo Switch Online*.</li>
+                        <li><b>Inteligencia Artificial:</b> Creación de personajes con respuestas más naturales.</li>
+                    </ul>
+                </section>
+        
+                <section>
+                    <h2>Comparación de Géneros Más Jugados</h2>
+                    <table class="tabla-videojuegos">
+                        <thead>
+                            <tr>
+                                <th>Género</th>
+                                <th>Ejemplos de Juegos</th>
+                                <th>Popularidad Global</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>JRPG</td>
+                                <td>Final Fantasy XVI, Persona 5 Royal, Xenoblade Chronicles</td>
+                                <td>Alta</td>
+                            </tr>
+                            <tr>
+                                <td>Acción/Aventura</td>
+                                <td>Elden Ring, Ghost of Tsushima, Zelda: Breath of the Wild</td>
+                                <td>Muy Alta</td>
+                            </tr>
+                            <tr>
+                                <td>Pelea</td>
+                                <td>Tekken 8, Street Fighter 6, Super Smash Bros.</td>
+                                <td>Alta</td>
+                            </tr>
+                            <tr>
+                                <td>Hack and Slash</td>
+                                <td>Bayonetta 3, Devil May Cry 5, Nier: Automata</td>
+                                <td>Moderada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            
+       
+        <!--El pie de pagina, aqui va la informacion de la pagina, por ahora no hay cambios dejenlo asi-->
+        <footer class="bg-dark text-white text-center py-3">
+            <div>
+                <p><a href="/Contactos/contactos.html" class="text-white">Contacto</a> | <a href="/Referencias/referencias.html" class="text-white">Referencias</a></p>
+            </div>
+        </footer>
+
+
+    </div>
+</body>
