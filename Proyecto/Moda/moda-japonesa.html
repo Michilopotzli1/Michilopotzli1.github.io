@@ -164,9 +164,11 @@ section {
     }
 }
 img {
-  width: 100%;
-  max-width: 250px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  display: block;
+  margin: 0 auto;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -175,12 +177,9 @@ img:hover {
 }
 
 img:active {
-  transform: scale(1.5);
+  transform: scale(3);
 }
 
-img {
-    animation: scaleUp 0.8s ease-in-out;
-}
 
 /* Animación de hover en botones */
 @keyframes pulse {
