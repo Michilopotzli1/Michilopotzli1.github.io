@@ -331,7 +331,7 @@ button:hover {
          transition: transform 1s ease-out;
         }
 
-        .content-section {
+.content-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -350,9 +350,10 @@ button:hover {
     text-align: left;
 }
 
-.reverse {
-    flex-direction: row-reverse; /* Alterna la posición de la imagen */
+.content-section.reverse {
+    flex-direction: row-reverse !important;
 }
+
 
 
 
@@ -434,20 +435,9 @@ button:hover {
     <main class="container">
         
         
-<section class="content-section">
-    <img src="https://wallpaperaccess.com/full/4322570.png" alt="Moda Japonesa">
-    <div class="text-content">
+<section class="mt-4">
         <h2>Historia de la Moda Japonesa</h2>
         <p>La moda japonesa ha evolucionado a lo largo de los siglos, mezclando tradición y modernidad.</p>
-    </div>
-</section>
-
-<section class="content-section reverse">
-    <div class="text-content">
-        <h2>Estilos Contemporáneos</h2>
-        <p>Hoy en día, Japón es pionero en tendencias como el Harajuku, el Lolita y el street fashion.</p>
-    </div>
-    <img src="https://wallpaperaccess.com/full/4322570.png" alt="Estilos Contemporáneos">
 </section>
 
         
