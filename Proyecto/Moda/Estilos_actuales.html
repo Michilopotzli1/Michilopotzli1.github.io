@@ -144,6 +144,53 @@
             color: white;
             padding: 10px;
         }
+        
+        .wallpaper-estilos {
+    background-image: url('https://wallpaperaccess.com/full/4322570.png'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--dark);
+    padding-top: 70px;
+    position: relative;
+}
+
+/* Filtro oscuro para mejorar la legibilidad */
+.wallpaper-estilos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Oscurece un poco la imagen */
+    z-index: 1;
+}
+
+/* Nueva animación: aparición con zoom y opacidad */
+.wallpaper-title-estilos {
+    color: var(--text-white);
+    font-size: 3em;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
+    animation: zoomFadeIn 1.5s ease-in-out;
+}
+
+/* Definición de la nueva animación */
+@keyframes zoomFadeIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
     </style>
 </head>
 <body>
@@ -203,6 +250,10 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </header>
+    <section class="wallpaper-estilos">
+    <h1 class="wallpaper-title-estilos">Estilos Actuales de la Moda Japonesa</h1>
+</section>
+
 
     <main class="container" style="padding-top: 75px;">
         <section>
