@@ -37,7 +37,39 @@
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
         }
-
+                body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #0077cc;
+        }
+        .section {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        }
+        .hidden {
+            transform: translateX(-100px);
+            opacity: 0;
         .bd-mode-toggle {
             z-index: 1500;
         }
@@ -492,7 +524,17 @@
                         </tbody>
                     </table>
                 </section>
-            
+        <script>
+        window.addEventListener("scroll", function() {
+            const images = document.querySelectorAll(".image");
+            images.forEach(img => {
+                const rect = img.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    img.classList.add("hidden");
+                }
+            });
+        });
+    </script>
        
         <!--El pie de pagina, aqui va la informacion de la pagina, por ahora no hay cambios dejenlo asi-->
         <footer class="bg-dark text-white text-center py-3">
