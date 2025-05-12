@@ -508,15 +508,18 @@
                     </table>
                 </section>
         <script>
-        window.addEventListener("scroll", function() {
-            const images = document.querySelectorAll(".image");
-            images.forEach(img => {
-                const rect = img.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) {
-                    img.classList.add("hidden");
-                }
-            });
-        });
+window.addEventListener("scroll", function() {
+    const images = document.querySelectorAll("img");
+    images.forEach(img => {
+        const rect = img.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            img.style.transform = "translateX(-100px)";
+            img.style.opacity = "0";
+            img.style.transition = "transform 1s ease-in-out, opacity 1s ease-in-out";
+        }
+    });
+});
+
     </script>
        
         <!--El pie de pagina, aqui va la informacion de la pagina, por ahora no hay cambios dejenlo asi-->
