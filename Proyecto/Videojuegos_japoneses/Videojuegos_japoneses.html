@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        .bg-pink {
+    background-color: #333; /* Fondo oscuro */
+}
 
         li:hover {color:rgb(136, 190, 201); }
         button:hover {background-color:rgb(153, 197, 255);}
@@ -109,14 +112,14 @@
             padding: 20px;
         }
 
-        section {
-            animation: fadeIn 1s ease-in-out;
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
+.section {
+    background-color: #1a1a1a;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    text-align: center;
+}
 
         img {
             width: 100%;
@@ -202,7 +205,7 @@
 
 
 .wallpaper {
-    background-image: url('https://wallpaperaccess.com/full/18680737.jpg'); /* Corregido */
+    background-image: url('https://wallpaperaccess.com/full/18680737.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -210,10 +213,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--dark);
+    color: var(--text-white);
     padding-top: 70px;
     position: relative;
 }
+
 
 /* Filtro oscuro para mejorar la legibilidad del título */
 .wallpaper::before {
@@ -519,7 +523,6 @@ window.addEventListener("scroll", function() {
         }
     });
 });
-
     </script>
        
         <!--El pie de pagina, aqui va la informacion de la pagina, por ahora no hay cambios dejenlo asi-->
