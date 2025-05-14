@@ -41,18 +41,27 @@
             -webkit-overflow-scrolling: touch;
         }
                
-        .img-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .image {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-        }
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en pantallas pequeñas */
+}
+
+.image {
+    width: 200px; /* Tamaño más pequeño */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px; /* Espaciado entre imágenes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.image:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+}
+
         .hidden {
             transform: translateX(-100px);
             opacity: 0;
