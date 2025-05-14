@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consolas Japonesas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <style>
+                li:hover {color:rgb(136, 190, 201); }
+        button:hover {background-color:rgb(153, 197, 255);}
+        li {margin-bottom: 10px;}
+        a {transition: color 0.3s ease, background-color 0.3s ease;}
+        .dropdown-item {color:rgb(149, 183, 224);}
+        .dropdown-item:hover { color:rgb(141, 210, 240); background-color: #d49ba7;}
+        .dropdown-menu {background-color:rgb(197, 245, 192);}
+        .bg-pink {background-color:rgb(151, 204, 237);}
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.55rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #343a40;
+            color: #ced4da;
+        }
+        .img-container {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image {
+         width: 100px; 
+         height: 100px; 
+         object-fit: cover; 
+         border-radius: 6px; 
+         margin: 5px;
+         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+         transition: transform 0.3s ease-in-out;
+        }
+        .image:hover {
+         transform: scale(1.1);
+        }
+
+        :root {
+         --soft-pink: rgb(193, 231, 255);
+         --pale-pink: #e4fff7;
+          --text-white: #ffffff;
+          --text-gray: #ced4da;
+         --dark: #343a40;
+        }
+        section {
+         margin-bottom: 40px;
+         background-color: #1a1a1a; 
+         color: #e0e0e0; 
+         padding: 20px;
+         border-radius: 8px;
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+        }
+
+        h1, h2, h3 {
+        color: #b0c4de;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+         }
+        
+
+        a {
+         color: #76c7c0; 
+        }
+        img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            animation: scaleUp 0.8s ease-in-out;
+        }
+
+        .table tbody tr {
+        transition: background-color 0.3s ease-in-out;
+        }
+
+        .table tbody tr:hover {
+        background-color: #b3e0ff; 
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+        button {
+            background-color:rgb(102, 201, 255);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .wallpaper {
+            background-image: url('https://wallpaperaccess.com/full/18680737.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 70px;
+            position: relative;
+        }
+        .wallpaper-title {
+            font-size: 3em;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+        section {
+            margin-bottom: 40px;
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #19334d;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="root">
+        <header data-bs-theme="dark">
+            <nav class="navbar navbar-expand-md fixed-top bg-pink">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../Portada/index.html">J-POP</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav_bg-dark">
+                        <ul class="navbar-nav dropdown">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Introduccion/index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Música
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
+                                <a class="dropdown-item" href="#">Historia</a>
+                                <a class="dropdown-item" href="https://michilopotzli1.github.io/Proyecto/jpopmusica.html">Actualidad</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Videojuegos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
+                                <a class="dropdown-item" href="#">Actualidad</a>
+                                <a class="dropdown-item" href="#">Consolas del Nipon</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Entretenimiento
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
+                                <a class="dropdown-item" href="#">Anime y Mangas</a>
+                                <a class="dropdown-item" href="../Entretenimiento/Cine/Peliculas.html">Peliculas y novelas</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Moda y maquillaje
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
+                                <a class="dropdown-item" href="../Moda/moda-japonesa.html">Historia</a>
+                                <a class="dropdown-item" href="../Moda/Estilos_actuales.html">Estilos actuales</a>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            </header>
+
+            <section class="wallpaper">
+                <h1 class="wallpaper-title">Actualidad de los videojuegos</h1>
+            </section>
+            
+            <script>
+                let lastScrollTop = 0;
+                window.addEventListener("scroll", function() {
+                    const title = document.querySelector(".wallpaper-title");
+                    let scrollTop = window.scrollY;
+            
+                    if (scrollTop > lastScrollTop) {
+                        // Oculta el título al hacer scroll hacia abajo
+                        title.style.opacity = "0";
+                        title.style.transform = "translateY(-20px)";
+                        title.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                    } else {
+                        // Muestra el título al hacer scroll hacia arriba
+                        title.style.opacity = "1";
+                        title.style.transform = "translateY(0)";
+                        title.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                    }
+            
+                    lastScrollTop = scrollTop;
+                });
+            </script>
+            
+
+<main class="container">
+    <section>
+        <h2>Las Consolas Más Icónicas de Japón</h2>
+        <section>
+            <h2>Las Consolas Más Icónicas de Japón</h2>
+            <p>Japón ha sido el epicentro de la industria de los videojuegos, con consolas que han marcado generaciones.</p>
+        
+            <ul>
+                <li><b>1. Nintendo Entertainment System (NES) - 1983:</b> Revolucionó la industria con títulos como <i>Super Mario Bros.</i></li>
+                <li><b>2. Sega Mega Drive (Genesis) - 1988:</b> Destacó con juegos como <i>Sonic the Hedgehog</i> y <i>Streets of Rage</i>.</li>
+                <li><b>3. Super Nintendo Entertainment System (SNES) - 1990:</b> Introdujo gráficos mejorados y clásicos como <i>The Legend of Zelda</i>.</li>
+                <li><b>4. Sony PlayStation - 1994:</b> Innovó con juegos en 3D como <i>Final Fantasy VII</i> y <i>Resident Evil</i>.</li>
+                <li><b>5. Sega Dreamcast - 1998:</b> Pionera en juego en línea con títulos como <i>Shenmue</i> y <i>Jet Set Radio</i>.</li>
+                <li><b>6. Nintendo Switch - 2017:</b> Su diseño híbrido revolucionó la experiencia portátil y de sobremesa.</li>
+            </ul>
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/NES-Console-Set.jpg" alt="Nintendo Entertainment System">
+                <figcaption>Nintendo Entertainment System (NES), una de las consolas más influyentes de la era clásica.</figcaption>
+            </figure>
+        </section>
+        
+    </section>
+
+    <section>
+        <h2>Era Clásica (1980-1990): El Nacimiento de las Consolas Domésticas</h2>
+        <p>Durante los años 80, Japón revolucionó la industria de los videojuegos con la llegada de las primeras consolas domésticas. Este período marcó el inicio de franquicias icónicas y el establecimiento de estándares tecnológicos que definirían el futuro del gaming.</p>
+    
+        <h3>Las Consolas Más Representativas</h3>
+        <ul>
+            <li><b>Nintendo Entertainment System (NES) - 1983:</b> Lanzada en Japón como **Famicom**, esta consola introdujo títulos legendarios como <i>Super Mario Bros.</i> y <i>The Legend of Zelda</i>.</li>
+            <li><b>Sega Master System - 1985:</b> Competencia directa de Nintendo, con juegos como <i>Alex Kidd in Miracle World</i> y <i>Phantasy Star</i>.</li>
+            <li><b>PC Engine (TurboGrafx-16) - 1987:</b> Desarrollada por NEC, destacó por sus gráficos avanzados y títulos como <i>Bonk's Adventure</i>.</li>
+        </ul>
+    
+        <h3>Innovaciones Tecnológicas</h3>
+        <ul>
+            <li><b>Gráficos en 8 bits:</b> Permitieron mayor detalle visual en comparación con los juegos arcade.</li>
+            <li><b>Cartuchos intercambiables:</b> Facilitó la expansión de bibliotecas de juegos sin necesidad de comprar nuevas consolas.</li>
+            <li><b>Mandos ergonómicos:</b> Mejoraron la experiencia de juego con diseños más cómodos.</li>
+        </ul>
+    
+        <h3>Impacto Cultural</h3>
+        <ul>
+            <li><b>Expansión global:</b> Japón dominó el mercado, pero las consolas llegaron a hogares de todo el mundo.</li>
+            <li><b>Nacimiento de franquicias:</b> <i>Super Mario, Final Fantasy y Metroid</i> surgieron en esta época.</li>
+            <li><b>Competencia entre empresas:</b> Nintendo y SEGA protagonizaron una de las rivalidades más famosas de la industria.</li>
+        </ul>
+    
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/NES-Console-Set.jpg" alt="Nintendo Entertainment System">
+            <figcaption>Nintendo Entertainment System (NES), una de las consolas más influyentes de la era clásica.</figcaption>
+        </figure>
+    </section>
+    
+
+    <section>
+        <h2>Era de los 16 y 32 Bits (1990-2000): La Revolución de los Gráficos y la Jugabilidad</h2>
+        <p>Durante los años 90, la industria de los videojuegos experimentó un salto tecnológico con la llegada de las consolas de 16 y 32 bits. Este período marcó la transición de los gráficos en 2D a los entornos tridimensionales y la evolución de los juegos de rol y acción.</p>
+    
+        <h3>Las Consolas Más Representativas</h3>
+        <ul>
+            <li><b>Super Nintendo Entertainment System (SNES) - 1990:</b> Introdujo gráficos mejorados y títulos como <i>The Legend of Zelda: A Link to the Past</i>.</li>
+            <li><b>Sega Mega Drive (Genesis) - 1988:</b> Popularizó franquicias como <i>Sonic the Hedgehog</i> y <i>Streets of Rage</i>.</li>
+            <li><b>Sony PlayStation - 1994:</b> Revolucionó la industria con juegos en 3D como <i>Final Fantasy VII</i> y <i>Metal Gear Solid</i>.</li>
+            <li><b>Nintendo 64 - 1996:</b> Introdujo mundos abiertos con títulos como <i>Super Mario 64</i> y <i>The Legend of Zelda: Ocarina of Time</i>.</li>
+        </ul>
+    
+        <h3>Innovaciones Tecnológicas</h3>
+        <ul>
+            <li><b>Gráficos en 16 y 32 bits:</b> Permitieron mayor detalle visual y efectos avanzados.</li>
+            <li><b>CD-ROM como formato de juego:</b> Introdujo cinemáticas y bandas sonoras de alta calidad.</li>
+            <li><b>Primeros juegos en 3D:</b> Cambiaron la forma de jugar con entornos tridimensionales.</li>
+        </ul>
+    
+        <h3>Impacto Cultural</h3>
+        <ul>
+            <li><b>Expansión global:</b> Las consolas japonesas dominaron el mercado internacional.</li>
+            <li><b>Nacimiento de franquicias:</b> <i>Resident Evil, Tekken y Gran Turismo</i> surgieron en esta época.</li>
+            <li><b>Competencia entre empresas:</b> Sony, Nintendo y SEGA protagonizaron una intensa rivalidad.</li>
+        </ul>
+    
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Super_Nintendo_Entertainment_System.png" alt="Super Nintendo Entertainment System">
+            <figcaption>Super Nintendo Entertainment System (SNES), una de las consolas más influyentes de la era de los 16 bits.</figcaption>
+        </figure>
+    </section>
+    
+
+    <section>
+        <h2>Consolas Modernas (2000-presente): Evolución y Tecnología Avanzada</h2>
+        <p>Desde el año 2000, las consolas han evolucionado con gráficos de alta definición, conectividad en línea y experiencias inmersivas. Japón sigue siendo un líder en la industria con innovaciones que han redefinido el gaming.</p>
+    
+        <h3>Las Consolas Más Representativas</h3>
+        <ul>
+            <li><b>PlayStation 2 - 2000:</b> La consola más vendida de la historia, con títulos como <i>Grand Theft Auto: San Andreas</i> y <i>Final Fantasy X</i>.</li>
+            <li><b>Nintendo Wii - 2006:</b> Introdujo controles de movimiento revolucionarios con juegos como <i>Wii Sports</i>.</li>
+            <li><b>PlayStation 4 - 2013:</b> Potenció el gaming en línea y la realidad virtual con títulos como <i>Bloodborne</i> y <i>God of War</i>.</li>
+            <li><b>Nintendo Switch - 2017:</b> Innovó con su diseño híbrido portátil y de sobremesa, con juegos como <i>The Legend of Zelda: Breath of the Wild</i>.</li>
+            <li><b>PlayStation 5 - 2020:</b> Introdujo gráficos en 4K y tiempos de carga ultrarrápidos.</li>
+        </ul>
+    
+        <h3>Innovaciones Tecnológicas</h3>
+        <ul>
+            <li><b>Gráficos en alta definición:</b> Desde los 1080p hasta el 4K y 8K.</li>
+            <li><b>Realidad virtual:</b> PlayStation VR y otras tecnologías han cambiado la inmersión en los videojuegos.</li>
+            <li><b>Conectividad en línea:</b> Juegos multijugador y servicios de streaming como PlayStation Now.</li>
+        </ul>
+    
+        <h3>Impacto Cultural</h3>
+        <ul>
+            <li><b>Expansión del gaming:</b> Más accesible con juegos en la nube y suscripciones.</li>
+            <li><b>Esports y streaming:</b> Plataformas como Twitch han impulsado la comunidad gamer.</li>
+            <li><b>Innovación japonesa:</b> Nintendo y Sony siguen liderando con nuevas tecnologías.</li>
+        </ul>
+    
+        <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Nintendo_Switch_Console.png" alt="Nintendo Switch">
+            <figcaption>Nintendo Switch, una de las consolas más innovadoras de la era moderna.</figcaption>
+        </figure>
+    </section>
+    
+</main>
+
+<footer>
+    <p>© 2025 Consolas Japonesas | Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
