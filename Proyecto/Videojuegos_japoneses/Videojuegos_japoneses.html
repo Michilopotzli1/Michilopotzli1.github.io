@@ -56,6 +56,7 @@
         .hidden {
             transform: translateX(-100px);
             opacity: 0;
+        }
         .bd-mode-toggle {
             z-index: 1500;
         }
@@ -68,49 +69,48 @@
             color: var(--text-white);
         }
 
-        :root {
-            --soft-pink:rgb(193, 231, 255);
-            --pale-pink: #e4fff7;
-            --text-white: #ffffff;
-            --text-gray: #ced4da;
-            --dark: #343a40
-        }
+:root {
+    --soft-pink: rgb(193, 231, 255);
+    --pale-pink: #e4fff7;
+    --text-white: #ffffff;
+    --text-gray: #ced4da;
+    --dark: #343a40;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: var(--dark);
-            margin: 0;
-            color: var(--text-gray);
-        }
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--dark); /* Corregí la variable */
+    margin: 0;
+    color: var(--text-gray);
+}
 
-        h1 {
-            margin: 0;
-            color:rgb(84, 181, 245);;
-            font-size: 2.5em;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
-        }
+h1 {
+    margin: 0;
+    color: rgb(84, 181, 245);
+    font-size: 2.5em; /* Eliminé el doble punto y coma */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
 
         h2 {
             color:rgb(102, 227, 255);
             font-size: 2em;
         }
 
-        h3 {
-            color:rgb(153, 233, 255);
-            font-size: 1.5em;
-            margin-top: 20px;
-            border-left: 4px solidrgb(127, 192, 232);
-            padding-left: 10px;
-        }
-
+h3 {
+    color: rgb(153, 233, 255);
+    font-size: 1.5em;
+    margin-top: 20px;
+    border-left: 4px solid rgb(127, 192, 232); /* Corregí la falta de espacio */
+    padding-left: 10px;
+}
         
-        main {
-            margin-top: 70px;
-            background-color: var(-dark);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
+main {
+    margin-top: 70px;
+    background-color: var(--dark); /* Corregí la variable */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
 
 .section {
     background-color: #1a1a1a;
