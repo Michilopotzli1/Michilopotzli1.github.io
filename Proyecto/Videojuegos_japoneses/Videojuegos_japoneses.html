@@ -11,7 +11,7 @@
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .bg-pink {
-    background-color: #333; /* Fondo oscuro */
+    background-color: #333; 
 }
 
         li:hover {color:rgb(136, 190, 201); }
@@ -43,17 +43,17 @@
                
 .img-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que las imágenes se ajusten en pantallas pequeñas */
+    flex-wrap: wrap; 
     justify-content: center;
     align-items: center;
 }
 
 .image {
     width: 150px; 
-    height: 150px; 
-    object-fit: cover;
-    border-radius: 10px;
-    margin: 8px; 
+    height: 150px;
+    object-fit: cover; 
+    border-radius: 10px; 
+    margin: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
@@ -123,20 +123,20 @@ main {
 
 section {
     margin-bottom: 40px;
-    background-color: #1a1a1a; /* Un tono más oscuro */
-    color: #e0e0e0; /* Texto más claro para mejor legibilidad */
+    background-color: #1a1a1a; 
+    color: #e0e0e0; 
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Mayor profundidad */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
 }
 
 h1, h2, h3 {
-    color: #b0c4de; /* Azul grisáceo para que destaque */
+    color: 
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 a {
-    color: #76c7c0; /* Un tono más vibrante para los enlaces */
+    color: #76c7c0; 
 }
 
 
@@ -239,7 +239,6 @@ a {
 }
 
 
-/* Filtro oscuro para mejorar la legibilidad del título */
 .wallpaper::before {
     content: "";
     position: absolute;
@@ -247,7 +246,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Oscurece un poco la imagen */
+    background: rgba(0, 0, 0, 0.5); 
     z-index: 1;
 }
 
@@ -265,7 +264,6 @@ a {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Animación de entrada */
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(-20px); }
     100% { opacity: 1; transform: translateY(0); }
