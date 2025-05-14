@@ -529,19 +529,38 @@ a {
                         </tbody>
                     </table>
                 </section>
-        <script>
-window.addEventListener("scroll", function() {
-    const images = document.querySelectorAll("img");
-    images.forEach(img => {
-        const rect = img.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-            img.style.transform = "translateX(-100px)";
-            img.style.opacity = "0";
-            img.style.transition = "transform 1s ease-in-out, opacity 1s ease-in-out";
-        }
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const images = document.querySelectorAll(".image");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = "fadeIn 0.6s ease-in-out";
+                } else {
+                    entry.target.style.animation = "none"; // Reinicia la animación al salir de la vista
+                }
+            });
+        }, { threshold: 0.2 });
+
+        images.forEach(image => observer.observe(image));
     });
-});
-    </script>
+
+    /* Definir la animación */
+    const style = document.createElement("style");
+    style.innerHTML = `
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .image {
+            opacity: 0;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+    `;
+    document.head.appendChild(style);
+</script>
+
        
         <!--El pie de pagina, aqui va la informacion de la pagina, por ahora no hay cambios dejenlo asi-->
         <footer class="bg-dark text-white text-center py-3">
