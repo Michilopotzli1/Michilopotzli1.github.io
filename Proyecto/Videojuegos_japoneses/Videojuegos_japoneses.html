@@ -48,7 +48,7 @@
     align-items: center;
 }
 
-.image {
+image {
     width: 100px; /* Tamaño más pequeño */
     height: 100px; /* Mantiene la forma cuadrada */
     object-fit: cover; /* Recorta la imagen para que encaje sin distorsión */
@@ -142,11 +142,15 @@ a {
 
 
         img {
-            width: 100%;
             border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             animation: scaleUp 0.8s ease-in-out;
-        }
+             width: 100%; /* Tamaño más pequeño */
+            height: 100px; /* Mantiene la forma cuadrada */
+            object-fit: cover; /* Recorta la imagen para que encaje sin distorsión */
+            margin: 5px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            }
 
         .table tbody tr {
         transition: background-color 0.3s ease-in-out;
