@@ -48,7 +48,7 @@
     align-items: center;
 }
 
-image {
+img {
     width: 100px; /* Tamaño más pequeño */
     height: 100px; /* Mantiene la forma cuadrada */
     object-fit: cover; /* Recorta la imagen para que encaje sin distorsión */
@@ -66,14 +66,15 @@ image {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    visibility: hidden; /* Oculta el elemento sin afectar el diseño */
+    visibility: hidden; /* Oculta sin eliminar el espacio */
 }
 
 .visible {
     opacity: 1;
     transform: translateY(0);
-    visibility: visible; /* Lo hace reaparecer suavemente */
+    visibility: visible; /* Hace que aparezca correctamente */
 }
+
 
         .bd-mode-toggle {
             z-index: 1500;
@@ -161,12 +162,15 @@ a {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    visibility: hidden; /* Oculta sin eliminar el espacio */
 }
 
 .visible {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible; /* Hace que aparezca correctamente */
 }
+
 
 
 .tabla-videojuegos tbody tr {
@@ -583,20 +587,23 @@ a {
                 </section>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const images = document.querySelectorAll(".image.hidden"); // Aseguramos que busca imágenes con la clase "hidden"
+    const images = document.querySelectorAll(".image.hidden"); 
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add("visible"); // Agrega la clase visible
+                entry.target.classList.add("visible");
+                entry.target.classList.remove("hidden");
             } else {
-                entry.target.classList.remove("visible"); // La elimina si sale de la vista
+                entry.target.classList.add("hidden");
+                entry.target.classList.remove("visible");
             }
         });
     }, { threshold: 0.3 });
 
     images.forEach(image => observer.observe(image));
 });
+
 
 // Mantener la animación CSS en el documento
 const style = document.createElement("style");
