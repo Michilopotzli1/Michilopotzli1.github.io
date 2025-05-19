@@ -142,15 +142,23 @@ a {
 
 
         img {
-            border-radius: 8px;
-            animation: scaleUp 0.8s ease-in-out;
-             width: 100%; /* Tamaño más pequeño */
-            height: 100px; /* Mantiene la forma cuadrada */
-            object-fit: cover; /* Recorta la imagen para que encaje sin distorsión */
-            margin: 5px;
-            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-            }
+    width: 100%; /* Ajusta el tamaño al contenedor */
+    max-width: 600px; /* Tamaño máximo */
+    height: auto; /* Mantiene la proporción */
+    display: block;
+    margin: 20px auto; /* Centra las imágenes */
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
         .table tbody tr {
         transition: background-color 0.3s ease-in-out;
@@ -535,34 +543,36 @@ a {
                 </section>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const images = document.querySelectorAll(".image");
+    const images = document.querySelectorAll(".image");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = "fadeIn 0.6s ease-in-out";
+                entry.target.style.opacity = "1"; // Asegura que la imagen sea visible
+            } else {
+                entry.target.style.animation = "none";
+                entry.target.style.opacity = "0"; // Oculta la imagen al salir de la vista
+            }
+        });
+    }, { threshold: 0.2 });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = "fadeIn 0.6s ease-in-out";
-                } else {
-                    entry.target.style.animation = "none"; // Reinicia la animación al salir de la vista
-                }
-            });
-        }, { threshold: 0.2 });
+    images.forEach(image => observer.observe(image));
+});
 
-        images.forEach(image => observer.observe(image));
-    });
+// Mantener la animación CSS en el documento
+const style = document.createElement("style");
+style.innerHTML = `
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: scale(0.9); }
+        100% { opacity: 1; transform: scale(1); }
+    }
+    .image {
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    }
+`;
+document.head.appendChild(style);
 
-    /* Definir la animación */
-    const style = document.createElement("style");
-    style.innerHTML = `
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: scale(0.9); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-        .image {
-            opacity: 0;
-            animation: fadeIn 0.6s ease-in-out;
-        }
-    `;
-    document.head.appendChild(style);
 </script>
 
        
