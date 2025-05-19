@@ -10,9 +10,29 @@ body {
     background: linear-gradient(45deg, #ffe4e1, #f8edeb, #ffdab9); /* Tonos pastel suaves */
     color: #5a2d2d; /* Texto en tono vino para contraste */
     font-family: 'Poppins', sans-serif; /* Fuente moderna */
+     text-align: center;
 }
 
 /* 🔹 Bordes y sombras pastel */
+  .oculto {
+    display: none;
+}
+
+button {
+    background-color: #ffb6c1;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ff69b4;
+}
+
+button:hover {
+    background-color: #ff69b4;
+    box-shadow: 0 0 15px #ffb6c1;
+}
+
 section {
     background-color: rgba(255, 223, 230, 0.9);
     color: #5a2d2d;
@@ -22,6 +42,9 @@ section {
     padding: 30px;
     margin-bottom: 60px;
     transition: transform 0.3s ease-in-out;
+     margin: 0 auto;
+    width: 80%;
+    max-width: 800px;
 }
 
 section:hover {
@@ -135,6 +158,13 @@ h1, h2, h3 {
 <a></a>
 </ol>
 </details>
+ <script>
+function mostrarSeccion(id) {
+    const secciones = document.querySelectorAll("section");
+    secciones.forEach(sec => sec.classList.add("oculto"));
+    document.getElementById(id).classList.remove("oculto");
+}
+
 </body>
 </html>
  
