@@ -13,6 +13,7 @@
         .bg-pink {
     background-color: #333; 
 }
+        
 
         li:hover {color:rgb(136, 190, 201); }
         button:hover {background-color:rgb(153, 197, 255);}
@@ -40,7 +41,32 @@
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
         }
-               
+               @keyframes moveStars {
+    0% { background-position: 0 0; }
+    100% { background-position: -800px 800px; }
+}
+.hud-box {
+    background: linear-gradient(90deg, #ff004c, #00fff2);
+    border: 2px solid #ff004c;
+    padding: 20px;
+    box-shadow: 0 0 15px #ff004c;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hud-box:hover {
+    transform: rotateY(180deg);
+}
+
+body {
+    background: url('https://www.transparenttextures.com/patterns/escheresque.png'), linear-gradient(45deg, #0a0a0a, #220044, #440088);
+    background-size: 400% 400%;
+    animation: moveStars 15s infinite linear;
+}
+
 /* 🔹 Estilo General */
 body {
     font-family: 'Press Start 2P', sans-serif; /* Tipografía retro gamer */
@@ -52,10 +78,11 @@ body {
 
 /* 🔹 Secciones con borde neón */
 section {
+    margin-bottom: 60px; /* Mayor separación */
+    padding: 30px; /* Espaciado interno más cómodo */
     background-color: rgba(20, 20, 20, 0.9);
-    color: #00fff2; /* Azul neón */
-    border: 3px solid #ff004c; /* Bordes rojos neón */
-    padding: 20px;
+    color: #00fff2;
+    border: 3px solid #ff004c;
     box-shadow: 0 0 20px #ff004c;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
@@ -64,6 +91,7 @@ section {
 section:hover {
     transform: scale(1.05);
 }
+
 
 /* 🔹 Animación de botones */
 button {
@@ -143,6 +171,124 @@ h1, h2, h3 {
     text-shadow: 0 0 10px #ff004c, 0 0 20px #ff004c;
     text-align: center;
 }
+        /* 🎮 Fondo animado estilo gaming */
+@keyframes backgroundMove {
+    0% { background-position: 0 0; }
+    100% { background-position: -300px 300px; }
+}
+body {
+    cursor: url('https://cur.cursors-4u.net/games/gam-3/gam205.cur'), auto;
+}
+
+body {
+    background: linear-gradient(45deg, #0a0a0a, #220044, #440088);
+    background-size: 400% 400%;
+    animation: backgroundMove 8s infinite alternate;
+}
+
+/* 🎮 Efecto en los títulos */
+h1, h2, h3 {
+    color: #00fff2;
+    text-shadow: 0 0 10px #00fff2, 0 0 20px #ff004c;
+    text-align: center;
+    animation: flicker 1s infinite alternate;
+}
+.hud-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 3px solid #ff004c;
+    padding: 20px;
+    box-shadow: 0 0 15px #ff004c;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hud-box:hover {
+    transform: scale(1.05);
+}
+.tabla-videojuegos {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    box-shadow: 0 0 20px #ff004c, 0 0 30px #00fff2;
+}
+
+.tabla-videojuegos th, .tabla-videojuegos td {
+    border: 2px solid #ff004c;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.tabla-videojuegos th {
+    background-color: #ff004c;
+    color: white;
+}
+
+.tabla-videojuegos tr:nth-child(even) {
+    background-color: rgba(255, 0, 76, 0.2);
+}
+
+.tabla-videojuegos tr:hover {
+    background-color: #00fff2;
+    transition: 0.3s;
+}
+        @keyframes neonBorder {
+    0% { box-shadow: 0 0 10px #ff004c; }
+    50% { box-shadow: 0 0 20px #00fff2; }
+    100% { box-shadow: 0 0 10px #ff004c; }
+}
+.holo-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    background: rgba(0, 255, 242, 0.2);
+    border: 2px solid #00fff2;
+    box-shadow: 0 0 15px #00fff2;
+    font-size: 1.2em;
+    color: white;
+    animation: fadeInOut 3s infinite alternate;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0.2; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.hud-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 3px solid #ff004c;
+    padding: 20px;
+    box-shadow: 0 0 15px #ff004c;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    animation: neonBorder 2s infinite alternate;
+}
+
+
+@keyframes loadingText {
+    0% { opacity: 0; transform: translateY(10px); }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2, h3 {
+    animation: loadingText 1s ease-out;
+}
+
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
 
         @keyframes fadeIn {
             from {
@@ -188,7 +334,9 @@ h1, h2, h3 {
     color: var(--text-white);
     padding-top: 70px;
     position: relative;
+    transition: background-position 0.3s ease-in-out;
 }
+
 
 
 .wallpaper::before {
@@ -305,12 +453,12 @@ h1, h2, h3 {
     
 
             <main class="container">
-                <section>
+                <div class="hud-box">
                     <h2>Historia y Evolución de los Videojuegos Japoneses</h2>
                     <p>Japón ha sido un epicentro de innovación en la industria del videojuego, desde sus inicios en los años 70 con títulos arcade hasta los mundos abiertos y las narrativas cinematográficas de hoy. Algunas etapas clave en su evolución incluyen:</p>
-                </section>
+                </div>
         
-                <section>
+                <section class="hidden">
                     <h3>Orígenes (1970-1980): La Era de los Arcades</h3>
                     <p>La era de los arcades en Japón durante los años 70 y principios de los 80 fue un período de gran innovación y crecimiento en la industria del videojuego. Aquí tienes más información sobre este fascinante momento:</p>
                     <h4>El Auge de los Arcades en Japón</h4>
@@ -334,7 +482,7 @@ h1, h2, h3 {
             </figure>
                 </section>
         
-                <section>
+                <section class="hidden">
                     <h3>Expansión (1980-1990): Consolas Domésticas</h3>
                     <p>La década de 1980 marcó un cambio fundamental en la industria del videojuego con la transición de los arcades a las consolas domésticas. Japón lideró esta expansión con empresas como Nintendo y SEGA, que revolucionaron la forma en que las personas jugaban en casa.</p>
                     <h4>El Auge de las Consolas Domésticas</h4>
@@ -362,7 +510,7 @@ h1, h2, h3 {
             </figure>
                 </section>
         
-                <section>
+                <section class="hidden">
                     <h3>Avances Tecnológicos (1990-2000): Juegos en 3D y RPGs Cinematográficos</h3>
                     <p>La década de 1990 fue un punto de inflexión en la industria del videojuego, con avances tecnológicos que permitieron la transición de los gráficos en 2D a los entornos tridimensionales y la evolución de los RPGs cinematográficos.</p>
                     <h4>El Salto a los Juegos en 3D</h4>
@@ -391,7 +539,7 @@ h1, h2, h3 {
             </figure>
                 </section>
         
-                <section>
+                <section class="hidden">
                     <h3>Actualidad (2000-presente): Mundo Abierto, Inteligencia Artificial y Realidad Virtual</h3>
                     <p>Desde el año 2000 hasta la actualidad, la industria del videojuego ha experimentado avances tecnológicos impresionantes, con el desarrollo de mundos abiertos, inteligencia artificial avanzada y realidad virtual.</p>
                     <h4>Mundos Abiertos</h4>
@@ -421,7 +569,7 @@ h1, h2, h3 {
             </figure>
                 </section>
                 
-                <section>
+                <section class="hidden">
                     <h2>Impacto Global</h2>
                     <ul>
                         <li><b>Adaptaciones cinematográficas y televisivas:</b> *Pokémon*, *Sonic*, *Resident Evil*.</li>
@@ -434,7 +582,7 @@ h1, h2, h3 {
             </figure>
                 </section>
         
-                <section>
+                <section class="hidden">
                     <h2>Tendencias Futuras</h2>
                     <ul>
                         <li><b>Accesibilidad:</b> Juegos más inclusivos como *The Last of Us Part II*.</li>
@@ -446,8 +594,12 @@ h1, h2, h3 {
                 <figcaption>the last of us II</figcaption>
             </figure>
                 </section>
-        
-                <section>
+<div class="hud-box">
+    <h3>Historia de los JRPG</h3>
+    <p>Los JRPG han evolucionado con narrativas complejas y batallas estratégicas.</p>
+</div>
+
+                <section class="hidden">
                     <h2>Comparación de Géneros Más Jugados</h2>
                     <table class="tabla-videojuegos">
                         <thead>
@@ -514,6 +666,20 @@ style.innerHTML = `
     }
 `;
 document.head.appendChild(style);
+document.addEventListener("mousemove", (event) => {
+    const elements = document.querySelectorAll("h1, h2, h3");
+    elements.forEach(element => {
+        const x = (event.clientX / window.innerWidth - 0.5) * 15;
+        const y = (event.clientY / window.innerHeight - 0.5) * 10;
+        element.style.transform = `translate(${x}px, ${y}px)`;
+    });
+});
+    document.addEventListener("mousemove", (event) => {
+    const x = (event.clientX / window.innerWidth) * 10;
+    const y = (event.clientY / window.innerHeight) * 10;
+    document.querySelector(".wallpaper").style.backgroundPosition = `${x}px ${y}px`;
+});
+
 
 </script>
 
