@@ -62,9 +62,10 @@
 }
 
 body {
-    background: url('https://www.transparenttextures.com/patterns/escheresque.png'), linear-gradient(45deg, #0a0a0a, #220044, #440088);
+    background: linear-gradient(45deg, #050505, #002244, #440022); /* Fondo negro con azul y rojo neón */
     background-size: 400% 400%;
-    animation: moveStars 15s infinite linear;
+    animation: backgroundMove 8s infinite alternate;
+    color: #ffffff; /* Texto blanco para contraste */
 }
 
 /* 🔹 Estilo General */
@@ -78,12 +79,12 @@ body {
 
 /* 🔹 Secciones con borde neón */
 section {
-    margin-bottom: 60px; /* Mayor separación */
-    padding: 30px; /* Espaciado interno más cómodo */
-    background-color: rgba(20, 20, 20, 0.9);
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: rgba(10, 10, 10, 0.9);
     color: #00fff2;
     border: 3px solid #ff004c;
-    box-shadow: 0 0 20px #ff004c;
+    box-shadow: 0 0 20px #ff004c, 0 0 30px #00fff2;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
@@ -95,20 +96,22 @@ section:hover {
 
 /* 🔹 Animación de botones */
 button {
-    background-color: #ff004c; /* Rojo neón */
+    background: linear-gradient(90deg, #ff004c, #00fff2);
     color: white;
     border: none;
-    padding: 12px 25px;
-    font-size: 1em;
+    padding: 12px 30px;
+    font-size: 1.2em;
     cursor: pointer;
+    box-shadow: 0 0 15px #ff004c, 0 0 25px #00fff2;
     transition: 0.3s ease-in-out;
-    box-shadow: 0 0 10px #ff004c;
 }
 
 button:hover {
-    background-color: #00fff2;
-    box-shadow: 0 0 20px #00fff2;
+    background: linear-gradient(90deg, #00fff2, #ff004c);
+    box-shadow: 0 0 30px #00fff2, 0 0 40px #ff004c;
+    transform: scale(1.1);
 }
+
 
 /* 🔹 Estilo de imágenes */
 img {
@@ -330,7 +333,7 @@ h1, h2, h3 {
 
 
 .wallpaper {
-    background-image: url('https://wallpaperaccess.com/full/18680737.jpg');
+    background-image: url('https://bing.com/th/id/BCO.9d6e96ba-362c-4b76-aa97-9ae49a8bc14e.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -338,12 +341,11 @@ h1, h2, h3 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--text-white);
+    color: #ffffff;
     padding-top: 70px;
     position: relative;
     transition: background-position 0.3s ease-in-out;
 }
-
 
 
 .wallpaper::before {
@@ -512,7 +514,7 @@ h1, h2, h3 {
                         <li><b>Competencia entre empresas:</b> Nintendo y SEGA protagonizaron una de las rivalidades más famosas de la industria.</li>
                     </ul>
                 <figure>
-                <img src="https://fyre.cdn.sewest.net/ff-xvi/637cf9194dc880a0db62c591/hero_bg-tT8XHFrO5.jpg?quality=85&width=3840" alt="Final fantasy"class="image hidden">
+                <img src="https://fyre.cdn.sewest.net/ff-xvi/637cf9194dc880a0db62c591/hero_bg-tT8XHFrO5.jpg?quality=85&width=3840" alt="Final fantasy"class="hidden">
                 <figcaption>Final Fantasy XVI.</figcaption>
             </figure>
                 </section>
@@ -541,7 +543,7 @@ h1, h2, h3 {
                         <li><b>Mayor realismo:</b> La mejora en gráficos y sonido permitió experiencias más inmersivas.</li>
                     </ul>
                     <figure>
-                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202402/0221/57e41521e1e91f38cf6ce3ce64cc2116522c302a30c1ec6c.png" alt="Tomb Raider"class="image hidden">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202402/0221/57e41521e1e91f38cf6ce3ce64cc2116522c302a30c1ec6c.png" alt="Tomb Raider"class="hidden">
                 <figcaption>Tomb Raider</figcaption>
             </figure>
                 </section>
@@ -571,7 +573,7 @@ h1, h2, h3 {
                         <li><b>Skyrim VR:</b> Adaptación del clásico RPG con total inmersión en su mundo abierto.</li>
                     </ul>
                     <figure>
-                <img src="https://media.vandal.net/m/34903/grand-theft-auto-iii-2015127132946_11.jpg" alt="Grand Theft auto"class="image hidden">
+                <img src="https://media.vandal.net/m/34903/grand-theft-auto-iii-2015127132946_11.jpg" alt="Grand Theft auto"class="hidden">
                 <figcaption>Grand Theft Auto III.</figcaption>
             </figure>
                 </section>
@@ -584,7 +586,7 @@ h1, h2, h3 {
                         <li><b>Estilo visual japonés:</b> Se ha convertido en un estándar en la industria.</li>
                     </ul>
             <figure>
-                <img src="https://m.media-amazon.com/images/M/MV5BMzE0ZDU1MzQtNTNlYS00YjNlLWE2ODktZmFmNDYzMTBlZTBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Minimalismo japonés en la moda"class="image hidden>
+                <img src="https://m.media-amazon.com/images/M/MV5BMzE0ZDU1MzQtNTNlYS00YjNlLWE2ODktZmFmNDYzMTBlZTBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Minimalismo japonés en la moda"class="hidden>
                 <figcaption>pokemon serie actual </figcaption>
             </figure>
                 </section>
