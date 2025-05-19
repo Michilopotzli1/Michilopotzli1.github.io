@@ -62,10 +62,19 @@ image {
     transform: scale(1.1);
 }
     
-        .hidden {
-            transform: translateX(-100px);
-            opacity: 0;
-        }
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    visibility: hidden; /* Oculta el elemento sin afectar el diseño */
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible; /* Lo hace reaparecer suavemente */
+}
+
         .bd-mode-toggle {
             z-index: 1500;
         }
@@ -448,7 +457,7 @@ a {
                         <li><b>Competencia entre empresas:</b> Nintendo y SEGA protagonizaron una de las rivalidades más famosas de la industria.</li>
                     </ul>
                 <figure>
-                <img src="https://fyre.cdn.sewest.net/ff-xvi/637cf9194dc880a0db62c591/hero_bg-tT8XHFrO5.jpg?quality=85&width=3840" alt="Final fantasy"class="hidden">
+                <img src="https://fyre.cdn.sewest.net/ff-xvi/637cf9194dc880a0db62c591/hero_bg-tT8XHFrO5.jpg?quality=85&width=3840" alt="Final fantasy"class="image hidden">
                 <figcaption>Final Fantasy XVI.</figcaption>
             </figure>
                 </section>
@@ -477,7 +486,7 @@ a {
                         <li><b>Mayor realismo:</b> La mejora en gráficos y sonido permitió experiencias más inmersivas.</li>
                     </ul>
                     <figure>
-                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202402/0221/57e41521e1e91f38cf6ce3ce64cc2116522c302a30c1ec6c.png" alt="Tomb Raider"class="hidden">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202402/0221/57e41521e1e91f38cf6ce3ce64cc2116522c302a30c1ec6c.png" alt="Tomb Raider"class="image hidden">
                 <figcaption>Tomb Raider</figcaption>
             </figure>
                 </section>
@@ -507,7 +516,7 @@ a {
                         <li><b>Skyrim VR:</b> Adaptación del clásico RPG con total inmersión en su mundo abierto.</li>
                     </ul>
                     <figure>
-                <img src="https://media.vandal.net/m/34903/grand-theft-auto-iii-2015127132946_11.jpg" alt="Grand Theft auto"class="hidden">
+                <img src="https://media.vandal.net/m/34903/grand-theft-auto-iii-2015127132946_11.jpg" alt="Grand Theft auto"class="image hidden">
                 <figcaption>Grand Theft Auto III.</figcaption>
             </figure>
                 </section>
@@ -520,7 +529,7 @@ a {
                         <li><b>Estilo visual japonés:</b> Se ha convertido en un estándar en la industria.</li>
                     </ul>
             <figure>
-                <img src="https://m.media-amazon.com/images/M/MV5BMzE0ZDU1MzQtNTNlYS00YjNlLWE2ODktZmFmNDYzMTBlZTBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Minimalismo japonés en la moda">
+                <img src="https://m.media-amazon.com/images/M/MV5BMzE0ZDU1MzQtNTNlYS00YjNlLWE2ODktZmFmNDYzMTBlZTBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Minimalismo japonés en la moda"class="image hidden>
                 <figcaption>pokemon serie actual </figcaption>
             </figure>
                 </section>
@@ -533,7 +542,7 @@ a {
                         <li><b>Inteligencia Artificial:</b> Creación de personajes con respuestas más naturales.</li>
                     </ul>
                     <figure>
-                <img src="https://i.blogs.es/ad1314/mhbyl4nzgrf6xcxdhsdfbhofwe/1366_2000.jpeg" alt="The Last of Us II"class="hidden">
+                <img src="https://i.blogs.es/ad1314/mhbyl4nzgrf6xcxdhsdfbhofwe/1366_2000.jpeg" alt="The Last of Us II"class="image hidden">
                 <figcaption>the last of us II</figcaption>
             </figure>
                 </section>
@@ -573,19 +582,18 @@ a {
                     </table>
                 </section>
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-    const images = document.querySelectorAll(".image");
+document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".image.hidden"); // Aseguramos que busca imágenes con la clase "hidden"
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animation = "fadeIn 0.6s ease-in-out";
-                entry.target.style.opacity = "1"; // Asegura que la imagen sea visible
+                entry.target.classList.add("visible"); // Agrega la clase visible
             } else {
-                entry.target.style.animation = "none";
-                entry.target.style.opacity = "0"; // Oculta la imagen al salir de la vista
+                entry.target.classList.remove("visible"); // La elimina si sale de la vista
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.3 });
 
     images.forEach(image => observer.observe(image));
 });
