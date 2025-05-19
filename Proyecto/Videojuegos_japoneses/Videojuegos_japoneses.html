@@ -41,6 +41,23 @@
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
         }
+
+
+        @keyframes glitch {
+    0% { transform: skew(0deg); }
+    25% { transform: skew(-5deg); }
+    50% { transform: skew(5deg); }
+    75% { transform: skew(-5deg); }
+    100% { transform: skew(0deg); }
+}
+
+.glitch-text {
+    font-size: 2em;
+    color: #00fff2;
+    text-shadow: 0 0 10px #ff004c, 0 0 20px #00fff2;
+    animation: glitch 0.2s infinite alternate;
+}
+
                @keyframes moveStars {
     0% { background-position: 0 0; }
     100% { background-position: -800px 800px; }
@@ -62,36 +79,50 @@
 }
 
 body {
-    background: linear-gradient(45deg, #050505, #002244, #440022); /* Fondo negro con azul y rojo neón */
-    background-size: 400% 400%;
-    animation: backgroundMove 8s infinite alternate;
+    background: linear-gradient(45deg, #000000, #001122, #220000); /* Negro, azul oscuro y rojo oscuro */
+    background-size: cover;
+    animation: none; /* Elimina el movimiento morado */
     color: #ffffff; /* Texto blanco para contraste */
 }
 
 /* 🔹 Estilo General */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
-    font-family: 'Press Start 2P', sans-serif; /* Tipografía retro gamer */
-    background-color: #0a0a0a; /* Fondo oscuro tipo cyberpunk */
-    color: #fff; /* Texto blanco */
+    font-family: 'Press Start 2P', sans-serif; /* Fuente gamer */
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
     margin: 0;
     padding: 0;
 }
 
 /* 🔹 Secciones con borde neón */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 section {
-    margin-bottom: 60px;
-    padding: 30px;
-    background-color: rgba(10, 10, 10, 0.9);
+    font-family: 'Press Start 2P', sans-serif; /* Tipografía gamer */
+    background-color: rgba(0, 0, 0, 0.8);
     color: #00fff2;
     border: 3px solid #ff004c;
-    box-shadow: 0 0 20px #ff004c, 0 0 30px #00fff2;
-    border-radius: 10px;
+    box-shadow: 0 0 15px #ff004c, 0 0 25px #00fff2;
+    border-radius: 8px;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 60px;
+    animation: neonBorder 2s infinite alternate;
     transition: transform 0.3s ease-in-out;
 }
 
 section:hover {
     transform: scale(1.05);
 }
+
+@keyframes neonBorder {
+    0% { box-shadow: 0 0 10px #ff004c; }
+    50% { box-shadow: 0 0 20px #00fff2; }
+    100% { box-shadow: 0 0 10px #ff004c; }
+}
+
 
 
 /* 🔹 Animación de botones */
@@ -185,10 +216,39 @@ h1, h2, h3 {
 }
 
 body {
+    cursor: url('https://cur.cursors-4u.net/games/gam-3/gam205.cur'), auto;
     background: url('https://www.transparenttextures.com/patterns/escheresque.png'), linear-gradient(45deg, #0a0a0a, #220044, #440088);
     background-size: 400% 400%;
     animation: moveStars 15s infinite linear;
 }
+
+        @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+        @keyframes neonBorder {
+    0% { box-shadow: 0 0 10px #ff004c; }
+    50% { box-shadow: 0 0 20px #00fff2; }
+    100% { box-shadow: 0 0 10px #ff004c; }
+}
+
+.hud-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 3px solid #ff004c;
+    padding: 20px;
+    box-shadow: 0 0 15px #ff004c;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    animation: neonBorder 2s infinite alternate;
+}
+
 
 body {
     background: linear-gradient(45deg, #0a0a0a, #220044, #440088);
@@ -197,7 +257,13 @@ body {
 }
 
 /* 🎮 Efecto en los títulos */
+@font-face {
+    font-family: 'Arcade Classic';
+    src: url('https://www.1001freefonts.com/es/video-game-fonts.php');
+}
 h1, h2, h3 {
+    font-family: 'Arcade Classic', sans-serif;
+    text-shadow: 0 0 10px #00fff2, 0 0 20px #ff004c;
     color: #00fff2;
     text-shadow: 0 0 10px #00fff2, 0 0 20px #ff004c;
     text-align: center;
@@ -459,7 +525,8 @@ h1, h2, h3 {
                 });
             </script>
 
-    
+    <h1 class="glitch-text">¡Bienvenido al mundo gamer!</h1>
+
 
             <main class="container">
                 <div class="hud-box">
