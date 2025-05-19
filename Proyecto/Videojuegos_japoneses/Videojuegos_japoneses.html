@@ -41,212 +41,108 @@
             -webkit-overflow-scrolling: touch;
         }
                
-.img-container {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-    align-items: center;
+/* 🔹 Estilo General */
+body {
+    font-family: 'Press Start 2P', sans-serif; /* Tipografía retro gamer */
+    background-color: #0a0a0a; /* Fondo oscuro tipo cyberpunk */
+    color: #fff; /* Texto blanco */
+    margin: 0;
+    padding: 0;
 }
 
-img {
-    width: 100px; /* Tamaño más pequeño */
-    height: 100px; /* Mantiene la forma cuadrada */
-    object-fit: cover; /* Recorta la imagen para que encaje sin distorsión */
-    border-radius: 6px; /* Bordes ligeramente redondeados */
-    margin: 5px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+/* 🔹 Secciones con borde neón */
+section {
+    background-color: rgba(20, 20, 20, 0.9);
+    color: #00fff2; /* Azul neón */
+    border: 3px solid #ff004c; /* Bordes rojos neón */
+    padding: 20px;
+    box-shadow: 0 0 20px #ff004c;
+    border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
-.image:hover {
-    transform: scale(1.1);
-}
-    
-.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    visibility: hidden; /* Oculta sin eliminar el espacio */
+section:hover {
+    transform: scale(1.05);
 }
 
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible; /* Hace que aparezca correctamente */
+/* 🔹 Animación de botones */
+button {
+    background-color: #ff004c; /* Rojo neón */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px #ff004c;
 }
 
-
-        .bd-mode-toggle {
-            z-index: 1500;
-        }
-
-        .bd-mode-toggle .dropdown-menu .active .bi {
-            display: block !important;
-        }
-
-        .bold-span{
-            color: var(--text-white);
-        }
-
-:root {
-    --soft-pink: rgb(193, 231, 255);
-    --pale-pink: #e4fff7;
-    --text-white: #ffffff;
-    --text-gray: #ced4da;
-    --dark: #343a40;
+button:hover {
+    background-color: #00fff2;
+    box-shadow: 0 0 20px #00fff2;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: var(--dark); /* Corregí la variable */
-    margin: 0;
-    color: var(--text-gray);
-}
-
-h1 {
-    margin: 0;
-    color: rgb(84, 181, 245);
-    font-size: 2.5em; /* Eliminé el doble punto y coma */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-        h2 {
-            color:rgb(102, 227, 255);
-            font-size: 2em;
-        }
-
-h3 {
-    color: rgb(153, 233, 255);
-    font-size: 1.5em;
-    margin-top: 20px;
-    border-left: 4px solid rgb(127, 192, 232); /* Corregí la falta de espacio */
-    padding-left: 10px;
-}
-        
-main {
-    margin-top: 70px;
-    background-color: var(--dark); /* Corregí la variable */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 40px;
-    background-color: #1a1a1a; 
-    color: #e0e0e0; 
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
-}
-
-h1, h2, h3 {
-    color: 
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-a {
-    color: #76c7c0; 
-}
-
-
-
-        img {
-    width: 100%; /* Ajusta el tamaño al contenedor */
-    max-width: 600px; /* Tamaño máximo */
-    height: auto; /* Mantiene la proporción */
+/* 🔹 Estilo de imágenes */
+img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     display: block;
-    margin: 20px auto; /* Centra las imágenes */
-}
-.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    visibility: hidden; /* Oculta sin eliminar el espacio */
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #00fff2;
 }
 
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible; /* Hace que aparezca correctamente */
-}
-
-
-
-.tabla-videojuegos tbody tr {
-    transition: background-color 0.3s ease-in-out, transform 0.2s;
-}
-
-.tabla-videojuegos tbody tr:hover {
-    background-color: #a8d5ff; /* Color más suave */
-    transform: scale(1.02); /* Efecto ligero de crecimiento */
-}
-
-    
-    .tabla-videojuegos {
+/* 🔹 Tabla con diseño futurista */
+.tabla-videojuegos {
     width: 100%;
     border-collapse: collapse;
     margin: 20px auto;
     font-family: Arial, sans-serif;
     text-align: center;
+    box-shadow: 0 0 20px #ff004c;
 }
 
 .tabla-videojuegos th, .tabla-videojuegos td {
     border: 1px solid #ddd;
-    padding: 10px;
-}
-
-.tabla-videojuegos th {
-    background-color: #343a40;
-    color: white;
+    padding: 15px;
     font-weight: bold;
 }
 
+.tabla-videojuegos th {
+    background-color: #ff004c;
+    color: white;
+}
+
 .tabla-videojuegos tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: rgba(255, 0, 76, 0.2);
 }
 
 .tabla-videojuegos tr:hover {
-    background-color: #ddd;
+    background-color: #00fff2;
     transition: 0.3s;
 }
 
+/* 🔹 Animaciones de aparición */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    visibility: hidden;
+}
 
-        ul, ol {
-            margin-left: 20px;
-            padding-left: 10px;
-        }
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
 
-        footer {
-            background-color: var(--soft-pink);
-            color: var(--white);
-            padding: 20px 0;
-            text-align: center;
-            border-top: 4px solidrgb(153, 189, 223);
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        footer a {
-            text-decoration: none;
-            color: var(--white);
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            color:rgb(153, 210, 166);
-            text-decoration: underline;
-        }
-
-        button {
-            background-color:rgb(102, 201, 255);
-            color: var(--white);
-            border: none;
-            border-radius: 4px;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
+/* 🔹 Título con efecto neón */
+h1, h2, h3 {
+    color: #ff004c;
+    text-shadow: 0 0 10px #ff004c, 0 0 20px #ff004c;
+    text-align: center;
+}
 
         @keyframes fadeIn {
             from {
