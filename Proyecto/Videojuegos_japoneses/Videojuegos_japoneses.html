@@ -103,17 +103,27 @@ body {
 
 section {
     font-family: 'Press Start 2P', sans-serif; /* Tipografía gamer */
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
     color: #00fff2;
-    border: 3px solid #ff004c;
-    box-shadow: 0 0 15px #ff004c, 0 0 25px #00fff2;
-    border-radius: 8px;
+    border: 3px solid #00ffff; /* Azul neón */
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+    border-radius: 10px;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     margin-bottom: 60px;
     animation: neonBorder 2s infinite alternate;
     transition: transform 0.3s ease-in-out;
 }
+section:nth-child(odd) {
+  border-color: #00ffff;
+  box-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff;
+}
+
+section:nth-child(even) {
+  border-color: #0099ff;
+  box-shadow: 0 0 15px #0099ff, 0 0 25px #0099ff;
+}
+
 
 section:hover {
     transform: scale(1.05);
