@@ -67,6 +67,32 @@
           --text-gray: #ced4da;
          --dark: #343a40;
         }
+.tabla-gamer {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #00ffea;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+}
+
+.tabla-gamer th, .tabla-gamer td {
+    border: 2px solid #00ffea;
+    padding: 10px;
+}
+
+.tabla-gamer th {
+    background-color: #008f63;
+    color: black;
+}
+
+.tabla-gamer tr:hover {
+    background-color: #00ffea;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
 @keyframes loadingEffect {
   0% { opacity: 0; transform: scale(0.8); }
   100% { opacity: 1; transform: scale(1); }
@@ -520,6 +546,57 @@ h1, h2 {
             <figcaption>Nintendo Switch, una de las consolas más innovadoras de la era moderna.</figcaption>
         </figure>
     </section>
+    
+    <section>
+    <h2>Tabla Gamer: Consolas Japonesas</h2>
+    <table class="tabla-gamer">
+        <thead>
+            <tr>
+                <th>Consola</th>
+                <th>Año de Lanzamiento</th>
+                <th>Características Destacadas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nintendo Entertainment System (NES)</td>
+                <td>1983</td>
+                <td>Revolucionó la industria con títulos como Super Mario Bros.</td>
+            </tr>
+            <tr>
+                <td>Sega Mega Drive (Genesis)</td>
+                <td>1988</td>
+                <td>Popularizó franquicias como Sonic the Hedgehog.</td>
+            </tr>
+            <tr>
+                <td>Super Nintendo Entertainment System (SNES)</td>
+                <td>1990</td>
+                <td>Introdujo gráficos mejorados y clásicos como The Legend of Zelda.</td>
+            </tr>
+            <tr>
+                <td>Sony PlayStation</td>
+                <td>1994</td>
+                <td>Innovó con juegos en 3D como Final Fantasy VII.</td>
+            </tr>
+            <tr>
+                <td>Sega Dreamcast</td>
+                <td>1998</td>
+                <td>Pionera en juego en línea con títulos como Shenmue.</td>
+            </tr>
+            <tr>
+                <td>Nintendo Switch</td>
+                <td>2017</td>
+                <td>Diseño híbrido que revolucionó la experiencia portátil y de sobremesa.</td>
+            </tr>
+            <tr>
+                <td>PlayStation 5</td>
+                <td>2020</td>
+                <td>Gráficos en 4K y tiempos de carga ultrarrápidos.</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
     
 </main>
 
