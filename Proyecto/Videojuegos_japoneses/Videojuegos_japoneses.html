@@ -457,13 +457,13 @@ h1, h2, h3 {
 
 .videojuegos-gamer {
     background-color: rgba(0, 0, 0, 0.85);
-    border: 3px solid var(--neon-pink);
-    box-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--soft-blue);
-    border-radius: 10px;
-    padding: 20px;
+    border: 5px solid var(--neon-pink);
+    box-shadow: 0 0 25px var(--neon-pink), 0 0 40px var(--soft-blue);
+    border-radius: 15px;
+    padding: 25px;
     margin: auto;
-    max-width: 80%;
-    animation: fadeInUp 0.8s ease-out, neonPulse 2s infinite alternate;
+    max-width: 85%;
+    animation: fadeInUp 0.8s ease-out, neonPulse 1.2s infinite alternate;
     text-align: center;
 }
 
@@ -471,43 +471,61 @@ h1, h2, h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center; /* Centra verticalmente */
-    gap: 15px;
-    margin-top: 20px;
+    align-items: center;
+    gap: 20px;
+    margin-top: 25px;
 }
 
-/* Efecto de brillo en los botones */
+/* 🔹 Neón pulsante extremo */
 @keyframes neonPulse {
-    0% { box-shadow: 0 0 10px var(--neon-pink); }
-    50% { box-shadow: 0 0 20px var(--soft-blue); }
-    100% { box-shadow: 0 0 10px var(--neon-pink); }
+    0% { box-shadow: 0 0 25px var(--neon-pink), 0 0 50px var(--soft-blue); }
+    50% { box-shadow: 0 0 40px var(--neon-pink), 0 0 60px var(--soft-blue); }
+    100% { box-shadow: 0 0 25px var(--neon-pink), 0 0 50px var(--soft-blue); }
 }
 
 .btn-gamer {
-    background-color: var(--soft-blue);
+    background: linear-gradient(90deg, #ff00ff, #00fff2);
     color: black;
-    padding: 15px 25px;
-    font-size: 1.2em;
+    padding: 15px 30px;
+    font-size: 1.4em;
     text-transform: uppercase;
-    border-radius: 10px;
-    border: 4px solid var(--neon-pink);
-    box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--soft-blue);
+    font-weight: bold;
+    border-radius: 12px;
+    border: 5px solid #ff00ff;
+    box-shadow: 0 0 25px #ff00ff, 0 0 40px #00fff2;
     transition: 0.3s ease-in-out;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 🔥 🔹 Efecto de destello al pasar el mouse */
+.btn-gamer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-45deg);
+    transition: 0.5s ease-in-out;
+}
+
+.btn-gamer:hover::before {
+    left: 100%;
 }
 
 .btn-gamer:hover {
-    animation: buttonPress 0.3s infinite alternate;
-    box-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--soft-blue);
-    transform: scale(1.05);
+    animation: buttonPress 0.2s infinite alternate;
+    box-shadow: 0 0 35px #ff00ff, 0 0 55px #00fff2;
 }
 
 @keyframes buttonPress {
     0% { transform: scale(1); }
-    50% { transform: scale(0.95); }
+    50% { transform: scale(1.08); }
     100% { transform: scale(1); }
 }
 
