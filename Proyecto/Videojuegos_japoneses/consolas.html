@@ -36,7 +36,6 @@
         }
         body {
             font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
             color: #e0e0e0;
         }
         .img-container {
@@ -193,18 +192,33 @@ cursor: url('https://tse2.mm.bing.net/th?id=OIG2.5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5
 }
 
 .wallpaper {
-  background-image: url('https://wallpaperaccess.com/full/6963165.jpg'); 
+  background-image: url('https://wallpaperaccess.com/full/6963165.jpg');
   background-size: cover;
+  background-attachment: fixed; /* Efecto parallax */
   background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding-top: 70px;
+  width: 100%;
   position: relative;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Capa semitransparente para mejor legibilidad */
+.wallpaper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según necesites */
+  z-index: 0;
+}
+
+/* Asegúrate que el contenido esté sobre la capa de overlay */
+.wallpaper-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
 }
         .wallpaper-title {
             font-size: 3em;
