@@ -409,20 +409,17 @@ h1, h2, h3 {
 
 
 .wallpaper {
-    background-image: url('https://bing.com/th/id/BCO.9d6e96ba-362c-4b76-aa97-9ae49a8bc14e.png');
+    background-image: url('https://wallpapercave.com/wp/wp9276441.jpg'); /* Asegura que la imagen es accesible */
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #ffffff;
-    padding-top: 70px;
     position: relative;
-    transition: background-position 0.3s ease-in-out;
 }
-
 
 .wallpaper::before {
     content: "";
@@ -431,22 +428,22 @@ h1, h2, h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0; /* Mantiene la visibilidad de la imagen */
 }
 
-/* Animación para el título */
 .wallpaper-title {
-    color: var(--text-white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 3em;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-    margin: 0;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px 40px;
     border-radius: 10px;
-    z-index: 2;
-    position: relative;
     animation: fadeIn 1.5s ease-in-out;
+    z-index: 2;
 }
 
 @keyframes fadeIn {
