@@ -43,139 +43,220 @@
         }
 
 
-        @keyframes glitch {
-    0% { transform: skew(0deg); }
-    25% { transform: skew(-5deg); }
-    50% { transform: skew(5deg); }
-    75% { transform: skew(-5deg); }
-    100% { transform: skew(0deg); }
-}
+        <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Gamer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Variables de color */
+        :root {
+            --neon-pink: #ff00ff;
+            --soft-blue: #00ffff;
+            --neon-green: #00ffea;
+            --soft-pink: rgb(193, 231, 255);
+            --pale-pink: #e4fff7;
+            --text-white: #ffffff;
+            --text-gray: #ced4da;
+            --dark: #343a40;
+            --dark-bg: #1a1a1a;
+        }
 
-.glitch-text {
-    font-size: 2em;
-    color: #00fff2;
-    text-shadow: 0 0 10px #ff004c, 0 0 20px #00fff2;
-    animation: glitch 0.2s infinite alternate;
-}
+        /* Reset y estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-               @keyframes moveStars {
-    0% { background-position: 0 0; }
-    100% { background-position: -800px 800px; }
-}
-.hud-box {
-    background: linear-gradient(90deg, #ff004c, #00fff2);
-    border: 2px solid #ff004c;
-    padding: 20px;
-    box-shadow: 0 0 15px #ff004c;
-    border-radius: 8px;
-    text-align: center;
-    margin: 20px auto;
-    width: 80%;
-    transition: transform 0.5s ease-in-out;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--dark-bg);
+            color: #e0e0e0;
+            line-height: 1.6;
+            cursor: url('https://cur.cursors-4u.net/games/gam-8/gam758.cur'), auto;
+        }
 
-.hud-box:hover {
-    transform: rotateY(180deg);
-}
+        /* Tipografía */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-green);
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 5px rgba(0, 255, 255, 0.7);
+        }
 
+        h1 {
+            font-size: 2.5rem;
+        }
 
-/* 🔹 Estilo General */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        h2 {
+            font-size: 2rem;
+        }
 
+        h3 {
+            font-size: 1.75rem;
+        }
 
+        p {
+            margin-bottom: 1rem;
+        }
 
-/* 🔹 Secciones con borde neón */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        a {
+            color: var(--neon-green);
+            text-decoration: none;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
 
-section {
-    font-family: 'Press Start 2P', sans-serif; /* Tipografía gamer */
-    background-color: rgba(0, 0, 0, 0.85);
-    color: #00fff2;
-    border: 3px solid #00ffff; /* Azul neón */
-    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-    border-radius: 10px;
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 60px;
-    animation: neonBorder 2s infinite alternate;
-    transition: transform 0.3s ease-in-out;
-}
-section:nth-child(odd) {
-  border-color: #00ffff;
-  box-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff;
-}
+        a:hover {
+            color: rgb(136, 190, 201);
+        }
 
-section:nth-child(even) {
-  border-color: #0099ff;
-  box-shadow: 0 0 15px #0099ff, 0 0 25px #0099ff;
-}
+      
+        /* Wallpaper hero */
+        .wallpaper {
+            background-image: url('https://wallpaperaccess.com/full/6963165.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .wallpaper::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
 
-section:hover {
-    transform: scale(1.05);
-}
+        .wallpaper-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-@keyframes neonBorder {
-    0% { box-shadow: 0 0 10px #ff004c; }
-    50% { box-shadow: 0 0 20px #00fff2; }
-    100% { box-shadow: 0 0 10px #ff004c; }
-}
-}
-        /* 🎮 Fondo animado estilo gaming */
-@keyframes backgroundMove {
-    0% { background-position: 0 0; }
-    100% { background-position: -300px 300px; }
-}
-@keyframes moveStars {
-    0% { background-position: 0 0; }
-    100% { background-position: -800px 800px; }
-}
+        .wallpaper-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 3.5rem;
+            color: var(--neon-green);
+            text-align: center;
+            padding: 1.5rem 3rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 4px solid var(--neon-pink);
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            animation: glitch 0.3s infinite alternate, neonPulse 1.5s infinite alternate;
+        }
 
+        /* Secciones */
+        section {
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.85);
+            max-width: 80%;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1s ease-out;
+        }
 
-/* 🔹 Animación de botones */
-button {
-    background: linear-gradient(90deg, #ff004c, #00fff2);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1.2em;
-    cursor: pointer;
-    box-shadow: 0 0 15px #ff004c, 0 0 25px #00fff2;
-    transition: 0.3s ease-in-out;
-}
+        section:nth-child(odd) {
+            border: 3px solid var(--soft-blue);
+            box-shadow: 0 0 10px var(--soft-blue), 0 0 20px var(--soft-blue);
+        }
 
-button:hover {
-    background: linear-gradient(90deg, #00fff2, #ff004c);
-    box-shadow: 0 0 30px #00fff2, 0 0 40px #ff004c;
-    transform: scale(1.1);
-}
+        section:nth-child(even) {
+            border: 3px solid var(--neon-pink);
+            box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink);
+        }
 
+        /* Contenedores */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
 
-/* 🔹 Estilo de imágenes */
-img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 5px;
-    box-shadow: 0 0 15px #00fff2;
-}
+        /* Imágenes */
+        .img-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
 
+        .image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
 
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        .section-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .section-img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            max-height: 500px;
+            border-radius: 8px;
+            border: 3px solid var(--soft-blue);
+            box-shadow: 0 0 15px var(--soft-blue), 0 0 25px var(--soft-blue);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            object-fit: cover;
+        }
+
+        .section-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px var(--neon-pink), 0 0 40px var(--neon-pink);
+            border-color: var(--neon-pink);
+        }
+
+        /* Tablas */
         .tabla-gamer {
             width: 100%;
             border-collapse: collapse;
             background-color: rgba(0, 0, 0, 0.85);
-            color: #00ffea;
+            color: var(--neon-green);
             text-align: center;
             font-family: 'Press Start 2P', cursive;
-            box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+            box-shadow: 0 0 10px var(--neon-green), 0 0 20px var(--neon-green);
+            margin: 1.5rem 0;
         }
 
         .tabla-gamer th, .tabla-gamer td {
-            border: 2px solid #00ffea;
-            padding: 10px;
+            border: 2px solid var(--neon-green);
+            padding: 0.75rem;
         }
 
         .tabla-gamer th {
@@ -184,184 +265,72 @@ img {
         }
 
         .tabla-gamer tr:hover {
-            background-color: #00ffea;
+            background-color: var(--neon-green);
             color: black;
             transition: 0.3s ease-in-out;
         }
 
+        /* Botones */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            margin: 0.5rem;
+            cursor: pointer;
+            border: none;
+        }
 
-/* 🔹 Animaciones de aparición */
-.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    display: block; /* Asegura que el elemento sigue ocupando espacio */
-}
+        .btn-primary {
+            background-color: var(--neon-green);
+            color: black;
+            box-shadow: 0 0 10px var(--neon-green), 0 0 20px var(--neon-green);
+        }
 
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+        .btn-primary:hover {
+            background-color: #008f63;
+            box-shadow: 0 0 15px var(--neon-green), 0 0 30px var(--neon-green);
+            transform: scale(1.05);
+        }
 
+        .btn-gamer {
+            background-color: var(--soft-blue);
+            color: black;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            border-radius: 8px;
+            border: 3px solid var(--neon-pink);
+            box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--soft-blue);
+            transition: all 0.3s ease-in-out;
+        }
 
-/* 🔹 Título con efecto neón */
-h1, h2, h3 {
-    color: #ff004c;
-    text-shadow: 0 0 10px #ff004c, 0 0 20px #ff004c;
-    text-align: center;
+        .btn-gamer:hover {
+            animation: buttonPress 0.3s infinite alternate;
+            box-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--soft-blue);
+            transform: scale(1.05);
+        }
 
+        /* Listas */
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
 
-body {
-    cursor: url('https://cur.cursors-4u.net/games/gam-3/gam205.cur'), auto;
-    animation: moveStars 15s infinite linear;
-    font-family: 'Press Start 2P', sans-serif; /* Fuente gamer */
-    background-color: #000000; /* Fondo negro */
-    color: #ffffff; /* Texto blanco */
-    box-shadow: none; /* Elimina cualquier efecto de brillo si lo deseas */
-    margin: 0;
-    padding: 0;
+        li {
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
 
-}
+        li:hover {
+            color: rgb(136, 190, 201);
+        }
 
-
-        @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-section {
-    animation: fadeInUp 0.8s ease-out;
-}
-
-        @keyframes neonBorder {
-    0% { box-shadow: 0 0 10px #ff004c; }
-    50% { box-shadow: 0 0 20px #00fff2; }
-    100% { box-shadow: 0 0 10px #ff004c; }
-}
-
-.hud-box {
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 3px solid #ff004c;
-    padding: 20px;
-    box-shadow: 0 0 15px #ff004c;
-    border-radius: 8px;
-    text-align: center;
-    margin: 20px auto;
-    width: 80%;
-    animation: neonBorder 2s infinite alternate;
-}
-
-
-/* 🎮 Efecto en los títulos */
-@font-face {
-    font-family: 'Arcade Classic';
-    src: url('https://www.1001freefonts.com/es/video-game-fonts.php');
-}
-h1, h2, h3 {
-    font-family: 'Arcade Classic', sans-serif;
-    text-shadow: 0 0 10px #00fff2, 0 0 20px #ff004c;
-    color: #00fff2;
-    text-shadow: 0 0 10px #00fff2, 0 0 20px #ff004c;
-    text-align: center;
-    animation: flicker 1s infinite alternate;
-}
-.hud-box {
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 3px solid #ff004c;
-    padding: 20px;
-    box-shadow: 0 0 15px #ff004c;
-    border-radius: 8px;
-    text-align: center;
-    margin: 20px auto;
-    width: 80%;
-    transition: transform 0.3s ease-in-out;
-}
-
-.hud-box:hover {
-    transform: scale(1.05);
-}
-.tabla-videojuegos {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px auto;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    box-shadow: 0 0 20px #ff004c, 0 0 30px #00fff2;
-}
-
-.tabla-videojuegos th, .tabla-videojuegos td {
-    border: 2px solid #ff004c;
-    padding: 15px;
-    font-weight: bold;
-}
-
-.tabla-videojuegos th {
-    background-color: #ff004c;
-    color: white;
-}
-
-.tabla-videojuegos tr:nth-child(even) {
-    background-color: rgba(255, 0, 76, 0.2);
-}
-
-.tabla-videojuegos tr:hover {
-    background-color: #00fff2;
-    transition: 0.3s;
-}
-        @keyframes neonBorder {
-    0% { box-shadow: 0 0 10px #ff004c; }
-    50% { box-shadow: 0 0 20px #00fff2; }
-    100% { box-shadow: 0 0 10px #ff004c; }
-}
-.holo-message {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 15px 25px;
-    background: rgba(0, 255, 242, 0.2);
-    border: 2px solid #00fff2;
-    box-shadow: 0 0 15px #00fff2;
-    font-size: 1.2em;
-    color: white;
-    animation: fadeInOut 3s infinite alternate;
-}
-
-@keyframes fadeInOut {
-    0% { opacity: 0.2; transform: scale(0.95); }
-    100% { opacity: 1; transform: scale(1); }
-}
-
-.hud-box {
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 3px solid #ff004c;
-    padding: 20px;
-    box-shadow: 0 0 15px #ff004c;
-    border-radius: 8px;
-    text-align: center;
-    margin: 20px auto;
-    width: 80%;
-    animation: neonBorder 2s infinite alternate;
-}
-
-
-@keyframes loadingText {
-    0% { opacity: 0; transform: translateY(10px); }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-h1, h2, h3 {
-    animation: loadingText 1s ease-out;
-}
-
-
-@keyframes flicker {
-    0% { opacity: 1; }
-    50% { opacity: 0.8; }
-    100% { opacity: 1; }
-}
-
-
+        /* Animaciones */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -373,159 +342,89 @@ h1, h2, h3 {
             }
         }
 
-        @keyframes scaleUp {
-            from {
-                transform: scale(0.9);
-                opacity: 0.8;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
+        @keyframes loadingEffect {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
         }
 
+        @keyframes glitch {
+            0% { text-shadow: 3px 3px var(--neon-pink), -3px -3px var(--soft-blue); }
+            25% { text-shadow: -3px -3px var(--neon-pink), 3px 3px var(--soft-blue); }
+            50% { text-shadow: 5px 5px var(--neon-pink), -5px -5px var(--soft-blue); }
+            75% { text-shadow: -5px -5px var(--neon-pink), 5px 5px var(--soft-blue); }
+            100% { text-shadow: 3px 3px var(--neon-pink), -3px -3px var(--soft-blue); }
+        }
+
+        @keyframes neonPulse {
+            0% { box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--soft-blue); }
+            50% { box-shadow: 0 0 15px var(--neon-pink), 0 0 25px var(--soft-blue); }
+            100% { box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--soft-blue); }
+        }
+
+        @keyframes buttonPress {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.95); }
+            100% { transform: scale(1); }
+        }
+
+        /* Efectos de carga */
+        section, img, .btn {
+            animation: loadingEffect 1s ease-in-out;
+        }
+
+        /* Consolas gamer */
+        .consolas-gamer {
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 3px solid var(--neon-pink);
+            box-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--soft-blue);
+            border-radius: 10px;
+            max-width: 80%;
+            margin: 2rem auto;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            h1 {font-size: 1.8em;}
-            h2 {font-size: 1.4em;}
-            h3 {font-size: 1.2em;}
-            main {padding: 15px;}
-            section {padding: 10px;}
-            footer {font-size: 0.9em;}
+            .wallpaper-title {
+                font-size: 2rem;
+                padding: 1rem 1.5rem;
+            }
+
+            section, .consolas-gamer {
+                max-width: 95%;
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            .section-img {
+                max-width: 100%;
+                height: auto;
+            }
         }
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
 
-.wallpaper {
-    background-image: url('https://wallpapercave.com/wp/wp9276441.jpg'); /* Asegura que la imagen es accesible */
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-    position: relative;
-    z-index: -1;
-}
+        @media (max-width: 480px) {
+            .wallpaper-title {
+                font-size: 1.5rem;
+            }
 
-.wallpaper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 0; /* Mantiene la visibilidad de la imagen */
-}
-
-.wallpaper-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3em;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px 40px;
-    border-radius: 10px;
-    animation: fadeIn 1.5s ease-in-out;
-    z-index: 2;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-
-.videojuegos-gamer {
-    background-color: rgba(0, 0, 0, 0.85);
-    border: 5px solid var(--neon-pink);
-    box-shadow: 0 0 15px var(--neon-pink), 0 0 25px var(--soft-blue); 
-    border-radius: 15px;
-    padding: 25px;
-    margin: auto;
-    max-width: 85%;
-    animation: fadeInUp 0.8s ease-out, neonPulse 1.2s infinite alternate;
-    text-align: center;
-}
-
-.botones-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 25px;
-}
-
-/* 🔹 Neón pulsante extremo */
-@keyframes neonPulse {
-    0% { box-shadow: 0 0 25px var(--neon-pink), 0 0 50px var(--soft-blue); }
-    50% { box-shadow: 0 0 40px var(--neon-pink), 0 0 60px var(--soft-blue); }
-    100% { box-shadow: 0 0 25px var(--neon-pink), 0 0 50px var(--soft-blue); }
-}
-
-.btn-gamer {
-    background: linear-gradient(90deg, #ff00ff, #00fff2);
-    color: black;
-    padding: 15px 30px;
-    font-size: 1.4em;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 12px;
-    border: 5px solid #ff00ff;
-    box-shadow: 0 0 25px #ff00ff, 0 0 40px #00fff2;
-    transition: 0.3s ease-in-out;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-/* 🔥 🔹 Efecto de destello al pasar el mouse */
-.btn-gamer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    transform: skewX(-45deg);
-    transition: 0.5s ease-in-out;
-}
-
-.btn-gamer:hover::before {
-    left: 100%;
-}
-
-.btn-gamer:hover {
-    animation: buttonPress 0.2s infinite alternate;
-    box-shadow: 0 0 35px #ff00ff, 0 0 55px #00fff2;
-}
-
-@keyframes buttonPress {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.08); }
-    100% { transform: scale(1); }
-}
-
-.wallpaper-title {
-    transition: transform 0.1s ease-out;
-}
-
+            .btn, .btn-gamer {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    
     </style>
 </head>
 <body>
