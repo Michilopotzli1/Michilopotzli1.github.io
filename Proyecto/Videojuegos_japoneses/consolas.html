@@ -214,23 +214,36 @@
         }
 
         /* Formato de imágenes */
-        .section-img {
-            justify-content: center;
-            width: 300px;
-            height: 300px;
-            border-radius: 8px;
-            border: 3px solid var(--soft-blue);
-            box-shadow: 0 0 15px var(--soft-blue), 0 0 25px var(--soft-blue);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            object-fit: cover;
-        }
+/* Contenedor de imágenes */
+.section-images {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente */
+    flex-wrap: wrap; /* Permite que las imágenes se acomoden correctamente */
+    gap: 15px;
+    margin-top: 20px;
+}
 
-        /* Intensificar el efecto neon al hacer hover */
-        .section-img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 30px var(--neon-pink), 0 0 40px var(--neon-pink);
-            border-color: var(--neon-pink);
-        }  
+/* Formato de imágenes */
+.section-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    border: 3px solid var(--soft-blue);
+    box-shadow: 0 0 15px var(--soft-blue), 0 0 25px var(--soft-blue);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    object-fit: cover;
+    display: block; /* Asegura que la imagen se comporte como bloque */
+    margin: auto; /* Centra horizontalmente */
+}
+
+/* Intensificar el efecto neon al hacer hover */
+.section-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px var(--neon-pink), 0 0 40px var(--neon-pink);
+    border-color: var(--neon-pink);
+}
+
         /* Efecto glitch en los títulos */
         @keyframes glitch {
           0% { text-shadow: 2px 2px var(--neon-pink), -2px -2px var(--soft-blue); }
