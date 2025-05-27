@@ -453,6 +453,8 @@ h1, h2, h3 {
     0% { opacity: 0; transform: translateY(-20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
+
+
 .videojuegos-gamer {
     background-color: rgba(0, 0, 0, 0.85);
     border: 3px solid var(--neon-pink);
@@ -469,10 +471,12 @@ h1, h2, h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center; /* Centra verticalmente */
     gap: 15px;
+    margin-top: 20px;
 }
 
-
+/* Efecto de brillo en los botones */
 @keyframes neonPulse {
     0% { box-shadow: 0 0 10px var(--neon-pink); }
     50% { box-shadow: 0 0 20px var(--soft-blue); }
@@ -482,21 +486,23 @@ h1, h2, h3 {
 .btn-gamer {
     background-color: var(--soft-blue);
     color: black;
-    padding: 12px 20px;
+    padding: 15px 25px;
     font-size: 1.2em;
     text-transform: uppercase;
-    border-radius: 8px;
-    border: 3px solid var(--neon-pink);
+    border-radius: 10px;
+    border: 4px solid var(--neon-pink);
     box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--soft-blue);
     transition: 0.3s ease-in-out;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .btn-gamer:hover {
     animation: buttonPress 0.3s infinite alternate;
     box-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--soft-blue);
+    transform: scale(1.05);
 }
 
 @keyframes buttonPress {
