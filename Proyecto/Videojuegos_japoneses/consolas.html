@@ -226,7 +226,73 @@
             transform: scale(1.1);
             box-shadow: 0 0 30px var(--neon-pink), 0 0 40px var(--neon-pink);
             border-color: var(--neon-pink);
-        }    
+        }  
+        /* Efecto glitch en los títulos */
+@keyframes glitch {
+  0% { text-shadow: 2px 2px var(--neon-pink), -2px -2px var(--soft-blue); }
+  25% { text-shadow: -2px -2px var(--neon-pink), 2px 2px var(--soft-blue); }
+  50% { text-shadow: 3px 3px var(--neon-pink), -3px -3px var(--soft-blue); }
+  75% { text-shadow: -3px -3px var(--neon-pink), 3px 3px var(--soft-blue); }
+  100% { text-shadow: 2px 2px var(--neon-pink), -2px -2px var(--soft-blue); }
+}
+h1, h2 {
+  animation: glitch 0.3s infinite alternate;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Brillo pulsante en imágenes */
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 15px var(--soft-blue), 0 0 25px var(--neon-pink); }
+  50% { box-shadow: 0 0 25px var(--neon-pink), 0 0 35px var(--soft-blue); }
+  100% { box-shadow: 0 0 15px var(--soft-blue), 0 0 25px var(--neon-pink); }
+}
+.section-img {
+  animation: neonPulse 2s infinite alternate;
+}
+
+/* Simulación de escaneo CRT */
+.scanlines {
+  position: relative;
+  overflow: hidden;
+}
+.scanlines::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 255, 255, 0.05) 0%,
+    rgba(0, 255, 255, 0) 10%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  animation: scanline 8s linear infinite;
+}
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+section {
+  position: relative;
+}
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  z-index: 1;
+}
+
+/* Cursor neon */
+body {
+  cursor: url('https://cur.cursors-4u.net/games/gam-8/gam758.cur'), auto;
+}
 
     </style>
 </head>
@@ -294,9 +360,6 @@
                 <h1 class="wallpaper-title">Consolas</h1>
             </section>
 
-<main class="container">
-    <section>
-        <h2>Las Consolas Más Icónicas de Japón</h2>
         <section>
             <h2>Las Consolas Más Icónicas de Japón</h2>
             <p>Japón ha sido el epicentro de la industria de los videojuegos, con consolas que han marcado generaciones.</p>
