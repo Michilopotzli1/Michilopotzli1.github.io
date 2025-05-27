@@ -167,35 +167,33 @@ img {
     box-shadow: 0 0 15px #00fff2;
 }
 
-/* 🔹 Tabla con diseño futurista */
-.tabla-videojuegos {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px auto;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    box-shadow: 0 0 20px #ff004c;
-}
 
-.tabla-videojuegos th, .tabla-videojuegos td {
-    border: 1px solid #ddd;
-    padding: 15px;
-    font-weight: bold;
-}
+        .tabla-gamer {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(0, 0, 0, 0.85);
+            color: #00ffea;
+            text-align: center;
+            font-family: 'Press Start 2P', cursive;
+            box-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+        }
 
-.tabla-videojuegos th {
-    background-color: #ff004c;
-    color: white;
-}
+        .tabla-gamer th, .tabla-gamer td {
+            border: 2px solid #00ffea;
+            padding: 10px;
+        }
 
-.tabla-videojuegos tr:nth-child(even) {
-    background-color: rgba(255, 0, 76, 0.2);
-}
+        .tabla-gamer th {
+            background-color: #008f63;
+            color: black;
+        }
 
-.tabla-videojuegos tr:hover {
-    background-color: #00fff2;
-    transition: 0.3s;
-}
+        .tabla-gamer tr:hover {
+            background-color: #00ffea;
+            color: black;
+            transition: 0.3s ease-in-out;
+        }
+
 
 /* 🔹 Animaciones de aparición */
 .hidden {
@@ -693,7 +691,7 @@ h1, h2, h3 {
 
                 <section class="hidden">
                     <h2>Comparación de Géneros Más Jugados</h2>
-                    <table class="tabla-videojuegos">
+                    <table class="tabla-gamer">
                         <thead>
                             <tr>
                                 <th>Género</th>
