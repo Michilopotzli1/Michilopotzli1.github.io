@@ -353,7 +353,115 @@ button:hover {
 .content-section.reverse {
     flex-direction: row-reverse !important;
 }
+.btn-japanese {
+    background-color: #ff6699;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 5px;
+    position: relative;
+    overflow: hidden;
+}
 
+.btn-japanese:hover {
+    background-color: #ff99aa;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-japanese:active {
+    transform: translateY(1px);
+}
+
+.btn-japanese::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.btn-japanese:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+/* Variantes de botones */
+.btn-japanese-outline {
+    background-color: transparent;
+    border: 2px solid #ff6699;
+    color: #ff6699;
+}
+
+.btn-japanese-outline:hover {
+    background-color: #ff6699;
+    color: white;
+}
+
+.btn-japanese-dark {
+    background-color: #5a3d5a;
+}
+
+.btn-japanese-dark:hover {
+    background-color: #7a5d7a;
+}
+
+/* Botones de redes sociales */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    color: #ff6699;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+.social-btn.youtube:hover { background-color: #FF0000; }
+.social-btn.instagram:hover { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); }
+.social-btn.twitter:hover { background-color: #1DA1F2; }
+.social-btn.pinterest:hover { background-color: #E60023; }
+.social-btn.tiktok:hover { background-color: #000000; }
 
 
 
@@ -573,7 +681,54 @@ button:hover {
         </tbody>
     </table>
 </section>
+<section class="social-section">
+    <h3>Explora más sobre cultura japonesa</h3>
+    <p>Sigue estas cuentas en redes sociales para aprender más:</p>
+    
+    <div class="social-buttons">
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/c/JapanSocietyNYC" class="social-btn youtube" target="_blank" title="Japan Society NYC">
+            <i class="fab fa-youtube"></i>
+        </a>
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/japantimes/" class="social-btn instagram" target="_blank" title="The Japan Times">
+            <i class="fab fa-instagram"></i>
+        </a>
+        
+        <!-- Twitter -->
+        <a href="https://twitter.com/Japan" class="social-btn twitter" target="_blank" title="Japan National Tourism">
+            <i class="fab fa-twitter"></i>
+        </a>
+        
+        <!-- Pinterest -->
+        <a href="https://www.pinterest.com/explore/japanese-culture/" class="social-btn pinterest" target="_blank" title="Japanese Culture on Pinterest">
+            <i class="fab fa-pinterest"></i>
+        </a>
+        
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/tag/japaneseculture" class="social-btn tiktok" target="_blank" title="Japanese Culture on TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+    
+    <div class="resource-buttons">
+        <a href="https://www.japan.travel/en/" class="btn-japanese" target="_blank">
+            <i class="fas fa-globe-asia"></i> Japan Travel Guide
+        </a>
+        
+        <a href="https://www.japan-guide.com/" class="btn-japanese btn-japanese-outline" target="_blank">
+            <i class="fas fa-book"></i> Japan Guide
+        </a>
+        
+        <a href="https://web-japan.org/" class="btn-japanese btn-japanese-dark" target="_blank">
+            <i class="fas fa-landmark"></i> Web Japan
+        </a>
+    </div>
+</section>
 
+<!-- Añade Font Awesome para los íconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </main>
     <footer class="bg-dark text-white text-center py-3">
         <div>
