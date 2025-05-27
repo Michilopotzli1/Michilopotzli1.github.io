@@ -200,21 +200,33 @@
         section:nth-child(even) {
             border-color: #ff00ff;
         }
+/* Contenedor de imágenes */
+        .section-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Permite que las imágenes se acomoden correctamente */
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Formato de imágenes */
         .section-img {
             width: 150px;
             height: 150px;
             border-radius: 8px;
             border: 3px solid var(--soft-blue);
-            box-shadow: 0 0 10px var(--soft-blue), 0 0 20px var(--soft-blue);
+            box-shadow: 0 0 15px var(--soft-blue), 0 0 25px var(--soft-blue);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             object-fit: cover;
         }
 
+        /* Intensificar el efecto neon al hacer hover */
         .section-img:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 20px var(--neon-pink), 0 0 30px var(--neon-pink);
+            box-shadow: 0 0 30px var(--neon-pink), 0 0 40px var(--neon-pink);
             border-color: var(--neon-pink);
-        }
+        }    
+
     </style>
 </head>
 <body>
