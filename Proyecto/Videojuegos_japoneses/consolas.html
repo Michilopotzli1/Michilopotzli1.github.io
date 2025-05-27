@@ -104,7 +104,7 @@
         .image:hover {
             transform: scale(1.1);
         }
-
+        
         /* Tabla gamer */
         .tabla-gamer {
             width: 100%;
@@ -137,7 +137,16 @@
             0% { opacity: 0; transform: scale(0.8); }
             100% { opacity: 1; transform: scale(1); }
         }
-
+        .consolas-gamer {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 3px solid #ff00ff;
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #00ffff;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: auto;
+}
         section, img, .btn {
             animation: loadingEffect 1s ease-in-out;
         }
@@ -157,6 +166,26 @@
         .btn:hover {
             background-color: #008f63;
             box-shadow: 0 0 15px #00ffea, 0 0 30px #00ffea;
+        }
+        @keyframes buttonPress {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.95); }
+            100% { transform: scale(1); }
+        }
+        .btn-gamer {
+            background-color: var(--soft-blue);
+            color: black;
+            padding: 12px 20px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            border-radius: 8px;
+            border: 3px solid var(--neon-pink);
+            box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--soft-blue);
+            transition: 0.3s ease-in-out;
+        }
+        .btn-gamer:hover {
+            animation: buttonPress 0.3s infinite alternate;
+            box-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--soft-blue);
         }
 
         /* Fondo con efecto parallax */
@@ -535,6 +564,18 @@ body {
             </tr>
         </tbody>
     </table>
+</section>
+<section class="consolas-gamer">
+    <h2>Consolas Legendarias</h2>
+    <div class="botones-container">
+        <a href="https://www.nintendo.com/systems/nes-classic/" class="btn-gamer" target="_blank">Nintendo Entertainment System (NES)</a>
+        <a href="https://www.sega.com/" class="btn-gamer" target="_blank">Sega Mega Drive (Genesis)</a>
+        <a href="https://www.nintendo.com/systems/super-nes-classic/" class="btn-gamer" target="_blank">Super Nintendo Entertainment System (SNES)</a>
+        <a href="https://www.playstation.com/en-us/" class="btn-gamer" target="_blank">Sony PlayStation</a>
+        <a href="https://www.sega.com/" class="btn-gamer" target="_blank">Sega Dreamcast</a>
+        <a href="https://www.nintendo.com/switch/" class="btn-gamer" target="_blank">Nintendo Switch</a>
+        <a href="https://www.playstation.com/en-us/ps5/" class="btn-gamer" target="_blank">PlayStation 5</a>
+    </div>
 </section>
 
     
