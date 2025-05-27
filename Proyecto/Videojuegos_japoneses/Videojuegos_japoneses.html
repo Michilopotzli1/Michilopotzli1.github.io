@@ -453,6 +453,61 @@ h1, h2, h3 {
     0% { opacity: 0; transform: translateY(-20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
+.videojuegos-gamer {
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 3px solid var(--neon-pink);
+    box-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--soft-blue);
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    max-width: 80%;
+    animation: fadeInUp 0.8s ease-out, neonPulse 2s infinite alternate;
+    text-align: center;
+}
+
+.botones-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes neonPulse {
+    0% { box-shadow: 0 0 10px var(--neon-pink); }
+    50% { box-shadow: 0 0 20px var(--soft-blue); }
+    100% { box-shadow: 0 0 10px var(--neon-pink); }
+}
+
+.btn-gamer {
+    background-color: var(--soft-blue);
+    color: black;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    border: 3px solid var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--soft-blue);
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-gamer:hover {
+    animation: buttonPress 0.3s infinite alternate;
+    box-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--soft-blue);
+}
+
+@keyframes buttonPress {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
 
 .wallpaper-title {
     transition: transform 0.1s ease-out;
@@ -770,6 +825,26 @@ document.addEventListener("mousemove", (event) => {
     const y = (event.clientY / window.innerHeight) * 10;
     document.querySelector(".wallpaper").style.backgroundPosition = `${x}px ${y}px`;
 });
+<section class="videojuegos-gamer">
+    <h2 class="glitch-text">Comparación de Géneros Más Jugados</h2>
+    <div class="botones-container">
+        <a href="https://www.finalfantasyxvi.com/" class="btn-gamer" target="_blank">Final Fantasy XVI (JRPG)</a>
+        <a href="https://atlus.com/persona5/" class="btn-gamer" target="_blank">Persona 5 Royal (JRPG)</a>
+        <a href="https://www.nintendo.com/store/products/xenoblade-chronicles-definitive-edition-switch/" class="btn-gamer" target="_blank">Xenoblade Chronicles (JRPG)</a>
+
+        <a href="https://www.eldenring.com/" class="btn-gamer" target="_blank">Elden Ring (Acción/Aventura)</a>
+        <a href="https://www.playstation.com/en-us/games/ghost-of-tsushima/" class="btn-gamer" target="_blank">Ghost of Tsushima (Acción/Aventura)</a>
+        <a href="https://www.zelda.com/breath-of-the-wild/" class="btn-gamer" target="_blank">Zelda: Breath of the Wild (Acción/Aventura)</a>
+
+        <a href="https://www.bandainamcoent.com/games/tekken-8" class="btn-gamer" target="_blank">Tekken 8 (Pelea)</a>
+        <a href="https://www.streetfighter.com/6/" class="btn-gamer" target="_blank">Street Fighter 6 (Pelea)</a>
+        <a href="https://www.smashbros.com/" class="btn-gamer" target="_blank">Super Smash Bros. (Pelea)</a>
+
+        <a href="https://www.nintendo.com/store/products/bayonetta-3-switch/" class="btn-gamer" target="_blank">Bayonetta 3 (Hack and Slash)</a>
+        <a href="https://www.capcom.com/devilmaycry5/" class="btn-gamer" target="_blank">Devil May Cry 5 (Hack and Slash)</a>
+        <a href="https://nierautomata.square-enix-games.com/" class="btn-gamer" target="_blank">Nier: Automata (Hack and Slash)</a>
+    </div>
+</section>
 
 
 </script>
