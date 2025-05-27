@@ -36,6 +36,7 @@
         }
         body {
             font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
             color: #e0e0e0;
         }
         .img-container {
@@ -381,32 +382,6 @@ h1, h2 {
             <section class="wallpaper">
                 <h1 class="wallpaper-title">Consolas</h1>
             </section>
-            
-            <script>
-                let lastScrollTop = 0;
-                window.addEventListener("scroll", function() {
-                    const title = document.querySelector(".wallpaper-title");
-                    let scrollTop = window.scrollY;
-            
-                    if (scrollTop > lastScrollTop) {
-                        // Oculta el título al hacer scroll hacia abajo
-                        title.style.opacity = "0";
-                        title.style.transform = "translateY(-20px)";
-                        title.style.transition = "opacity 0.5s ease, transform 0.5s ease";
-                    } else {
-                        // Muestra el título al hacer scroll hacia arriba
-                        title.style.opacity = "1";
-                        title.style.transform = "translateY(0)";
-                        title.style.transition = "opacity 0.5s ease, transform 0.5s ease";
-                    }
-            
-                    lastScrollTop = scrollTop;
-                });
-                <audio autoplay loop>
-  <source src="tu-musica.mp3" type="audio/mpeg">
-</audio>
-            </script>
-            
 
 <main class="container">
     <section>
