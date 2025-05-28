@@ -10,9 +10,7 @@
     <title>Carousel Template · Bootstrap v5.3</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -95,7 +93,7 @@
 
       li:hover {color: #c98895; }
       .dropdown-item {color: #EFC3CA;}
-      .dropdown-item:hover { color: #F8D9DE; background-color: #d49ba7;}
+      .dropdown-item:hover, .active{ color: #F8D9DE; background-color: #d49ba7; border-radius: 4px;}
       .dropdown-menu {background-color: #c98895;}
       .bg-pink{background-color: #c98895;}
     </style>
@@ -115,14 +113,14 @@
       <div class="collapse navbar-collapse" id="navbarNav_bg-dark">
         <ul class="navbar-nav dropdown">
           <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link active" href="#">Home</a>
           </li>
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Música
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
-                  <a class="dropdown-item" href="https://michilopotzli1.github.io/Proyecto/jpopmusica.html">Historia</a>
+                  <a class="dropdown-item" href="#">Historia</a>
                   <a class="dropdown-item" href="#">Actualidad</a>
               </div>
           </li>
@@ -131,8 +129,8 @@
                   Videojuegos
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
-                  <a class="dropdown-item" href="../Videojuegos_japoneses/Videojuegos_japoneses.html">Actualidad</a>
-                  <a class="dropdown-item" href="../Videojuegos_japoneses/consolas.html">Consolas del Nipon</a>
+                  <a class="dropdown-item" href="../Videojuegos/Actualidad/Nombredelaseccion.html">Actualidad</a>
+                  <a class="dropdown-item" href="#">Consolas del Nipon</a>
               </div>
           </li>
           <li class="nav-item dropdown">
@@ -140,7 +138,7 @@
                   Entretenimiento
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
-                  <a class="dropdown-item" href="../Entretenimiento/Anime/Anime.html">Anime y Mangas</a>
+                  <a class="dropdown-item" href="#">Anime y Mangas</a>
                   <a class="dropdown-item" href="../Entretenimiento/Cine/Peliculas.html">Peliculas y novelas</a>
               </div>
           </li>
@@ -172,32 +170,34 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="banner_jpopmusic.png" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/>
+          <image href="banners/banner_jpopmusic.png" x="0" y="0" width="100%" height="100%">
+        </svg>
         <div class="container">
           <div class="carousel-caption text-start">
             <h1>Conoce la Música</h1>
-            <p class="opacity-75">Explora otras barreras músicales orientales y descubre lo que puede ser tu proximo genero favorito.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+            <p>Explora otras barreras músicales orientales y descubre lo que puede ser tu proximo genero favorito.</p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class=""bd-placeholder-img" width="100%" height="100%" xmlns="banner_smash.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="banner_smash.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/>
+          <image href="banners/banner_smash.jpg" x="0" y="0" width="100%" height="100%">
+        </svg>
         <div class="container">
           <div class="carousel-caption">
             <h1>Videojuegos y Entretenimiento</h1>
-            <p>Conoce la razón de un Japon tan popular y enamorate de sus encantos.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            <p><b>Conoce la razón de un Japon tan popular y enamorate de sus encantos.</b></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+          <image href="banners/banner_moda.jpg" x="0" y="0"></image>
         <div class="container">
           <div class="carousel-caption text-end">
             <h1>Moda</h1>
             <p>Aprende de la historia por medio de la moda Japonesa y encuentra nuevos estilos que te podran enamorar!.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
           </div>
         </div>
       </div>
@@ -225,7 +225,7 @@
         <p class="lead">Japón es una nación rica en tradiciones y valores que se remontan a miles de años. Desde las ceremonias del té hasta los jardines zen, la cultura japonesa se caracteriza por su enfoque en la armonía, el respeto y la atención al detalle. Esta filosofía no solo está presente en su vida diaria, sino que también influye en su arquitectura, arte, gastronomía y moda.<br>Con el tiempo, Japón ha logrado una combinación única de tradición y modernidad. Las festividades tradicionales como el <b>Gion Matsuri</b> y el <b>Tanabata</b> conviven con una cultura pop que ha dado lugar a tendencias globales como el <b>anime</b>, el <b>manga</b> y los <b>videojuegos</b>. Esta mezcla de lo antiguo y lo nuevo hace que la cultura japonesa sea fascinante para millones de personas en todo el mundo.</p>
       </div>
       <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="Cultura.jpg">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="Imgs/Cultura.jpg">
       </div>
     </div>
 
@@ -242,7 +242,7 @@
         <p class="leader">Japón no solo preserva su herencia cultural, sino que también lidera en innovación tecnológica, siendo pionero en robótica, infraestructura y diseño. Esto le da un lugar destacado en la economía mundial, mientras sigue siendo un ícono cultural. </p>
       </div>
       <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="papers.jpg" padding-top: 15%>
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="Imgs/papers.jpg" padding-top: 15%>
       </div>
     </div>
 
@@ -254,7 +254,7 @@
         <p class="lead">Si deseas conocer más sobre las maravillas de Japón, aquí encontrarás temas destacados que capturan lo más esencial de su identidad cultural. Desde su impacto en la moda hasta su contribución al entretenimiento global, Japón es un país que nunca deja de sorprender.</p>
       </div>
       <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="Exploring.jpg">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="Imgs/Exploring.jpg">
       </div>
     </div>
 
@@ -266,11 +266,9 @@
 
 
   <!-- FOOTER -->
-    <footer class="bg-dark text-white text-center py-3">
-        <div>
-            <p><a href="/Contactos/contactos.html" class="text-white">Contacto</a> | <a href="/Referencias/referencias.html" class="text-white">Referencias</a></p>
-        </div>
-    </footer>
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+  </footer>
 </main>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
