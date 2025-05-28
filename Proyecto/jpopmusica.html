@@ -10,34 +10,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        
-        li:hover {color: #c98895; }
-        button:hover {background-color: #ff99aa;}
-        li {margin-bottom: 10px;}
-        a {transition: color 0.3s ease, background-color 0.3s ease;}
-        .dropdown-item {color: #EFC3CA;}
-        .dropdown-item:hover { color: #F8D9DE; background-color: #d49ba7;}
-        .dropdown-menu {background-color: #c98895;}
-        .bg-pink {background-color: #c98895;}
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.55rem;
-            overflow-y: hidden;
-        }
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-        .bd-mode-toggle { z-index: 1500; }
-        .bd-mode-toggle .dropdown-menu .active .bi { display: block !important; }
-        .bold-span { color: var(--text-white); }
         :root {
             --soft-pink: #ffc1cc;
             --pale-pink: #ffe4e6;
@@ -45,52 +17,71 @@
             --text-gray: #ced4da;
             --dark: #343a40;
         }
+
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #ffc1cc, #ffe4e6, #fff0f5);
             background-size: cover;
             background-attachment: fixed;
             margin: 0;
-            color: var(--text-white);
+            color: var(--dark);
         }
 
-        h1 {
-            margin: 0;
+        h1, h2, h3 {
             color: #f5548a;
-            font-size: 2.5em;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
+
         h2 {
-            color: #ff6699;
-            font-size: 2em;
+            font-size: 2rem;
         }
+
         h3 {
-            color: #ff99aa;
-            font-size: 1.5em;
-            margin-top: 20px;
+            font-size: 1.5rem;
             border-left: 4px solid #ff6699;
             padding-left: 10px;
         }
-        main {
-            margin-top: 70px;
-            background-color: var(--dark);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+
+        .wallpaper {
+            background: url('wallpaper.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        ul, ol {
-            margin-left: 20px;
-            padding-left: 10px;
+
+        .wallpaper-title {
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
+
+        .bg-pink {
+            background-color: #c98895;
+        }
+
+        .btn-pink {
+            background-color: #ff99aa;
+            color: white;
+        }
+
+        .btn-pink:hover {
+            background-color: #ff6f91;
+        }
+
         footer {
             background-color: var(--soft-pink);
             color: var(--text-white);
-            padding: 20px 0;
+            padding: 20px;
             text-align: center;
             border-top: 4px solid #ff99aa;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
         }
 
+        .artist-card img {
+            max-height: 250px;
+            object-fit: cover;
+        }
+        
         .navbar-nav .nav-link {
             color: white;
             font-weight: bold;
@@ -117,6 +108,7 @@
             background-color: #d49ba7;
             color: #fff;
         }
+
     </style>
 </head>
 <body>
