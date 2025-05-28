@@ -78,6 +78,9 @@
             padding-left: 10px;
         }
 
+        img {
+            border: whitesmoke 3px solid;
+        }
         footer {
             background-color: var(--soft-pink);
             color: var(--white);
@@ -146,7 +149,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
                                 <a class="dropdown-item" href="#">Historia</a>
-                                <a class="dropdown-item" href="../../Jpop/Jpop.html">Actualidad</a>
+                                <a class="dropdown-item" href="#">Actualidad</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -154,8 +157,8 @@
                                 Videojuegos
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
-                                <a class="dropdown-item" href="../../Videojuegos_japoneses/Videojuegos_japoneses.html">Actualidad</a>
-                                <a class="dropdown-item" href="../../Videojuegos_japoneses/consolas.html">Consolas del Nipon</a>
+                                <a class="dropdown-item" href="../../Videojuegos/Actualidad/Nombredelaseccion.html">Actualidad</a>
+                                <a class="dropdown-item" href="#">Consolas del Nipon</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -163,8 +166,8 @@
                                 Entretenimiento
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-top: 0px">
-                                <a class="dropdown-item" href="../Anime/Anime.hmtl">Anime y Mangas</a>
-                                <a class="dropdown-item" href="../Cine/Peliculas.html">Peliculas y novelas</a>
+                                <a class="dropdown-item" href="../Anime/#">Anime y Mangas</a>
+                                <a class="dropdown-item" href="#">Peliculas y novelas</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown txt-pnk">
@@ -198,131 +201,295 @@
                 <div class="model"></div>
             </div>
         </div>
-        <script>
-            let titulo = document.getElementById('titulo');
-            
-            window.addEventListener('scroll', function(){
-                let value = window.scrollY;
-                titulo.style.marginRight =  value * 3.2 + 'px';
-            })
-        </script>
         <main>
             <div class="container introducction">
                 <center>
-                    <h2>Peliculas</h2>
+                    <h2>Introduccion</h2>
                 </center>
                 <br><br>
+                <p>
+                    El anime, inicialmente llamado Senga Eiga, evolucionó hasta denominarse Animeeshon hacia 1960, abreviado como "anime". Aunque algunos creen que su origen es francés, en Japón es un medio cultural y comercial muy popular que ha generado un fenómeno de masas. <br><br> Está dirigido a diversos públicos y aborda múltiples géneros y temas, desde amor y fantasía hasta ciencia ficción y deportes.
+                    Tradicionalmente dibujado a mano, con el tiempo el anime ha adoptado herramientas digitales para procesos como el coloreado y los efectos visuales, agilizando la producción. <br><br> Tiene una estrecha relación con el manga y las novelas gráficas japonesas, ya que muchas series se basan en estos.El anime se caracteriza por su estilo visual distintivo, con énfasis en los detalles y técnicas cinematográficas más que en el movimiento. A partir de los años 80, su popularidad creció internacionalmente gracias al doblaje, los subtítulos y las plataformas de streaming. Para 2016, representaba el 60% de los programas de televisión animados en el mundo.
+                </p>
                 <center>
-                    <img src="Imgs/cine.webp">
+                    <img src="resources/animes.png" style="width: 80%">
+                    <figcaption>Animes populares del 2025</figcaption>
                 </center>
                 <br>
-                <h3>Géneros</h3>
+                <h2>Colección</h2>
+                <br><br>
                 <p>
-                    <center>
-                        <table>
-                            <tr>
-                                <th>Géneros</th><th>Descripción</th>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Anime</a></td><td>Animación japonesa</td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://es.wikipedia.org/wiki/Jidaigeki">Jidaigeki</a></td><td>Drama de epoca, generalmente Periodo Edo(1603-1868)</td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://es.wikipedia.org/wiki/Terror_japonés">J-Horror</a></td><td>Predomina el terror psicológico y la tensión</td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://es.wikipedia.org/wiki/Película_de_culto">Cine de culto</a></td><td>Comprende aquellas películas que atraen a un pequeño grupo de seguidores</td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://es.wikipedia.org/wiki/Kaijū">Kaiju</a></td><td>Películas cuyo protagonista es un monstruo, como el popular Godzilla.</td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://es.wikipedia.org/wiki/Pinku_eiga">Pink films</a></td><td>cine porno japonés por lo general incluye temas sociales y es estéticamente más cuidado.</td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://es.wikipedia.org/wiki/Yakuza">Yakuza</a></td><td>Películas que tratan acerca de la mafia japonesa.</td>
-                            </tr>
-                        </table>
-                    </center>
+                    Aunque muchas series de anime no alcanzan gran popularidad general, pueden dejar una fuerte huella en la cultura otaku gracias a sus historias, personajes y referencias. Desde los años 90, las convenciones de anime se han expandido a nivel mundial, especialmente en Asia, Europa y América. Estas reuniones suelen incluir actividades como concursos de karaoke, cosplay y coreografías. Ha surgido también el término akiba-kei, que se refiere a los fanáticos del anime con un conocimiento profundo del medio, más centrados en su estudio y apreciación que en el fanatismo popular.
                 </p>
-                <br>
+                <h2>Generos</h2>
+                <br><br>
+                <table border="1">
+                    <thead>
+                        <tr>
+                        <th>Género / Categoría</th>
+                        <th>Descripción</th>
+                        <th>Ejemplos / Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>Hentai</td>
+                        <td>Contenidos eróticos con universos narrativos complejos.</td>
+                        <td>Ejemplos en categoría Hentai.</td>
+                        </tr>
+                        <tr>
+                        <td><a href="https://es.wikipedia.org/wiki/Isekai">Isekai</a></td>
+                        <td>Protagonista es transportado o renacido en otro mundo.</td>
+                        <td>Categoría: Anime y manga fantástico.</td>
+                        </tr>
+                        <tr>
+                        <td><a href="https://es.wikipedia.org/wiki/Jidaigeki">Jidaigeki</a></td>
+                        <td>Relatos históricos, generalmente en el periodo Edo.</td>
+                        <td>Ambientación tradicional japonesa.</td>
+                        </tr>
+                        <tr>
+                        <td><a href="https://es.wikipedia.org/wiki/Kaijū">Kaiju</a></td>
+                        <td>Historias con monstruos gigantes destructivos.</td>
+                        <td>Ejemplo: Godzilla. Asociado al género mecha.</td>
+                        </tr>
+                        <tr>
+                        <td><a href="https://es.wikipedia.org/wiki/Kemono">Kemono</a></td>
+                        <td>Humanos con rasgos animales o viceversa.</td>
+                        <td>Usualmente dirigido al público infantil.</td>
+                        </tr>
+                        <tr>
+                        <td>Kinshinsōkan</td>
+                        <td>Relaciones románticas o eróticas entre familiares.</td>
+                        <td>Contenido controvertido.</td>
+                        </tr>
+                        <tr>
+                        <td><a href="https://es.wikipedia.org/wiki/Mahō_shōjo">Mahō shōjo</a></td>
+                        <td>Chicas con poderes mágicos que luchan contra el mal.</td>
+                        <td>Ejemplo: Sailor Moon.</td>
+                        </tr>
+                        <tr>
+                        <td><a href="https://es.wikipedia.org/wiki/Mecha_(género)">Mecha</a></td>
+                        <td>Robots gigantes que salvan al mundo.</td>
+                        <td>Real Robots vs Super Robots.</td>
+                        </tr>
+                        <tr>
+                        <td>Meitantei</td>
+                        <td>Historias policíacas.</td>
+                        <td>Enfoque en la resolución de crímenes.</td>
+                        </tr>
+                        <tr>
+                        <td>Musical</td>
+                        <td>Historias centradas en la música y músicos.</td>
+                        <td>Categoría: Música.</td>
+                        </tr>
+                        <tr>
+                        <td><a href="https://es.wikipedia.org/wiki/Nekketsu">Nekketsu</a> (Shōnen de lucha)</td>
+                        <td>Acción con protagonista que evoluciona enfrentando rivales.</td>
+                        <td>Espíritu combativo y crecimiento personal.</td>
+                        </tr>
+                        <tr>
+                        <td><a href="https://es.wikipedia.org/wiki/Escenario_apocalíptico">Post apocalíptico</a></td>
+                        <td>Historias ambientadas en mundos devastados.</td>
+                        <td>Diferentes de las distopías por su contexto temporal.</td>
+                        </tr>
+                        <tr>
+                        <td><a hre="https://es.wikipedia.org/wiki/Recuentos_de_la_vida">Recuentos de la vida</a> (Slice of Life)</td>
+                        <td>Historias de la vida cotidiana.</td>
+                        <td>Categoría: Recuentos de la vida.</td>
+                        </tr>
+                        <tr>
+                        <td>Romakome</td>
+                        <td>Comedias románticas populares incluso en cine.</td>
+                        <td>Categoría: Romance.</td>
+                        </tr>
+                        <tr>
+                        <td><a href="https://es.wikipedia.org/wiki/Sentai">Sentai</a></td>
+                        <td>Historias de superhéroes japoneses.</td>
+                        <td>Contraparte japonesa de héroes occidentales.</td>
+                        </tr>
+                        <tr>
+                        <td><a href="https://es.wikipedia.org/wiki/Shotacon">Shotacon</a> / <a href="https://es.wikipedia.org/wiki/Lolicon">Lolicon</a></td>
+                        <td>Romances con menores; los roles de género son variables.</td>
+                        <td>Categoría: Lolicon.</td>
+                        </tr>
+                        <tr>
+                        <td><a href="https://es.wikipedia.org/wiki/Yuri_(género)">Shōjo-ai / Yuri</a></td>
+                        <td>Romances entre chicas o mujeres.</td>
+                        <td>Shōjo-ai (contenido leve) vs Yuri (explícito).</td>
+                        </tr>
+                        <tr>
+                        <td><a href="https://es.wikipedia.org/wiki/Yaoi">Shōnen-ai / Yaoi</a></td>
+                        <td>Romances entre chicos o hombres.</td>
+                        <td>Shōnen-ai (contenido leve) vs Yaoi (explícito).</td>
+                        </tr>
+                        <tr>
+                        <td>Spokon</td>
+                        <td>Historias deportivas con espíritu de lucha y cooperación.</td>
+                        <td>Categoría: Deportes.</td>
+                        </tr>
+                        <tr>
+                        <td><a href="https://es.wikipedia.org/wiki/Steampunk">Steampunk</a></td>
+                        <td>Mundos donde predomina la tecnología a vapor.</td>
+                        <td>Estilo estético ambientado en la época victoriana.</td>
+                        </tr>
+                        <tr>
+                        <td><a href="https://es.wikipedia.org/wiki/Suspenso">Suspenso</a></td>
+                        <td>Historias con giros inesperados y cambios de tono.</td>
+                        <td>Categoría: Suspenso.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br><br>
                 <hr class="featurette-divider">
                 <br>
-                <h3>Inicios &nbsp; &#10236; &nbsp; 1940</h3>
+                <h1>Historia</h1>
+                <h3>Precursores de la animación japonesa</h3>
                 <p>
-                    El cine japonés comenzó a finales del siglo XIX con la llegada de una cámara Gaumont, con la que se filmaron geishas y la obra <b>kabuki Momijigari (1899)</b>, considerada la primera película japonesa. <b>Matsunosuke Onoe</b>, actor de kabuki, fue la primera estrella del cine nacional, participando en más de 1,000 cortometrajes junto al director <b>Shozo Makino</b>, popularizando el género <b>jidaigeki</b>.<br><br>
-                    La primera actriz profesional japonesa en cine fue <b>Tokuko Nagai Takagi</b>, quien actuó en cortos estadounidenses entre 1911 y 1914. Durante el cine mudo, Japón usaba <b>benshis</b>, narradores en vivo. Catástrofes como el terremoto de 1923 y la Segunda Guerra Mundial destruyeron muchas películas de la época.<br><br>
-                    Aunque en Occidente ya dominaba el cine sonoro en los años 30, en Japón aún se producían filmes mudos. Destacan los trabajos de <b>Kenji Mizoguchi</b>, <b>Sadao Yamanaka</b> y <b>Mikio Naruse</b>, cuyos filmes comenzaron a proyectarse en EE. UU. en esa década. La censura afectó a directores de izquierda como <b>Daisuke Ito</b>.<br><br>
-                    <b>Akira Kurosawa</b> debutó en 1943 con <b>Sanshiro Sugata</b>. Tras la guerra, la ocupación estadounidense introdujo animación y cine prohibidos anteriormente. Finalmente, en 1949, <b>Yasujirō Ozu</b> dirigió el reconocido filme <b>Primavera tardía (Banshun)</b>.<br><br>
+                    Los <b>precursores de la animación japonesa</b> provienen de diversas formas tradicionales de arte visual y narración. Entre ellos destacan el <b>emakimono</b>, utilizado desde el siglo XI, donde cuentacuentos ambulantes relataban historias mientras desenrollaban un rollo ilustrado en orden cronológico, creando un efecto similar al movimiento. Durante el período Edo, se popularizó el <b>kagee</b>, un arte derivado de las sombras chinescas.<br><br>
+                    En el siglo XVIII, las <b>linternas mágicas</b> provenientes de los Países Bajos también fueron utilizadas como medio visual. Además, el <b>kamishibai</b>, una técnica de narración con ilustraciones en papel surgida en el siglo XII, fue ampliamente difundida en el teatro callejero hasta los años 30.<br><br>
+                    Otros antecedentes importantes incluyen los <b>títeres del teatro bunraku</b> y las <b>estampas ukiyo-e</b>, que influyeron en el diseño de personajes en el anime moderno. Finalmente, el <b>manga</b> tuvo un impacto decisivo en la animación japonesa, especialmente gracias a caricaturistas como <b>Kitzawa Rakuten</b> y <b>Okamoto Ippei</b>, quienes incorporaron técnicas cinematográficas en sus obras.<br><br>
                 </p>
-                <h3>Edad de oro &nbsp; &#10236; &nbsp; 1950</h3>
+                <h3>Pioneros</h3>
                 <p>
-                    Durante los años 1950, el cine japonés vivió su <b>Edad de Oro</b>, iniciando con <b>Rashōmon</b> (1950) de <b>Akira Kurosawa</b>, que ganó el Oscar honorífico y dio proyección internacional al cine japonés y a <b>Toshirō Mifune</b>. Kurosawa también dirigió <b>Ikiru</b> (1952) y <b>Los siete samuráis</b> (1954), esta última inspiradora de <b>Los siete magníficos</b>.<br><br>
+                    Los <b>pioneros de la animación japonesa</b> surgieron a principios del siglo XX, inspirándose en técnicas desarrolladas en países como Francia, Alemania, EE. UU. y Rusia. Uno de los primeros registros es <b>Katsudō Shashin</b> (c. 1907), de autor desconocido, considerada una de las animaciones japonesas más antiguas. Sin embargo, fue en <b>1917</b> cuando aparecieron las primeras obras profesionales, destacando a animadores como:
                     <ul>
-                        <li>En 1954, <b>Ishirō Honda</b> lanzó <b>Gojira (Godzilla)</b>, pionera del género <b>Kaiju</b> y símbolo cultural global.<br></li>
-                        <li><b>Hiroshi Inagaki</b> ganó un Oscar por <b>Samurái I</b> (1955), parte de su trilogía sobre <b>Miyamoto Musashi</b>.</li>
-                        <li><b>Ichikawa</b> realizó notables dramas antibélicos como <b>El arpa birmana</b> (1956) y <b>Fuego en la llanura</b> (1959).</li>
-                        <li><b>Masaki Kobayashi</b> dirigió <b>La trilogía de la condición humana</b> (1958–1961).</li><br>
-                        <li><b>Kenji Mizoguchi</b> destacó con películas como <b>Vida de O-Haru</b> (1952), <b>Cuentos de la luna pálida</b> (1953, premio en Venecia) y <b>El intendente Sansho</b> (1954).</li>
-                        <li><b>Mikio Naruse</b> aportó obras como <b>Meshi</b> (1950), <b>Bangiku</b> (1954) y <b>Nubes flotantes</b> (1955).</li><br>
-                        <li><b>Yasujirō Ozu</b> estrenó <b>Ukikusa</b> (1958) y <b>Buenos días</b> (1959), consolidando su estilo minimalista y familiar.</li>
+                        <li><b>Ōten Shimokawa</b></li>
+                        <li><b>Seitarō Kitayama</b></li>
+                        <li><b>Jun'ichi Kōuchi</b> (autor de *Namakura Gatana*, el primer cortometraje de anime destinado al cine)</li>
                     </ul>
+                    Estos tres son conocidos como los “<b>padres del anime</b>”. Muchos trabajos tempranos se perdieron en el Gran Terremoto de Kantō en 1923.
+                    Durante la década de <b>1930</b>, la animación japonesa se consolidó como alternativa al cine con actores reales, aunque enfrentó competencia de estudios extranjeros como Disney. Algunos datos destacados:
+                    <ul>
+                        <li><b>Noburō Ōfuji</b> y <b>Yasuji Murata</b> usaban técnicas más económicas como la animación recortada.</li>
+                        <li><b>Kenzō Masaoka</b> y <b>Mitsuyo Seo</b> innovaron gracias al apoyo estatal, creando cortos educativos y de propaganda.</li>
+                        <li>En <b>1933</b>, Masaoka produjo <b>Chikara to onna no yo no naka</b>, el <b>primer anime con sonido</b>.</li>
+                        <li>En <b>1945</b>, Seo realizó <b>Momotaro: Sacred Sailors</b>, el <b>primer largometraje de anime</b>, patrocinado por la Armada Imperial Japonesa.</li>
+                    </ul>
+                    Finalmente, en los años <b>50</b>, surgieron numerosos anuncios animados para televisión. En <b>1958</b>, se estrenó <b>Hakuja Den</b> (<b>Panda y la serpiente blanca</b>), el <b>primer largometraje de anime en color</b>, basado en una leyenda china.
                 </p>
+                <br><br>
+                <h3>Era moderna del anime</h3>
+                    <h4>Años 60</h4>
+                        <ul>
+                            <li><strong>Osamu Tezuka</strong> adaptó técnicas de Disney para abaratar costos, estableciendo así el estilo limitado del anime.</li>
+                            <li><em>Three Tales</em> (1960): primera película de anime en TV.</li>
+                            <li><em>Otogi Manga Calendar</em> (1961–64): primera serie de anime en televisión.</li>
+                            <li><em>Astro Boy</em> (1963–66), dirigida por Tezuka, marcó un hito importante.</li>
+                            <li>Ex-empleados de Mushi Production fundaron estudios como Madhouse, Sunrise y Pierrot.</li>
+                        </ul>
+                        <center>
+                            <img src="resources/astroBoy.jpg" style="height: 300px;">
+                            <figcaption>Astro boy (1963 - 1966)</figcaption>
+                        </center>
+                        <h4>Años 70</h4>
+                        <ul>
+                            <li>Gran auge del manga; muchas obras fueron adaptadas al anime.</li>
+                            <li>El género <strong>Mecha</strong> se consolidó, evolucionando con creadores como Go Nagai y Yoshiyuki Tomino.</li>
+                        </ul>
+
+                        <h4>Años 80</h4>
+                        <ul>
+                            <li>Clásicos del Mecha: <em>Gundam</em> y <em>Macross</em>.</li>
+                            <li>La burbuja económica permitió producciones de alto presupuesto como:
+                            <ul>
+                                <li><em>Nausicaä del Valle del Viento</em> (1984)</li>
+                                <li><em>The Wings of Honnêamise</em> (1987)</li>
+                                <li><em>Akira</em> (1988)</li>
+                            </ul>
+                            </li>
+                        </ul>
+
+                        <h4>Años 90</h4>
+                        <ul>
+                            <li><em>Neon Genesis Evangelion</em> (1995) revolucionó el anime con un enfoque experimental.</li>
+                            <li>Otras obras destacadas: <em>Ghost in the Shell</em> (1995), <em>Cowboy Bebop</em> (1998).</li>
+                            <li>Éxito internacional de <em>Sailor Moon</em> y <em>Dragon Ball Z</em>.</li>
+                        </ul>
+                        <center>
+                            <img src="resources/neonGenesisEvangelion.jpg" style="width: 80%;">
+                            <figcaption>Neon Genesis Evangelion (1995) revolucionó el anime con un enfoque experimental.</figcaption>
+                        </center>
+                        <br>
+                        <h4>Años 2000 en adelante</h4>
+                        <ul>
+                            <li><em>El viaje de Chihiro</em> (2003) ganó el Óscar y fue la película de anime más taquillera por años.</li>
+                            <li>Crecimiento en adaptaciones de novelas ligeras y visuales como:
+                            <ul>
+                                <li><em>The Melancholy of Haruhi Suzumiya</em> (2006)</li>
+                                <li><em>Fate/stay night</em> (2006)</li>
+                            </ul>
+                            </li>
+                            <li><em>Kimetsu no Yaiba: Mugen Ressha-hen</em> (2020) superó todos los récords de taquilla en Japón.</li>
+                        </ul>
+                <br><br>
+                <hr class="featurette-divider">
                 <br>
-                <br> <br>
-                <h3>Entre 1960 &nbsp; &#10236; &nbsp; 1990</h3>
-                <p>
-                    <b>La nueva ola japonesa (nūberu bāgu)</b> surgió a finales de los años 1950 con una mirada crítica hacia el Japón de posguerra. Sus principales representantes fueron <b>Shōhei Imamura</b> (<b>Nippon konchuki</b>, 1963) y <b>Nagisa Ōshima</b> (<b>Historias crueles de juventud</b>, 1960). <b>Hiroshi Teshigahara</b> logró reconocimiento internacional con <b>La mujer de la arena</b> (1964), y <b>Masaki Kobayashi</b> con <b>Kwaidan</b> (1965), ambas premiadas en Cannes.<br><br>
-                    
-                    Ōshima también dirigió <b>El imperio de los sentidos</b> (1976), polémica por su contenido sexual explícito, lo que llevó a su censura en Japón y su estreno en Francia.
-                    
-                    En paralelo, directores consolidados continuaron activos:
-                    <ul class="lista">
-                            <li><b>Akira Kurosawa</b> dirigió <b>Yojimbo</b> (1961), influyente en el western.</li>
-                            <li><b>Kon Ichikawa</b> filmó el documental <b>Las olimpiadas de Tokio</b> (1965).</li>
-                            <li><b>Yoji Yamada</b> lanzó la exitosa saga <b>Otoko wa tsurai yo</b> (1969–1995), con 48 películas.</li>
-                            <li><b>Kinji Fukasaku</b> inició en 1973 <b>The Yakuza Papers</b>, una saga de cinco filmes sobre crimen organizado.</li>
-                            <li><b>Shôgorô Nishimura</b> destacó en el cine erótico con <b>Dan Oniroku: Nawa-Geshô</b> (1978).</li>
-                    </ul>
-                    <p>En los años 1980:</p>
-                    <ul class="lista">
-                        <li><b>Kurosawa</b> ganó la Palma de Oro con <b>Kagemusha</b> (1980) y dirigió <b>Ran</b> (1985), que obtuvo un Oscar al mejor vestuario.</li>
-                        <li><b>Seijun Suzuki</b> volvió con <b>Zigeunerweisen</b> (1980), ganadora de premios nacionales.</li>
-                        <li><b>Imamura</b> ganó otra Palma de Oro con <b>La balada de Narayama</b> (1983) y fue elogiado por <b>Lluvia negra</b> (1989).</li>
-                    </ul>
-                </p>
-                <br>
-                <h3>Apartir de &nbsp; &#10236; &nbsp; 1990</h3>
-                <p>
-                    A partir de los años <b>1990 y 2000</b>, el cine japonés vivió una nueva etapa de reconocimiento internacional:
-                    <ul class="lista">
-                        <li><b>Kiyoshi Kurosawa</b> se destacó con el thriller psicológico <b>Cure</b> (1997).</li>
-                        <li><b>Shohei Imamura</b> ganó nuevamente la <b>Palma de Oro</b> con <b>La anguila</b> (1997).</li>
-                        <li><b>Takeshi Kitano</b> se consolidó con películas como <b>Sonatine</b> (1993), <b>Kids Return</b> (1996) y <b>Hana-bi</b> (*Flores de fuego</b>, 1997), que ganó el <b>León de Oro</b> en Venecia.</li>
-                        <li><b>Takashi Miike</b> desarrolló una carrera prolífica, destacando con <b></b>Audition</b> (1999) y <b>The Bird People in China</b> (1998).</li>
-                    </ul>
-                    <p>En animación y suspenso:</p>
-                    <ul class="lista">
-                        <li><b>Satoshi Kon</b> debutó con <b>Perfect Blue</b> (1997), reconocida mundialmente.</li>
-                        <li><b>Perfect Blue: Yume nara samete</b> (2002) fue una reinterpretación de la misma novela original.</li>
-                        <li>El controvertido <b>Kinji Fukasaku</b> dirigió <b>Battle Royale</b> (2000), película de culto prohibida en algunos países.</li>
-                        <li><b>Takeshi Kitano</b> también dirigió <b>Dolls</b> (2002) y <b>Zatōichi</b> (2003), esta última una reinterpretación del personaje clásico.</li>
-                    </ul>
-                        <p>El cine de horror japonés alcanzó popularidad global con películas como:</p>
-                    <ul class="lista">
-                        <li><b>Ringu</b> (1998)</li>
-                        <li><b>Kairo</b> (2001)</li>
-                        <li><b>Dark Water</b> (2002)</li>
-                        <li><b>Yogen</b> (2004)</li>
-                        <li>y la serie <b>Ju-on</b>, dirigida por <b>Takashi Shimizu</b>.</li>
-                        <li>En 2004, <b>Ryuhei Kitamura</b> estrenó <b>Godzilla: Final Wars</b>, por el 50.º aniversario del monstruo.</li>
-                        <li><b>Seijun Suzuki</b> regresó con su última película, <b>Princess Raccoon</b> (2005).</li>
-                        <li>Hirokazu Koreeda</b> dirigió <b>Distance</b> (2001) y <b>Nadie sabe</b> (2005), esta última ampliamente premiada.</li>
-                        <li>Sion Sono</b> emergió con un estilo provocador en títulos como <b>Suicide Club</b> (2002), <b>Strange Circus</b> (2005), y <b>Noriko's Dinner Table</b> (2005).</li>
-                    </ul>
-                </p><br>
+                <h1>Directores Reconocidos del Anime</h1>
+                    <h2>Studio Ghibli: Hayao Miyazaki e Isao Takahata</h2>
+                        <ul>
+                            <li><strong>Miyazaki</strong> debutó como director con <em>El castillo de Cagliostro</em> (1979).</li>
+                            <li>En 1984 dirigió <em>Nausicaä del Valle del Viento</em>, éxito que llevó a la fundación de <strong>Studio Ghibli</strong> en 1985.</li>
+                            <li>Películas destacadas de Miyazaki:
+                            <ul>
+                                <li><em>El castillo en el cielo</em> (1986)</li>
+                                <li><em>Mi vecino Totoro</em> (1988)</li>
+                                <li><em>Majo no Takkyūbin</em> (1989)</li>
+                                <li><em>Porco Rosso</em> (1992)</li>
+                            </ul>
+                            </li>
+                            <li><strong>Takahata</strong> dirigió <em>La tumba de las luciérnagas</em> (1988) y <em>Pom Poko</em> (1994).</li>
+                            <li>Ghibli ganó fama internacional por la calidad y profundidad de sus obras.</li>
+                        </ul>
+                        <center>
+                            <img src="resources/Hayao_Miyazaki.jpg">
+                            <figcaption>Hayao Miyazaki director reconocido en el anime por el estudio Ghibli</figcaption>
+                        </center>
+
+                        <h2>Mamoru Oshii</h2>
+                        <ul>
+                            <li>Conocido por <em>Urusei Yatsura</em> y <em>Patlabor</em>.</li>
+                            <li>Alcanzó fama internacional con <em>Ghost in the Shell</em> (1995) y su secuela <em>Innocence</em> (2004).</li>
+                        </ul>
+
+                        <h2>Katsuhiro Ōtomo</h2>
+                        <ul>
+                            <li>Autor de <em>Akira</em> (1988), obra fundamental del anime moderno.</li>
+                            <li>Otras obras: <em>Memories</em> (1995) y <em>Steamboy</em> (2004).</li>
+                        </ul>
+
+                        <h2>Hayao Miyazaki (Fase posterior)</h2>
+                        <ul>
+                            <li><em>La princesa Mononoke</em> (1997): gran éxito comercial y ecológico en temática.</li>
+                            <li><em>El viaje de Chihiro</em> (2001): ganó el Oscar y el Oso de Oro; igualó ingresos de <em>Titanic</em>.</li>
+                            <li><em>El castillo ambulante</em> (2004): continuó su éxito internacional.</li>
+                            <li>Premios:
+                            <ul>
+                                <li>León de Oro por trayectoria (2005)</li>
+                            </ul>
+                            </li>
+                            <li>Su última película fue <em>El viento se levanta</em> (2013), tras la cual anunció su retiro.</li>
+                            <li><strong>Takahata</strong> se alejó tras el fracaso comercial de <em>Mis vecinos los Yamada</em> (1999).</li>
+                        </ul>
+
+                        <h2>Satoshi Kon</h2>
+                        <ul>
+                            <li>Dirigió cuatro películas consideradas de culto:
+                            <ul>
+                                <li><em>Perfect Blue</em> (1997)</li>
+                                <li><em>Millennium Actress</em> (2001)</li>
+                                <li><em>Tokyo Godfathers</em> (2003)</li>
+                                <li><em>Paprika</em> (2006)</li>
+                            </ul>
+                            </li>
+                            <li>Inspiró a directores como Darren Aronofsky y Christopher Nolan.</li>
+                            <li>También dirigió la serie <em>Paranoia Agent</em> (2004) y participó en <em>Memories</em>.</li>
+                            <li>Falleció en 2010 por cáncer de páncreas.</li>
+                        </ul>
+                    <br>
+                    <br>
+                    <h4>Descubre más</h4>
+                    <a href="https://es.wikipedia.org/wiki/Anime">wikipedia</a>
+                    <a href="https://animeorignal.fandom.com/es/wiki/Anime_Wiki">AniWiki</a>
             </div>
         </main>
 
