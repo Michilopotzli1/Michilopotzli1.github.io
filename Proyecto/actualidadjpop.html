@@ -1,19 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- (El head se mantiene igual que antes) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <title>J-POP Universe</title>
+    <meta name="author" content="Ruiz Flores Alan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --soft-pink: #ffc1cc;
+            --pale-pink: #ffe4e6;
+            --text-white: #ffffff;
+            --text-gray: #ced4da;
+            --dark: #343a40;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffc1cc, #ffe4e6, #fff0f5);
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            color: var(--dark);
+        }
+
+        h1, h2, h3 {
+            color: #f5548a;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            border-left: 4px solid #ff6699;
+            padding-left: 10px;
+        }
+
+        .wallpaper {
+            background: url('wallpaper.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wallpaper-title {
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .bg-pink {
+            background-color: #c98895;
+        }
+
+        .btn-pink {
+            background-color: #ff99aa;
+            color: white;
+        }
+
+        .btn-pink:hover {
+            background-color: #ff6f91;
+        }
+
+        footer {
+            background-color: var(--soft-pink);
+            color: var(--text-white);
+            padding: 20px;
+            text-align: center;
+            border-top: 4px solid #ff99aa;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
+        }
+
+        .artist-card img {
+            max-height: 250px;
+            object-fit: cover;
+        }
+        
+        .navbar-nav .nav-link {
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #ffebef;
+            background-color: #d49ba7;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .navbar .dropdown-menu {
+            background-color: #c98895;
+            border: none;
+        }
+
+        .navbar .dropdown-item {
+            color: #fff;
+        }
+
+        .navbar .dropdown-item:hover {
+            background-color: #d49ba7;
+            color: #fff;
+        }
+
+    </style>
 </head>
 <body>
-    <div id="root">
-        <!-- (El navbar se mantiene igual) -->
+    <header>
+            <nav class="navbar navbar-expand-md fixed-top bg-pink">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../Portada/index.html">J-POP</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-        <!-- Portada Actualizada -->
-        <section class="wallpaper">
-            <h1 class="wallpaper-title">Actualidad del J-POP 2023</h1>
-        </section>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav dropdown">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Introduccion/index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Música
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Historia</a></li>
+                                    <li><a class="dropdown-item" href="https://michilopotzli1.github.io/Proyecto/jpopmusica.html">Actualidad</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Videojuegos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../Videojuegos_japoneses/Videojuegos_japoneses.html">Actualidad</a></li>
+                                    <li><a class="dropdown-item" href="../Videojuegos_japoneses/consolas.html">Consolas del Nipon</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Entretenimiento
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../Entretenimiento/Anime/Anime.html">Anime y Mangas</a></li>
+                                    <li><a class="dropdown-item" href="../Entretenimiento/Cine/Peliculas.html">Películas y novelas</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" id="navbarDropdown4" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Moda y maquillaje
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../Moda/moda-japonesa.html">Historia</a></li>
+                                    <li><a class="dropdown-item" href="#">Estilos actuales</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    </header>
 
-        <!-- Contenido Principal Actualizado -->
-        <main class="container">
+    <main class="container mt-5 pt-5">
             <!-- Sección Inicio Actualizada -->
             <section id="home">
                 <h1 class="text-center mb-4">Lo más Reciente en el Mundo J-POP</h1>
@@ -45,10 +204,10 @@
                         <div class="bg-secondary p-3 rounded">
                             <h3>📅 Próximos Eventos</h3>
                             <ul>
-                                <li>SUMMER SONIC 2023 (Tokyo/Osaka)</li>
-                                <li>Tokyo Idol Festival 2023</li>
+                                <li>Tokyo Girls Colecction 2025 S/S (Japón)</li>
+                                <li>Rock in Japan Festival 2025</li>
                                 <li>Concierto virtual de Hatsune Miku</li>
-                                <li>Gira mundial de ONE OK ROCK</li>
+                                <li>Yoasobi 6 de Junio Barcelona</li>
                             </ul>
                         </div>
                     </div>
@@ -63,7 +222,7 @@
                 <article class="mb-5 artist-card">
                     <div class="row">
                         <div class="col-md-3">
-                            <img src="yoasobi-2023.jpg" class="img-fluid rounded" alt="YOASOBI 2023">
+                            <img src="https://static.wikia.nocookie.net/yoasobi/images/a/a0/YOASOBI_.png/revision/latest/scale-to-width-down/1200?cb=20231022164116" class="img-fluid rounded" alt="YOASOBI 2023">
                         </div>
                         <div class="col-md-9">
                             <h3>YOASOBI <span class="badge bg-success">Trending</span></h3>
@@ -73,7 +232,7 @@
                                 <li>Primer artista japonés en encabezar Billboard Global Excl. US</li>
                                 <li>Nuevo álbum: "THE BOOK 3" (Octubre 2023)</li>
                             </ul>
-                            <a href="#" class="btn btn-sm btn-pink">Ver discografía</a>
+                            <a href="https://www.last.fm/es/music/YOASOBI/+albums" class="btn btn-sm btn-pink">Ver discografía</a>
                         </div>
                     </div>
                 </article>
@@ -94,7 +253,7 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <img src="yonezu-2023.jpg" class="img-fluid rounded" alt="Kenshi Yonezu 2023">
+                            <img src="https://i.discogs.com/mp-ZHFRRBlBSiknKoknBjWd1AtIx6k07rBieXoK4YUc/rs:fit/g:sm/q:90/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxMTgx/NTYtMTczOTIwMzE0/Ni0yNDM0LmpwZWc.jpeg" class="img-fluid rounded" alt="Kenshi Yonezu 2023">
                         </div>
                     </div>
                 </article>
@@ -105,7 +264,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="card h-100">
-                                <img src="vaundy.jpg" class="card-img-top" alt="Vaundy">
+                                <img src="https://i.scdn.co/image/ab67616100005174f6be169899c276073de46a1b" class="card-img-top" alt="Vaundy">
                                 <div class="card-body">
                                     <h5 class="card-title">Vaundy</h5>
                                     <p class="card-text">Artista indie que conquistó el mainstream con "Toriko" y temas para Chainsaw Man.</p>
@@ -114,7 +273,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="card h-100">
-                                <img src="fujii-kaze.jpg" class="card-img-top" alt="Fujii Kaze">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHQPGF2llIETzgNg0HHT7gqy1vELZB6XbiYg&s" class="card-img-top" alt="Fujii Kaze">
                                 <div class="card-body">
                                     <h5 class="card-title">Fujii Kaze</h5>
                                     <p class="card-text">Su álbum "LOVE ALL SERVE ALL" rompió esquemas con fusión de soul y pop.</p>
@@ -123,10 +282,10 @@
                         </div>
                         <div class="col-md-4">
                             <div class="card h-100">
-                                <img src="ano.jpg" class="card-img-top" alt="ano">
+                                <img src="https://i.redd.it/ano-the-underground-idol-v0-qe9fmo6ign5d1.jpg?width=787&format=pjpg&auto=webp&s=1c58b13e69554a8f8b8a3048bf14016871517a38" class="card-img-top" alt="ano">
                                 <div class="card-body">
-                                    <h5 class="card-title">ano</h5>
-                                    <p class="card-text">Ex-idol que triunfa como solista con su estilo único y letras provocativas.</p>
+                                    <h5 class="card-title">Ano</h5>
+                                    <p class="card-text">Ex-idol underground que triunfa como solista con su estilo único y letras provocativas.</p>
                                 </div>
                             </div>
                         </div>
@@ -246,7 +405,7 @@
                         <div class="card mb-3">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="collab1.jpg" class="img-fluid rounded-start" alt="Colaboración">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFln4w31qLcCNsR8Hxqw0EmuQ_EffgVu8lOA&s" class="img-fluid rounded-start" alt="Colaboración">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -263,7 +422,7 @@
                         <div class="card mb-3">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="collab2.jpg" class="img-fluid rounded-start" alt="Colaboración">
+                                    <img src="https://pbs.twimg.com/media/FQaBYACWYAYVtWA.jpg:large" class="img-fluid rounded-start" alt="Colaboración">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -307,11 +466,13 @@
             </section>
         </main>
 
-        <!-- (El footer se mantiene igual) -->
+        </section>
+    </main>
 
-        <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    </div>
+    <footer>
+        <p>&copy; 2025 J-POP Universe. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
