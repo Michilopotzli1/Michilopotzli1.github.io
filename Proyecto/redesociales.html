@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <title>J-POP Universe - Redes Sociales</title>
+    <meta name="author" content="Ruiz Flores Alan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --soft-pink: #ffc1cc;
+            --pale-pink: #ffe4e6;
+            --text-white: #ffffff;
+            --text-gray: #ced4da;
+            --dark: #343a40;
+            --primary-pink: #f5548a;
+            --secondary-pink: #ff6699;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffc1cc, #ffe4e6, #fff0f5);
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            color: var(--dark);
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: var(--primary-pink);
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            border-left: 4px solid var(--secondary-pink);
+            padding-left: 10px;
+        }
+
+        .bg-pink {
+            background-color: #c98895;
+        }
+
+        footer {
+            background-color: var(--soft-pink);
+            color: var(--text-white);
+            padding: 20px;
+            text-align: center;
+            border-top: 4px solid var(--secondary-pink);
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .navbar-nav .nav-link {
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #ffebef;
+            background-color: #d49ba7;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .navbar .dropdown-menu {
+            background-color: #c98895;
+            border: none;
+        }
+
+        .navbar .dropdown-item {
+            color: #fff;
+        }
+
+        .navbar .dropdown-item:hover {
+            background-color: #d49ba7;
+            color: #fff;
+        }
+        
+        .navbar .navbar-brand {
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Estilos para las nuevas cajas de redes sociales */
+        .social-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid var(--primary-pink);
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: var(--dark);
+            display: block;
+        }
+
+        .social-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            color: var(--dark);
+        }
+
+        .social-card .card-body {
+            padding: 2rem;
+        }
+
+        .social-card h4 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-md fixed-top bg-pink">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Portada/index.html">J-POP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Introduccion/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Música
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="jpopmusica.html">Historia</a></li>
+                            <li><a class="dropdown-item" href="actualidadjpop.html">Actualidad</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Videojuegos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Videojuegos_japoneses/Videojuegos_japoneses.html">Actualidad</a></li>
+                            <li><a class="dropdown-item" href="Videojuegos_japoneses/consolas.html">Consolas del Nipon</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Entretenimiento
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Entretenimiento/Anime/Anime.html">Anime y Mangas</a></li>
+                            <li><a class="dropdown-item" href="Entretenimiento/Cine/Peliculas.html">Películas y novelas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Moda y maquillaje
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Moda/moda-japonesa.html">Historia</a></li>
+                            <li><a class="dropdown-item" href="Moda/Estilos_actuales.html">Estilos actuales</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="redes_sociales.html">Redes Sociales</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container mt-5 pt-5">
+
+    <section id="redes-sociales" class="py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4">Comunidades y Redes de J-POP</h1>
+            <p class="lead">Explora los mejores lugares para conectar con otros fans, seguir a tus artistas favoritos y descubrir nueva música.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <a href="#" class="social-card">
+                    <div class="card-body text-center">
+                        <h4>📱 Cuentas Oficiales</h4>
+                        <p>Sigue los perfiles oficiales de artistas y grupos en Twitter, Instagram y TikTok para no perderte ninguna novedad.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <a href="#" class="social-card">
+                    <div class="card-body text-center">
+                        <h4>▶️ Canales de YouTube</h4>
+                        <p>Descubre videos musicales, conciertos en vivo y contenido exclusivo en los canales oficiales y de fans.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <a href="#" class="social-card">
+                    <div class="card-body text-center">
+                        <h4>🎧 Playlists en Spotify</h4>
+                        <p>Encuentra y comparte las mejores playlists con los éxitos del momento y joyas ocultas del J-POP.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <a href="#" class="social-card">
+                    <div class="card-body text-center">
+                        <h4>🌐 Foros y Comunidades</h4>
+                        <p>Únete a foros como Reddit (r/jpop) para discutir lanzamientos, teorías y conectar con fans de todo el mundo.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 J-POP Universe. Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
