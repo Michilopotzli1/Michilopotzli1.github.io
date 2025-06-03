@@ -23,21 +23,34 @@
             height: 2.55rem;
             overflow-y: hidden;
         }
+/* Navbar con efecto neon mejorado */
 .navbar {
-    background-color: var(--dark-bg); /* Fondo oscuro más intenso */
-    border-bottom: 3px solid var(--neon-pink); /* Borde con un toque neon */
-    box-shadow: 0 0 15px var(--neon-green), 0 0 30px var(--soft-blue); /* Efecto de resplandor */
+    background-color: var(--dark-bg); /* Fondo oscuro */
+    border-bottom: 3px solid var(--neon-pink); /* Borde con efecto neon */
+    box-shadow: 0 0 20px var(--neon-pink), 0 0 40px var(--neon-green), 0 0 60px var(--soft-blue); /* Glow más fuerte */
+    transition: box-shadow 0.3s ease-in-out;
 }
 
+/* Efectos de texto luminoso */
 .navbar-brand, .nav-link {
-    color: var(--neon-green) !important; /* Texto neón */
+    color: var(--neon-green) !important;
     font-family: 'Orbitron', sans-serif;
-    text-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--soft-blue); /* Efecto luminoso */
+    text-shadow: 0 0 8px var(--neon-pink), 0 0 16px var(--soft-blue);
+    transition: text-shadow 0.3s ease-in-out;
 }
 
+/* Efecto animado al pasar el mouse */
 .nav-link:hover {
-    color: var(--neon-pink) !important; /* Cambio de color al pasar el mouse */
-    text-shadow: 0 0 10px var(--neon-green), 0 0 20px var(--soft-blue);
+    color: var(--neon-pink) !important;
+    text-shadow: 0 0 15px var(--neon-green), 0 0 30px var(--soft-blue), 0 0 45px var(--neon-pink);
+    animation: flicker 0.3s infinite alternate;
+}
+
+/* Animación sutil de parpadeo para mayor inmersión */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
 }
 
         .nav-scroller .nav {
