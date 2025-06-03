@@ -23,6 +23,22 @@
             height: 2.55rem;
             overflow-y: hidden;
         }
+.navbar {
+    background-color: var(--dark-bg); /* Fondo oscuro más intenso */
+    border-bottom: 3px solid var(--neon-pink); /* Borde con un toque neon */
+    box-shadow: 0 0 15px var(--neon-green), 0 0 30px var(--soft-blue); /* Efecto de resplandor */
+}
+
+.navbar-brand, .nav-link {
+    color: var(--neon-green) !important; /* Texto neón */
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--soft-blue); /* Efecto luminoso */
+}
+
+.nav-link:hover {
+    color: var(--neon-pink) !important; /* Cambio de color al pasar el mouse */
+    text-shadow: 0 0 10px var(--neon-green), 0 0 20px var(--soft-blue);
+}
 
         .nav-scroller .nav {
             display: flex;
