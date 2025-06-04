@@ -19,16 +19,19 @@
             --secondary-pink: #ff6699;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ffc1cc, #ffe4e6, #fff0f5);
-            background-size: cover;
-            background-attachment: fixed;
-            margin: 0;
-            color: var(--dark);
-            /* La animación fade-in se aplicará desde el CSS de esta página si la tienes aquí,
-               o desde un archivo CSS externo si la moviste */
-        }
+body {
+    font-family: Arial, sans-serif;
+    /* Ejemplo: Rosas más vibrantes y un toque de lavanda muy pálido */
+    background: linear-gradient(135deg, #FF99AA, #FFD1DC, #E6E6FA);
+    /* #FF99AA - Un rosa más fuerte que el --soft-pink */
+    /* #FFD1DC - Un rosa pastel (similar a tu --pale-pink pero podemos ajustarlo) */
+    /* #E6E6FA - Lavanda muy pálido, o podrías usar #FFF0E1 para un durazno suave */
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    color: var(--dark);
+    animation: fadeInAnimation 1.5s ease-in-out forwards; /* Manteniendo tu animación */
+}
 
         h1, h2, h3, h4, h5 {
             color: var(--primary-pink);
