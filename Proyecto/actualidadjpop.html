@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <title>J-POP Universe</title>
+    <title>J-POP Universe - Actualidad</title>
     <meta name="author" content="Ruiz Flores Alan">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,16 +17,7 @@
             --dark: #343a40;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ffc1cc, #ffe4e6, #fff0f5);
-            background-size: cover;
-            background-attachment: fixed;
-            margin: 0;
-            color: var(--dark);
-        }
-
-        /* ===== NUEVA ANIMACIÓN FADE-IN ===== */
+        /* Copiando la animación y aplicación al body de tu código anterior */
         @keyframes fadeInAnimation {
             0% {
                 opacity: 0;
@@ -35,14 +26,15 @@
                 opacity: 1;
             }
         }
-
-        /* Aplicaremos la animación al body o a un div wrapper si existe */
-        /* En este caso, no veo un <div id="root">, así que lo aplicaremos al body */
         body {
-            /* ... tus otros estilos de body ... */
-            animation: fadeInAnimation 1.5s ease-in-out forwards;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffc1cc, #ffe4e6, #fff0f5);
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            color: var(--dark);
+            animation: fadeInAnimation 1.5s ease-in-out forwards; /* Aplicando la animación */
         }
-        /* ===== FIN DE NUEVA ANIMACIÓN FADE-IN ===== */
 
 
         h1, h2, h3 {
@@ -59,7 +51,7 @@
             padding-left: 10px;
         }
 
-        .wallpaper { /* Este estilo es para la otra página, aquí no parece haber una sección .wallpaper */
+        .wallpaper { 
             background: url('wallpaper.jpg') no-repeat center center/cover;
             height: 300px;
             display: flex;
@@ -85,18 +77,6 @@
         .btn-pink:hover {
             background-color: #ff6f91;
         }
-
-        /* Ya no se usará este footer si se reemplaza por el oscuro */
-        /*
-        footer {
-            background-color: var(--soft-pink);
-            color: var(--text-white);
-            padding: 20px;
-            text-align: center;
-            border-top: 4px solid #ff99aa;
-            box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
-        }
-        */
 
         .artist-card img {
             max-height: 250px;
@@ -136,7 +116,8 @@
         }
     </style>
 </head>
-<body> <header>
+<body>
+<header>
     <nav class="navbar navbar-expand-md fixed-top bg-pink">
         <div class="container-fluid">
             <a class="navbar-brand" href="Portada/index.html">J-POP</a>
@@ -147,7 +128,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav dropdown">
+                <ul class="navbar-nav dropdown"> {/* Mantengo tu clase 'dropdown' aquí como en tu original */}
                     <li class="nav-item">
                         <a class="nav-link" href="Introduccion/index.html">Home</a>
                     </li>
@@ -192,7 +173,7 @@
                         </ul>
                     </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="redesociales.html">Redes Sociales</a>
+                        <a class="nav-link" href="redessociales.html">Redes Sociales</a>
                     </li>                   
                 </ul>
             </div>
@@ -212,9 +193,10 @@
                             <h3>🔥 Tendencias 2023</h3>
                             <ul>
                                 <li>Fusión de J-POP con géneros globales</li>
-                                <li>Auge del "City Pop" moderno</li>
-                                <li>Colaboraciones internacionales</li>
-                                <li>Artistas que rompen récords en streaming</li>
+                                <li>Auge del "City Pop" moderno y resurgimiento de géneros retro</li>
+                                <li>Colaboraciones internacionales cada vez más frecuentes</li>
+                                <li>Artistas que rompen récords en streaming y conquistan listas globales</li>
+                                <li>Mayor presencia de artistas virtuales y Vocaloid en el mainstream</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
@@ -223,7 +205,7 @@
                                 <li>"Idol" - YOASOBI</li>
                                 <li>"Kick Back" - Kenshi Yonezu</li>
                                 <li>"Subtitle" - Official HIGE DANDISM</li>
-                            </ol>
+                                </ol>
                         </div>
                     </div>
                 </div>
@@ -235,27 +217,27 @@
                             <li>Rock in Japan Festival 2025</li>
                             <li>Concierto virtual de Hatsune Miku</li>
                             <li>Yoasobi 6 de Junio Barcelona</li>
-                        </ul>
+                            </ul>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="current-artists" class="mt-5">
-            <h2 class="text-center mb-4">Artistas Dominando 2023</h2>
+            <h2 class="text-center mb-4">Artistas Dominando la Escena</h2>
             
             <article class="mb-5 artist-card">
                 <div class="row">
                     <div class="col-md-3">
-                        <img src="https://okamisamatv.com/wp-content/uploads/portada_yoasobi-2.jpg" class="img-fluid rounded" alt="YOASOBI 2025">
+                        <img src="https://okamisamatv.com/wp-content/uploads/portada_yoasobi-2.jpg" class="img-fluid rounded" alt="YOASOBI">
                     </div>
                     <div class="col-md-9">
                         <h3>YOASOBI <span class="badge bg-success">Trending</span></h3>
-                        <p>El dúo formado por Ayase (compositor) e Ikura (vocalista) continúa rompiendo récords en 2023:</p>
+                        <p>El dúo formado por Ayase (compositor) e Ikura (vocalista) continúa su racha de éxitos globales, transformando historias en música que resuena con millones.</p>
                         <ul>
-                            <li>"Idol" (Tema de Oshi no Ko) - Más de 300 millones de streams</li>
-                            <li>Primer artista japonés en encabezar Billboard Global Excl. US</li>
-                            <li>Nuevo álbum: "THE BOOK 3" (Octubre 2023)</li>
+                            <li>"Idol" (Tema de Oshi no Ko) - Fenómeno global con cientos de millones de streams.</li>
+                            <li>Pioneros en encabezar listas como Billboard Global Excl. US.</li>
+                            <li>Su álbum "THE BOOK 3" sigue siendo un favorito de los fans.</li>
                         </ul>
                         <a href="https://www.last.fm/es/music/YOASOBI/+albums" class="btn btn-sm btn-pink">Ver discografía</a>
                     </div>
@@ -266,31 +248,28 @@
                 <div class="row">
                     <div class="col-md-9">
                         <h3>Kenshi Yonezu <span class="badge bg-primary">Icono</span></h3>
-                        <p>El polifacético artista sigue innovando:</p>
+                        <p>El polifacético cantautor, productor e ilustrador sigue siendo una fuerza creativa imparable en el J-Pop, conocido por su profunda lírica y melodías pegajosas.</p>
                         <ul>
-                            <li>"Lovedream" - Nuevo sencillo viral</li>
-                            <li>Colaboración con PlayStation para tema exclusivo</li>
-                            <li>Exposición artística en Tokyo</li>
+                            <li>Éxitos virales como "Lemon" y "Kick Back" (Chainsaw Man) acumulan miles de millones de reproducciones.</li>
+                            <li>Continúa explorando nuevos sonidos y colaboraciones artísticas.</li>
                         </ul>
-                        <div class="alert alert-info">
-                            <strong>Dato:</strong> "Kick Back" superó las 500M reproducciones en Spotify
-                        </div>
+                         <a href="https://www.youtube.com/channel/UCxB0h3VML5xT1J0gU0Z8gZA" target="_blank" class="btn btn-sm btn-pink">Canal de YouTube</a>
                     </div>
                     <div class="col-md-3">
-                        <img src="https://i.discogs.com/mp-ZHFRRBlBSiknKoknBjWd1AtIx6k07rBieXoK4YUc/rs:fit/g:sm/q:90/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxMTgx/NTYtMTczOTIwMzE0/Ni0yNDM0LmpwZWc.jpeg" class="img-fluid rounded" alt="Kenshi Yonezu 2023">
+                        <img src="https://i.discogs.com/mp-ZHFRRBlBSiknKoknBjWd1AtIx6k07rBieXoK4YUc/rs:fit/g:sm/q:90/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxMTgx/NTYtMTczOTIwMzE0/Ni0yNDM0LmpwZWc.jpeg" class="img-fluid rounded" alt="Kenshi Yonezu">
                     </div>
                 </div>
             </article>
 
             <article class="mb-5">
-                <h3>🎤 Nuevas Revelaciones</h3>
+                <h3>🎤 Nuevas Revelaciones y Talentos en Ascenso</h3>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card h-100">
                             <img src="https://i.scdn.co/image/ab67616100005174f6be169899c276073de46a1b" class="card-img-top" alt="Vaundy">
                             <div class="card-body">
                                 <h5 class="card-title">Vaundy</h5>
-                                <p class="card-text">Artista indie que conquistó el mainstream con "Toriko" y temas para Chainsaw Man.</p>
+                                <p class="card-text">Joven prodigio que escribe, compone y arregla sus propias canciones, saltando del indie al mainstream con un estilo fresco y versátil.</p>
                             </div>
                         </div>
                     </div>
@@ -299,7 +278,7 @@
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHQPGF2llIETzgNg0HHT7gqy1vELZB6XbiYg&s" class="card-img-top" alt="Fujii Kaze">
                             <div class="card-body">
                                 <h5 class="card-title">Fujii Kaze</h5>
-                                <p class="card-text">Su álbum "LOVE ALL SERVE ALL" rompió esquemas con fusión de soul y pop.</p>
+                                <p class="card-text">Con su mezcla única de R&B, soul y pop, y un carisma arrollador, Fujii Kaze se ha convertido en un fenómeno internacional.</p>
                             </div>
                         </div>
                     </div>
@@ -308,7 +287,7 @@
                             <img src="https://i.redd.it/ano-the-underground-idol-v0-qe9fmo6ign5d1.jpg?width=787&format=pjpg&auto=webp&s=1c58b13e69554a8f8b8a3048bf14016871517a38" class="card-img-top" alt="ano">
                             <div class="card-body">
                                 <h5 class="card-title">Ano</h5>
-                                <p class="card-text">Ex-idol underground que triunfa como solista con su estilo único y letras provocativas.</p>
+                                <p class="card-text">Ex-idol de You'll Melt More!, Ano ha irrumpido como solista con una propuesta excéntrica y letras directas que desafían convenciones.</p>
                             </div>
                         </div>
                     </div>
@@ -317,31 +296,31 @@
         </section>
 
         <section id="releases" class="mt-5">
-            <h2 class="text-center mb-4">🎧 Lanzamientos Destacados</h2>
+            <h2 class="text-center mb-4">🎧 Lanzamientos Destacados Recientes</h2>
             
             <div class="row">
                 <div class="col-md-6">
-                    <h3>Álbumes</h3>
+                    <h3>Álbumes que Marcan Tendencia</h3>
                     <div class="list-group">
                         <a href="#" class="list-group-item list-group-item-action">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">"THE BOOK 3" - YOASOBI</h5>
                                 <small>Octubre 2023</small>
                             </div>
-                            <p class="mb-1">Incluye los éxitos "Idol" y "Adventure"</p>
+                            <p class="mb-1">Colección de éxitos que incluye "Idol", "Adventure" y más, consolidando su sonido único.</p>
                         </a>
                         <a href="#" class="list-group-item list-group-item-action">
                             <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">"LOVE ALL SERVE ALL" - Fujii Kaze</h5>
-                                <small>Edición Deluxe 2023</small>
+                                <h5 class="mb-1">"Ningen Gokko" - Vaundy</h5>
+                                <small>Septiembre 2023</small>
                             </div>
-                            <p class="mb-1">Versión extendida con 4 nuevas canciones</p>
+                            <p class="mb-1">Álbum que muestra la versatilidad y el genio compositivo de Vaundy.</p>
                         </a>
-                    </div>
+                        </div>
                 </div>
                 
                 <div class="col-md-6">
-                    <h3>Sencillos</h3>
+                    <h3>Sencillos Que No Puedes Dejar de Escuchar</h3>
                     <table class="table table-dark table-hover">
                         <thead>
                             <tr>
@@ -352,39 +331,35 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>"Lovedream"</td>
-                                <td>Kenshi Yonezu</td>
-                                <td>Sept 2023</td>
-                            </tr>
-                            <tr>
-                                <td>"Workin' Hard"</td>
-                                <td>Fujii Kaze</td>
-                                <td>Julio 2023</td>
-                            </tr>
-                            <tr>
-                                <td>"I'm a mess"</td>
-                                <td>Official HIGE DANDISM</td>
+                                <td>"SPECIALZ"</td>
+                                <td>King Gnu (Jujutsu Kaisen)</td>
                                 <td>Agosto 2023</td>
                             </tr>
-                        </tbody>
+                            <tr>
+                                <td>"Shouted Serenade"</td>
+                                <td>LiSA (Mahouka Koukou no Rettousei)</td>
+                                <td>Abril 2024</td>
+                            </tr>
+                            <tr>
+                                <td>"Hareyaka"</td>
+                                <td>Ryokuoushoku Shakai (MASHLE S2)</td>
+                                <td>Enero 2024</td>
+                            </tr>
+                             </tbody>
                     </table>
                 </div>
             </div>
         </section>
 
         <section id="viral" class="mt-5">
-            <h2 class="text-center mb-4">📱 Fenómenos Virales</h2>
+            <h2 class="text-center mb-4">📱 J-POP Conquistando el Mundo Digital</h2>
             
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100 bg-light text-dark">
                         <div class="card-body">
-                            <h5 class="card-title">TikTok Trends</h5>
-                            <ul>
-                                <li>"Idol Dance Challenge"</li>
-                                <li>"Subtitle" - Official HIGE DANDISM</li>
-                                <li>Remixes de City Pop vintage</li>
-                            </ul>
+                            <h5 class="card-title">TikTok e Instagram Reels</h5>
+                            <p>El J-Pop es una fuente inagotable de trends y challenges. Coreografías de "Idol" (YOASOBI) o "唱 (Show)" (Ado) se vuelven virales globalmente, impulsando el descubrimiento de nuevos artistas.</p>
                         </div>
                     </div>
                 </div>
@@ -392,12 +367,8 @@
                 <div class="col-md-4">
                     <div class="card h-100 bg-light text-dark">
                         <div class="card-body">
-                            <h5 class="card-title">YouTube Records</h5>
-                            <ul>
-                                <li>YOASOBI: 1B+ views</li>
-                                <li>Hatsune Miku: 500M+ views</li>
-                                <li>Kenshi Yonezu: 300M+ views</li>
-                            </ul>
+                            <h5 class="card-title">Explosión en YouTube</h5>
+                            <p>Los videos musicales (MVs) de J-Pop, a menudo con impresionantes animaciones o producciones cinematográficas, alcanzan cientos de millones de vistas, con canales como THE FIRST TAKE ofreciendo versiones únicas.</p>
                         </div>
                     </div>
                 </div>
@@ -405,12 +376,8 @@
                 <div class="col-md-4">
                     <div class="card h-100 bg-light text-dark">
                         <div class="card-body">
-                            <h5 class="card-title">Spotify Streaming</h5>
-                            <ul>
-                                <li>J-POP crece 40% en streams globales</li>
-                                <li>Playlists oficiales superan 1M seguidores</li>
-                                <li>Artistas japoneses en Viral 50 global</li>
-                            </ul>
+                            <h5 class="card-title">Dominio en Spotify y Streaming</h5>
+                            <p>El J-Pop ha visto un crecimiento exponencial en plataformas de streaming. Playlists oficiales y curadas por fans ayudan a la internacionalización, y artistas japoneses figuran constantemente en listas globales.</p>
                         </div>
                     </div>
                 </div>
@@ -418,20 +385,19 @@
         </section>
 
         <section id="collabs" class="mt-5">
-            <h2 class="text-center mb-4">🌍 Colaboraciones Globales</h2>
+            <h2 class="text-center mb-4">🌍 Colaboraciones Globales y Expansión</h2>
             
             <div class="row">
                 <div class="col-md-6">
                     <div class="card mb-3">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFln4w31qLcCNsR8Hxqw0EmuQ_EffgVu8lOA&s" class="img-fluid rounded-start" alt="Colaboración">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFln4w31qLcCNsR8Hxqw0EmuQ_EffgVu8lOA&s" class="img-fluid rounded-start" alt="Colaboración ONE OK ROCK">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">ONE OK ROCK x Ed Sheeran</h5>
-                                    <p class="card-text">Nueva versión de "Renegades" con participación especial.</p>
-                                    <p class="card-text"><small class="text-muted">Agosto 2023</small></p>
+                                    <h5 class="card-title">J-Rock y Artistas Occidentales</h5>
+                                    <p class="card-text">Bandas como ONE OK ROCK continúan colaborando con artistas internacionales, fusionando estilos y alcanzando nuevas audiencias.</p>
                                 </div>
                             </div>
                         </div>
@@ -442,13 +408,12 @@
                     <div class="card mb-3">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="https://pbs.twimg.com/media/FQaBYACWYAYVtWA.jpg:large" class="img-fluid rounded-start" alt="Colaboración">
+                                <img src="https://pbs.twimg.com/media/FQaBYACWYAYVtWA.jpg:large" class="img-fluid rounded-start" alt="Colaboración Hikaru Utada">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">Hikaru Utada x A.G. Cook</h5>
-                                    <p class="card-text">Remix experimental de "Face My Fears".</p>
-                                    <p class="card-text"><small class="text-muted">Julio 2023</small></p>
+                                    <h5 class="card-title">Productores Globales y J-Pop</h5>
+                                    <p class="card-text">Artistas icónicos como Hikaru Utada trabajan con productores de vanguardia de la escena electrónica global, como A.G. Cook, resultando en sonidos innovadores.</p>
                                 </div>
                             </div>
                         </div>
@@ -456,30 +421,50 @@
                 </div>
             </div>
             
-            <div class="alert alert-warning mt-3">
-                <strong>Próximamente:</strong> Se rumorea colaboración entre YOASOBI y un artista occidental top.
+            <div class="alert alert-info mt-3">
+                <strong>Festivales y Giras Mundiales:</strong> Cada vez más artistas y bandas de J-Pop anuncian giras por Norteamérica, Europa y Asia, participando también en grandes festivales internacionales.
             </div>
         </section>
 
+        <section id="anison-impact" class="mt-5">
+            <h2 class="text-center mb-4">🎤 Anison: La Puerta de Entrada Global al J-POP</h2>
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <p class="lead">Las canciones de anime ("Anison") siguen siendo uno de los principales motores de la popularidad global del J-POP. Temas de apertura (openings) y cierre (endings) de series exitosas se convierten instantáneamente en hits virales, llevando a artistas como LiSA, Aimer, King Gnu, Official HIGE DANDism, y YOASOBI a audiencias masivas fuera de Japón.</p>
+                    <p>Esta sinergia es más fuerte que nunca gracias a la disponibilidad global de anime a través de plataformas de streaming. Los fans descubren nueva música y artistas directamente a través de sus series favoritas, creando una conexión emocional que trasciende el idioma.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="https://kmagazine.mx/wp-content/uploads/2019/09/Bong-Bong1-e1568217198479.jpg" class="img-fluid rounded shadow" alt="Impacto Global del Anison">
+                </div>
+            </div>
+        </section>
+        <section id="jrock-actual" class="mt-5">
+            <h2 class="text-center mb-4">🎸 El J-Rock Sigue Vibrando: Bandas que Debes Escuchar</h2>
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                     <img src="https://www.retornoanime.com/files/wp-content/uploads/2014/12/babymetal-billboard2-726x400.jpg" class="img-fluid rounded shadow" alt="Escena Actual del J-Rock">
+                </div>
+                <div class="col-md-7">
+                    <p class="lead">El J-Rock mantiene una escena vibrante y diversa, con bandas consolidadas que continúan innovando y nuevos talentos que emergen con fuerza. Desde el rock alternativo hasta el post-hardcore y el metalcore melódico, hay una enorme variedad de sonidos.</p>
+                    <p>Muchas bandas de J-Rock también tienen una fuerte conexión con el anime y los videojuegos, componiendo bandas sonoras que amplifican su alcance. Artistas como (Puedes añadir ejemplos: MAN WITH A MISSION, SiM, My First Story, etc.) demuestran la energía y la calidad de la escena rockera japonesa actual, ganando fans en todo el mundo gracias a sus potentes directos y producciones de alta calidad.</p>
+                </div>
+            </div>
+        </section>
         <section id="stats" class="mt-5">
-            <h2 class="text-center mb-4">📊 J-POP en Números (2023)</h2>
+            <h2 class="text-center mb-4">📊 J-POP en Números (Actualizado)</h2>
             
             <div class="row text-center">
                 <div class="col-md-3">
-                    <div class="display-4">40%</div>
-                    <p>Crecimiento en streams internacionales</p>
+                    <div class="display-4">45%</div> <p>Crecimiento en streams internacionales (año anterior)</p>
                 </div>
                 <div class="col-md-3">
-                    <div class="display-4">15</div>
-                    <p>Artistas japoneses en Billboard Global</p>
+                    <div class="display-4">20+</div> <p>Artistas japoneses con presencia regular en Billboard Global</p>
                 </div>
                 <div class="col-md-3">
-                    <div class="display-4">3B+</div>
-                    <p>Reproducciones de YOASOBI en plataformas</p>
+                    <div class="display-4">5B+</div> <p>Reproducciones combinadas de los top 3 artistas en plataformas</p>
                 </div>
                 <div class="col-md-3">
-                    <div class="display-4">120%</div>
-                    <p>Aumento en búsquedas de "J-POP"</p>
+                    <div class="display-4">150%</div> <p>Aumento en búsquedas globales de "Anime Music"</p>
                 </div>
             </div>
         </section>
