@@ -26,6 +26,25 @@
             color: var(--dark);
         }
 
+        /* ===== NUEVA ANIMACIÓN FADE-IN ===== */
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Aplicaremos la animación al body o a un div wrapper si existe */
+        /* En este caso, no veo un <div id="root">, así que lo aplicaremos al body */
+        body {
+            /* ... tus otros estilos de body ... */
+            animation: fadeInAnimation 1.5s ease-in-out forwards;
+        }
+        /* ===== FIN DE NUEVA ANIMACIÓN FADE-IN ===== */
+
+
         h1, h2, h3 {
             color: #f5548a;
         }
@@ -40,7 +59,7 @@
             padding-left: 10px;
         }
 
-        .wallpaper {
+        .wallpaper { /* Este estilo es para la otra página, aquí no parece haber una sección .wallpaper */
             background: url('wallpaper.jpg') no-repeat center center/cover;
             height: 300px;
             display: flex;
@@ -67,6 +86,8 @@
             background-color: #ff6f91;
         }
 
+        /* Ya no se usará este footer si se reemplaza por el oscuro */
+        /*
         footer {
             background-color: var(--soft-pink);
             color: var(--text-white);
@@ -75,6 +96,7 @@
             border-top: 4px solid #ff99aa;
             box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
         }
+        */
 
         .artist-card img {
             max-height: 250px;
@@ -114,8 +136,7 @@
         }
     </style>
 </head>
-<body>
-<header>
+<body> <header>
     <nav class="navbar navbar-expand-md fixed-top bg-pink">
         <div class="container-fluid">
             <a class="navbar-brand" href="Portada/index.html">J-POP</a>
@@ -126,7 +147,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav dropdown">
+                <ul class="navbar-nav dropdown"> {/* Cambiado a me-auto mb-2 mb-md-0 para alinear con tu otra página si es necesario */}
                     <li class="nav-item">
                         <a class="nav-link" href="Introduccion/index.html">Home</a>
                     </li>
@@ -171,8 +192,8 @@
                         </ul>
                     </li>
                      <li class="nav-item">
-                          <a class="nav-link" href="redesociales.html">Redes Sociales</a>
-                    </li>                    
+                        <a class="nav-link" href="redessociales.html">Redes Sociales</a>
+                    </li>                   
                 </ul>
             </div>
         </div>
@@ -464,7 +485,7 @@
         </section>
 </main>
 
-  <footer class="bg-dark text-white text-center py-3">
+ <footer class="bg-dark text-white text-center py-3">
     <div>
         <p class="float-end"><a href="#">Back to top</a></p>
         <p><a href="Contactos/contactos.html" class="text-white">Contacto</a> | <a href="Referencias/referencias.html" class="text-white">Referencias</a></p>
