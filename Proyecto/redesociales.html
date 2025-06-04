@@ -26,6 +26,8 @@
             background-attachment: fixed;
             margin: 0;
             color: var(--dark);
+            /* La animación fade-in se aplicará desde el CSS de esta página si la tienes aquí,
+               o desde un archivo CSS externo si la moviste */
         }
 
         h1, h2, h3, h4, h5 {
@@ -44,15 +46,6 @@
 
         .bg-pink {
             background-color: #c98895;
-        }
-
-        footer {
-            background-color: var(--soft-pink);
-            color: var(--text-white);
-            padding: 20px;
-            text-align: center;
-            border-top: 4px solid var(--secondary-pink);
-            box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
         }
         
         .navbar-nav .nav-link {
@@ -87,7 +80,6 @@
             font-weight: bold;
         }
 
-        /* Estilos para las nuevas cajas de redes sociales */
         .social-card {
             background-color: rgba(255, 255, 255, 0.8);
             border: 2px solid var(--primary-pink);
@@ -96,6 +88,7 @@
             text-decoration: none;
             color: var(--dark);
             display: block;
+            height: 100%; /* Para que todas las tarjetas en una fila tengan la misma altura */
         }
 
         .social-card:hover {
@@ -106,12 +99,29 @@
 
         .social-card .card-body {
             padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Alinea el contenido y el botón */
         }
 
         .social-card h4 {
             font-size: 1.5rem;
             font-weight: bold;
+            margin-bottom: 1rem;
         }
+        .social-card p {
+            flex-grow: 1; /* Hace que el párrafo ocupe el espacio disponible */
+            margin-bottom: 1rem;
+        }
+        .btn-pink { /* Estilo de botón que ya tenías */
+            background-color: #ff99aa;
+            color: white;
+            border: none;
+        }
+        .btn-pink:hover {
+            background-color: #ff6f91;
+        }
+
     </style>
 </head>
 <body>
@@ -168,7 +178,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="redesociales.html">Redes Sociales</a>
+                        <a class="nav-link active" aria-current="page" href="redessociales.html">Redes Sociales</a>
                     </li>
                 </ul>
             </div>
@@ -188,35 +198,35 @@
         <div class="col-lg-3 col-md-6 mb-4">
             <a href="https://x.com/jpopstreaming?lang=es" target="_blank" class="social-card"> 
                 <div class="card-body text-center">
-                    <h4>📱 Cuenta de streaming</h4>
-                    <p>Sigue el perfil de este usuario en X para no perderte ninguna novedad.</p>
+                    <h4>📱 Noticias en X (Twitter)</h4>
+                    <p>Sigue esta cuenta para novedades y lanzamientos del J-Pop directamente en X.</p>
                 </div>
             </a>
         </div>
 
         <div class="col-lg-3 col-md-6 mb-4">
-            <a href="https://www.youtube.com/results?search_query=jpop" target="_blank" class="social-card">
+            <a href="https://www.youtube.com/@sonymusicjapan" target="_blank" class="social-card">
                 <div class="card-body text-center">
-                    <h4>▶️ Videos de YouTube</h4>
-                    <p>Descubre videos musicales, conciertos en vivo y contenido exclusivo en los canales oficiales y de fans.</p>
+                    <h4>▶️ Canales de YouTube</h4>
+                    <p>Descubre MVs oficiales, conciertos y contenido exclusivo. Ejemplo: Canal de Sony Music Japan.</p>
                 </div>
             </a>
         </div>
 
         <div class="col-lg-3 col-md-6 mb-4">
-            <a href="https://open.spotify.com/search/jpop" target="_blank" class="social-card">
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DXafb0IuPwQ9A" target="_blank" class="social-card">
                 <div class="card-body text-center">
                     <h4>🎧 Playlists en Spotify</h4>
-                    <p>Encuentra y comparte las mejores playlists con los éxitos del momento y joyas ocultas del J-POP.</p>
+                    <p>Escucha "Tokyo Super Hits!" y otras playlists oficiales para descubrir lo mejor del J-POP.</p>
                 </div>
             </a>
         </div>
 
         <div class="col-lg-3 col-md-6 mb-4">
-            <a href="https://www.reddit.com/search/?q=jpop&cId=11533ed4-102e-4bf8-b74e-050c41728177&iId=0b29b60f-c32e-4b1f-b12d-b40dbb7e9ff8" target="_blank" class="social-card">
+            <a href="https://www.reddit.com/r/jpop/" target="_blank" class="social-card">
                 <div class="card-body text-center">
                     <h4>🌐 Foros y Comunidades</h4>
-                    <p>Únete a foros como Reddit (r/jpop) para discutir lanzamientos, teorías y conectar con fans de todo el mundo.</p>
+                    <p>Únete al subreddit r/jpop para discutir lanzamientos, teorías y conectar con fans de todo el mundo.</p>
                 </div>
             </a>
         </div>
@@ -229,13 +239,13 @@
 
     <p></p>
 
-<hr class="my-5"> <div class="text-center mb-5">
+<hr class="my-5"> 
+<div class="text-center mb-5">
     <h2 class="display-6">Artistas Recomendados</h2>
     <p class="lead">Perfiles que no te puedes perder.</p>
 </div>
 
 <div class="row">
-
     <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100 shadow-sm">
             <img src="https://i.scdn.co/image/ab6761610000e5ebbcb1c184c322688f10cdce7a" class="card-img-top" alt="Ado">
@@ -260,26 +270,124 @@
 
     <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100 shadow-sm">
-            <img src="https://lh3.googleusercontent.com/1BFQt988LS_GupMk7K8412eq4Pa4A_vD5DD8wPqzNSqvwuFTRrXJ87XukcxTUrKAbMeE6M6MHXA_3Q=w544-h544-p-l90-rj" alt="Eve">
+            <img src="https://i.scdn.co/image/ab6761610000e5ebc1a7e93b5436662758176348" class="card-img-top" alt="Eve">
             <div class="card-body text-center d-flex flex-column">
                 <h5 class="card-title fw-bold">Eve</h5>
-                <p class="card-text">Artista y productor que cautivó al mundo con "Kaikai Kitan", el icónico opening de <em>Jujutsu Kaisen</em>. Su música mezcla rock y pop con impresionantes videos animados.</p>
+                <p class="card-text">Artista y productor que cautivó al mundo con "Kaikai Kitan" (Jujutsu Kaisen). Su música mezcla rock y pop con impresionantes videos animados.</p>
                 <a href="https://www.instagram.com/eve_harapeco/" target="_blank" class="btn btn-pink mt-auto">Ver Instagram</a>
             </div>
         </div>
     </div>
-
+</div>
+<hr class="my-5">
+<div class="text-center mb-5">
+    <h2 class="display-6">J-POP en el Entretenimiento</h2>
+    <p class="lead">Descubre cómo el J-Pop se fusiona con el mundo del anime y las películas japonesas.</p>
 </div>
 
-    <p></p>
-    
+<div class="row">
+    <div class="col-lg-4 col-md-6 mb-4">
+        <a href="https://open.spotify.com/playlist/37i9dQZF1DX4JfnKMLOE5B" target="_blank" class="social-card">
+            <div class="card-body text-center">
+                <h5 class="card-title fw-bold">Bandas Sonoras de Anime</h5>
+                <p>Explora playlists como "Anime Hits" en Spotify con los mejores openings y endings.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4">
+        <a href="https://www.animenewsnetwork.com/encyclopedia/anime.php?movie=on" target="_blank" class="social-card">
+             <div class="card-body text-center">
+                <h5 class="card-title fw-bold">J-Pop en el Cine Japonés</h5>
+                <p>Descubre películas con temas de J-Pop icónicos. Anime News Network lista películas de anime.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4">
+        <a href="https://www.reddit.com/r/anison/" target="_blank" class="social-card">
+            <div class="card-body text-center">
+                <h5 class="card-title fw-bold">Comunidad de Anison</h5>
+                <p>Únete al subreddit r/anison para discutir las mejores canciones de anime y su impacto.</p>
+            </div>
+        </a>
+    </div>
+</div>
+<hr class="my-5">
+<div class="text-center mb-5">
+    <h2 class="display-6">El Ritmo del J-POP en los Videojuegos</h2>
+    <p class="lead">Desde juegos de ritmo hasta bandas sonoras épicas, el J-Pop tiene una fuerte presencia en el gaming.</p>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-md-6 mb-4">
+        <a href="https://www.colorfulstage.com/" target="_blank" class="social-card">
+            <div class="card-body text-center">
+                <h5 class="card-title fw-bold">Juegos de Ritmo Japoneses</h5>
+                <p>Sigue novedades de juegos como "Hatsune Miku: Colorful Stage!" llenos de J-Pop y Vocaloid.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4">
+        <a href="https://open.spotify.com/playlist/37i9dQZF1DWXb9G0ei6ODk" target="_blank" class="social-card">
+            <div class="card-body text-center">
+                <h5 class="card-title fw-bold">Gaming & J-Pop Playlists</h5>
+                <p>Descubre playlists como "Anime & Gaming" en Spotify con temas vocales de J-Pop de tus juegos favoritos.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4">
+        <a href="https://tgs.cesa.or.jp/en/" target="_blank" class="social-card">
+            <div class="card-body text-center">
+                <h5 class="card-title fw-bold">Eventos Gamer y Música</h5>
+                <p>Sigue eventos como el Tokyo Game Show, donde a menudo se presentan novedades musicales relacionadas con videojuegos.</p>
+            </div>
+        </a>
+    </div>
+</div>
+<hr class="my-5">
+<div class="text-center mb-5">
+    <h2 class="display-6">Estilo J-POP: Moda y Maquillaje</h2>
+    <p class="lead">El J-Pop no solo es música, ¡es una declaración de estilo! Inspírate con las tendencias.</p>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-md-6 mb-4">
+        <a href="https://www.instagram.com/wego_official/" target="_blank" class="social-card">
+            <div class="card-body text-center">
+                <h5 class="card-title fw-bold">Marcas de Ropa Japonesa</h5>
+                <p>Sigue a marcas populares en Japón como WEGO para inspirarte en el street style japonés.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4">
+        <a href="https://www.youtube.com/c/sasakiasahi" target="_blank" class="social-card">
+            <div class="card-body text-center">
+                <h5 class="card-title fw-bold">Tutoriales J-Beauty</h5>
+                <p>Canales como el de Sasaki Asahi enseñan técnicas de maquillaje inspiradas en tendencias J-Pop.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-lg-4 col-md-6 mb-4">
+        <a href="https://www.instagram.com/vivi_mag_official/" target="_blank" class="social-card">
+            <div class="card-body text-center">
+                <h5 class="card-title fw-bold">Revistas de Moda Japonesas</h5>
+                <p>Sigue la cuenta de Instagram de la revista ViVi para ver los últimos estilos y tendencias en Japón.</p>
+            </div>
+        </a>
+    </div>
+</div>
 </main>
     
-  <footer class="bg-dark text-white text-center py-3">
+ <footer class="bg-dark text-white text-center py-3">
     <div>
         <p class="float-end"><a href="#">Back to top</a></p>
         <p><a href="Contactos/contactos.html" class="text-white">Contacto</a> | <a href="Referencias/referencias.html" class="text-white">Referencias</a></p>
-        <p>&copy; 2025 J-POP Universe. Todos los derechos reservados.</p>
+        <p>© 2025 J-POP Universe. Todos los derechos reservados.</p>
     </div>
 </footer>
 
