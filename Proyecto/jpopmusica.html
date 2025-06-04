@@ -27,6 +27,28 @@
             color: var(--dark);
         }
 
+        /* ===== NUEVA ANIMACIÓN FADE-IN ===== */
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #root {
+            /* Aplicamos la animación al div principal */
+            animation: fadeInAnimation 1.5s ease-in-out forwards;
+            /* * fadeInAnimation: Nombre de la animación que definimos arriba.
+             * 1.5s: Duración de la animación (puedes cambiarlo, ej: 1s, 2s).
+             * ease-in-out: Hace que la animación sea suave al inicio y al final.
+             * forwards: Mantiene el estado final de la animación (opacity: 1).
+             */
+        }
+        /* ===== FIN DE NUEVA ANIMACIÓN FADE-IN ===== */
+
+
         h1, h2, h3 {
             color: #f5548a;
         }
@@ -42,14 +64,11 @@
         }
 
         .wallpaper {
-            /* CORREGIDO: .png y asegúrate que la ruta sea correcta */
             background: url('wallpaper.png') no-repeat center center/cover; 
-            height: 300px; /* Puedes ajustar la altura según necesites */
+            height: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Añadimos un poco de padding superior para compensar el navbar fijo si es necesario */
-            /* padding-top: 56px;  Si el navbar fixed-top interfiere, ajusta este valor */
         }
 
         .wallpaper-title {
@@ -71,7 +90,7 @@
             background-color: #ff6f91;
         }
 
-        footer {
+        footer { /* Este footer es el rosa, si usas el negro, estos estilos no aplican a ese */
             background-color: var(--soft-pink);
             color: var(--text-white);
             padding: 20px;
@@ -176,7 +195,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="redesociales.html">Redes Sociales</a>
+                                <a class="nav-link" href="redessociales.html">Redes Sociales</a>
                             </li>
                         </ul>
                     </div>
@@ -270,7 +289,7 @@
                     </div>
                 </article>
 
-                </section>
+            </section>
 
             <section id="project-sekai" class="mt-5">
                 <h2 class="text-center mb-4">🎮 Project SEKAI</h2>
@@ -292,7 +311,7 @@
                                     </div>
                                 </div>
                             </div>
-                            </div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <h3>📅 Eventos Recientes</h3>
@@ -380,7 +399,8 @@
 
         </main>
         
-    </div> <footer class="bg-dark text-white text-center py-3">
+    </div> 
+    <footer class="bg-dark text-white text-center py-3">
     <div>
         <p class="float-end"><a href="#">Back to top</a></p>
         <p><a href="Contactos/contactos.html" class="text-white">Contacto</a> | <a href="Referencias/referencias.html" class="text-white">Referencias</a></p>
