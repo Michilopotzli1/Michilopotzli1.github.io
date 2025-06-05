@@ -27,7 +27,6 @@
             color: var(--dark);
         }
 
-        /* ===== NUEVA ANIMACIÓN FADE-IN ===== */
         @keyframes fadeInAnimation {
             0% {
                 opacity: 0;
@@ -38,16 +37,8 @@
         }
 
         #root {
-            /* Aplicamos la animación al div principal */
             animation: fadeInAnimation 1.5s ease-in-out forwards;
-            /* * fadeInAnimation: Nombre de la animación que definimos arriba.
-             * 1.5s: Duración de la animación (puedes cambiarlo, ej: 1s, 2s).
-             * ease-in-out: Hace que la animación sea suave al inicio y al final.
-             * forwards: Mantiene el estado final de la animación (opacity: 1).
-             */
         }
-        /* ===== FIN DE NUEVA ANIMACIÓN FADE-IN ===== */
-
 
         h1, h2, h3 {
             color: #f5548a;
@@ -64,11 +55,14 @@
         }
 
         .wallpaper {
-            background: url('wallpaper.png.png') no-repeat center center/cover; 
+            /* CORREGIDO el nombre del archivo y AÑADIDOS overflow y transition */
+            background: url('wallpaper.png') no-repeat center center/cover; 
             height: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden; /* Para que el fondo no se "salga" visualmente */
+            transition: background-position 0.1s linear; /* Para suavizar el efecto parallax */
         }
 
         .wallpaper-title {
@@ -90,14 +84,15 @@
             background-color: #ff6f91;
         }
 
-        footer { /* Este footer es el rosa, si usas el negro, estos estilos no aplican a ese */
+        /* footer original rosa, si lo cambiaste al negro, estos estilos no aplican */
+        /* footer { 
             background-color: var(--soft-pink);
             color: var(--text-white);
             padding: 20px;
             text-align: center;
             border-top: 4px solid #ff99aa;
             box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
-        }
+        } */
 
         .artist-card img {
             max-height: 250px;
@@ -185,7 +180,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown4" role="button"
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown4" role="button" 
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Moda y maquillaje
                                 </a>
@@ -264,9 +259,9 @@
                             </ul>
                             <p>Estos artistas dominaron las décadas de 1990 y 2000 con su fusión de pop occidental y sensibilidad japonesa.</p>
                             <p>Estos artistas, junto con otros contemporáneos, no solo vendieron millones de discos, sino que también influyeron en la moda, la televisión y la cultura popular japonesa en general. Dominaron las décadas de 1990 y 2000 con su habilidad para fusionar el pop occidental con una sensibilidad y melodías distintivamente japonesas, creando un sonido que era a la vez familiar y único. Su legado sentó las bases para la diversificación y la continua evolución del J-Pop en el siglo XXI."
-                       </p> </div>
+                           </p> </div>
                             
-                    </div>
+                        </div>
                 </article>
 
                 <article id="modern" class="mb-5">
@@ -277,7 +272,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <h4>YOASOBI</h4>
-                                    <p>Dúo que transforma novelas en canciones. Éxitos: "Yoru ni Kakeru", "Idol <br> YOASOBI es un popular dúo musical japonés que irrumpió en la escena musical en 2019. El grupo está compuesto por el productor y compositor Ayase, quien previamente era conocido por crear música Vocaloid, y la vocalista Ikura (también conocida como Rira Ikuta).
+                                    <p>Dúo que transforma novelas en canciones. Éxitos: "Yoru ni Kakeru", "Idol" <br> YOASOBI es un popular dúo musical japonés que irrumpió en la escena musical en 2019. El grupo está compuesto por el productor y compositor Ayase, quien previamente era conocido por crear música Vocaloid, y la vocalista Ikura (también conocida como Rira Ikuta).
 
 Concepto Único: La característica distintiva de YOASOBI es su concepto de "convertir novelas en música". Muchas de sus canciones y videos musicales están basados en cuentos y novelas publicadas en Monogatary.com, un sitio web operado por Sony Music Entertainment Japan."</p>
                                 </div>
@@ -406,7 +401,7 @@ Talento Multifacético: Yonezu es conocido por su amplio rango de talentos. No s
         </main>
         
     </div> 
-    <footer class="bg-dark text-white text-center py-3">
+ <footer class="bg-dark text-white text-center py-3">
     <div>
         <p class="float-end"><a href="#">Back to top</a></p>
         <p><a href="Contactos/contactos.html" class="text-white">Contacto</a> | <a href="Referencias/referencias.html" class="text-white">Referencias</a></p>
@@ -416,5 +411,30 @@ Talento Multifacético: Yonezu es conocido por su amplio rango de talentos. No s
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const banner = document.querySelector('.wallpaper'); // CAMBIADO A .wallpaper
+
+        if (banner) {
+            banner.addEventListener('mousemove', function(e) {
+                const rect = banner.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const deltaX = x - centerX;
+                const deltaY = y - centerY;
+                const moveX = -(deltaX / 30); 
+                const moveY = -(deltaY / 30); 
+                banner.style.backgroundPosition = `calc(50% + ${moveX}px) calc(50% + ${moveY}px)`;
+            });
+
+            banner.addEventListener('mouseleave', function() {
+                banner.style.backgroundPosition = 'center center';
+            });
+        }
+    });
+    </script>
+    </body>
 </html>
