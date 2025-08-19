@@ -1,0 +1,383 @@
+/* Tipografía y colores base */
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  background-color: #fdfaf6;
+  color: #3e2723;
+  line-height: 1.7;
+  scroll-padding-top: 80px;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  color: #5d4037;
+  margin-bottom: 1rem;
+}
+
+p, li {
+  font-size: 1.1rem;
+}
+
+ul {
+  padding-left: 0;
+  list-style-position: inside;
+  margin-bottom: 1.5rem;
+}
+
+strong {
+  color: #6d4c41;
+}
+
+/* Enlaces */
+a {
+  color: #8B4513;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #A0522D;
+}
+
+/* Navbar */
+#mainNav {
+  background-color: #3e2723;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: #f5f5f5 !important;
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #ffcc80 !important;
+}
+
+/* Header */
+.masthead {
+  background: url('../assets/img/header-bg.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 8rem 0;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.masthead::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(62, 39, 35, 0.7);
+  z-index: 0;
+}
+
+.masthead .container {
+  position: relative;
+  z-index: 1;
+}
+
+.masthead h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.masthead p {
+  font-size: 1.25rem;
+}
+
+/* Secciones */
+.page-section {
+  padding: 5rem 0;
+}
+
+.page-section.bg-light {
+  background-color: #fff8f0;
+}
+
+.page-section.bg-dark {
+  background-color: #3e2723;
+  color: white;
+}
+
+/* Separadores decorativos */
+.section-divider {
+  width: 80px;
+  height: 5px;
+  background: linear-gradient(to right, #8B4513, #A0522D);
+  margin: 1.5rem auto 2rem auto;
+  border-radius: 3px;
+}
+
+/* Tarjetas de productos */
+.product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.img-fluid {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.03);
+}
+
+/* Citas */
+blockquote {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  color: #6d4c41;
+  border-left: 4px solid #8B4513;
+  padding-left: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  display: inline-block;
+  text-align: left;
+}
+
+/* Formulario */
+form .form-control {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 1rem;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+form .btn-primary {
+  background-color: #8B4513;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+form .btn-primary:hover {
+  background-color: #A0522D;
+}
+
+/* Footer */
+footer {
+  background-color: #eee;
+  color: #555;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Animaciones AOS */
+[data-aos] {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: none;
+}
+
+/* Estilos por sección */
+#horma, #diseno, #fabricacion {
+  background-color: #fff8f0;
+}
+
+#tipos-zapatos, #materiales, #cuidado {
+  background-color: #fdfaf6;
+}
+
+#tipos-zapatos ul {
+  columns: 2;
+  column-gap: 2rem;
+  text-align: left;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  #tipos-zapatos ul {
+    columns: 1;
+  }
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #8B4513;
+  color: #8B4513;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #8B4513;
+  color: #fff;
+}
+
+/* Testimonios */
+.testimonial {
+  background-color: #fff8f0;
+  border-left: 4px solid #A0522D;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-style: italic;
+  color: #5d4037;
+  border-radius: 8px;
+  text-align: left;
+  display: inline-block;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #8B4513;
+}
+
+/* Responsive ajustes */
+@media (max-width: 768px) {
+  .masthead h1 {
+    font-size: 2.2rem;
+  }
+
+  .masthead p {
+    font-size: 1rem;
+  }
+
+  blockquote {
+    font-size: 1rem;
+  }
+
+  .product-card {
+    padding: 1rem;
+  }
+
+  .testimonial {
+    font-size: 0.95rem;
+  }
+}
+
+/* Fondo decorativo para secciones especiales */
+.bg-texture {
+  background-image: url('../assets/img/leather-texture.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 5rem 0;
+  position: relative;
+  text-align: center;
+}
+
+.bg-texture::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(62, 39, 35, 0.85);
+  z-index: 0;
+}
+
+.bg-texture .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Separador visual entre secciones */
+.section-spacer {
+  height: 60px;
+  background: url('../assets/img/separator-pattern.svg') repeat-x center;
+  background-size: contain;
+  margin: 3rem 0;
+}
+
+/* Íconos decorativos en títulos */
+h2::before {
+  content: "👞 ";
+  font-size: 1.2rem;
+  margin-right: 0.3rem;
+}
+
+/* Hover animado en títulos */
+h2:hover {
+  color: #A0522D;
+  transition: color 0.3s ease;
+}
+
+/* Efecto de entrada para imágenes con AOS */
+img[data-aos] {
+  transform: scale(0.95);
+  transition: transform 0.6s ease;
+}
+
+img[data-aos].aos-animate {
+  transform: scale(1);
+}
+
+/* Estilo para enlaces destacados */
+.highlight-link {
+  color: #A0522D;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.highlight-link:hover {
+  color: #8B4513;
+}
+
+/* Animación suave para botones */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Contenedor centrado con ancho limitado */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Ajustes para columnas en secciones técnicas */
+.page-section .container ul {
+  display: inline-block;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
